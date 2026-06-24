@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS Projects — Executive Status | June 24, 2026</title>
+  <style>
+    :root {
+      --green-bg: #e3fcef; --green-fg: #006644; --green-border: #006644;
+      --yellow-bg: #fffae6; --yellow-fg: #974f0c; --yellow-border: #974f0c;
+      --red-bg: #ffebe6;   --red-fg: #bf2600;   --red-border: #bf2600;
+      --text: #172b4d; --subtext: #6b778c; --border: #dfe1e6;
+      --surface: #ffffff; --page: #eef1f5;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: var(--page); color: var(--text); padding: 32px 24px; min-height: 100vh;
+    }
+    .header { max-width: 1200px; margin: 0 auto 28px; background: var(--surface); border-radius: 14px; padding: 24px 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+    .header-title { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+    .header-sub { font-size: 13px; color: var(--subtext); margin-top: 5px; }
+    .header-meta { text-align: right; flex-shrink: 0; }
+    .header-date { font-size: 13px; font-weight: 600; color: var(--text); }
+    .header-source { font-size: 11px; color: var(--subtext); margin-top: 4px; }
+    .ai-pill { display: inline-block; background: #f0e6ff; color: #5243aa; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; margin-top: 6px; }
+    .summary-bar { max-width: 1200px; margin: 0 auto 22px; display: flex; gap: 12px; }
+    .summary-chip { background: var(--surface); border-radius: 10px; padding: 12px 18px; flex: 1; display: flex; align-items: center; gap: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 13px; font-weight: 600; }
+    .chip-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+    .dot-green { background: var(--green-fg); } .dot-yellow { background: var(--yellow-fg); } .dot-red { background: var(--red-fg); }
+    .grid { max-width: 1200px; margin: 0 auto 28px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .card { background: var(--surface); border-radius: 14px; padding: 26px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border: 1px solid var(--border); display: flex; flex-direction: column; gap: 18px; }
+    .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+    .card-name { font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.3; }
+    .card-sub { font-size: 11px; color: var(--subtext); margin-top: 3px; }
+    .rag { flex-shrink: 0; padding: 5px 14px; border-radius: 24px; font-size: 12px; font-weight: 700; border: 2px solid; white-space: nowrap; }
+    .rag-yellow { background: var(--yellow-bg); color: var(--yellow-fg); border-color: var(--yellow-border); }
+    .rag-red    { background: var(--red-bg);    color: var(--red-fg);    border-color: var(--red-border); }
+    .rag-green  { background: var(--green-bg);  color: var(--green-fg);  border-color: var(--green-border); }
+    .rag-reason { font-size: 12px; font-style: italic; color: var(--subtext); border-left: 3px solid var(--border); padding-left: 10px; line-height: 1.55; }
+    .exec-summary { font-size: 13.5px; line-height: 1.7; color: var(--text); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .section-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.7px; color: var(--subtext); margin-bottom: 8px; }
+    .item-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .item-list li { font-size: 12.5px; line-height: 1.45; color: var(--text); }
+    .milestone { background: #f4f5f7; border-radius: 8px; padding: 11px 14px; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .milestone-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--subtext); white-space: nowrap; }
+    .milestone-value { font-size: 12.5px; font-weight: 600; color: #0052cc; text-align: right; }
+    .sources { font-size: 11px; color: #adb5bd; border-top: 1px solid #f0f2f5; padding-top: 10px; line-height: 1.6; }
+    .sources a { color: #adb5bd; text-decoration: none; }
+    .sources a:hover { color: #0052cc; }
+    .footer { max-width: 1200px; margin: 0 auto; text-align: center; font-size: 11px; color: var(--subtext); padding: 8px 0 16px; line-height: 1.6; }
+    @media print { body { background: white; padding: 16px; } .header, .card { box-shadow: none; border: 1px solid #ddd; } .summary-bar { display: none; } }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } .two-col { grid-template-columns: 1fr; } .header { flex-direction: column; } .header-meta { text-align: left; } .summary-bar { flex-direction: column; } }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <div class="header-title">☁️ AWS Projects — Executive Status Dashboard</div>
+    <div class="header-sub">PerfectServe Cloud Migration &amp; Platform Programs</div>
+    <div class="ai-pill">✦ AI-Analyzed · Fathom Meeting Notes</div>
+  </div>
+  <div class="header-meta">
+    <div class="header-date">June 24, 2026</div>
+    <div class="header-source">Source: Fathom standup &amp; review recordings<br>3 active projects · 2 at risk · 1 on track</div>
+  </div>
+</div>
+
+<div class="summary-bar">
+  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Atlanta AWS Migration — At Risk</div>
+  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Canada AWS Platform — At Risk</div>
+  <div class="summary-chip"><div class="chip-dot dot-green"></div>OC West Expansion — On Track</div>
+</div>
+
+<div class="grid">
+
+  <div class="card">
+    <div class="card-top">
+      <div><div class="card-name">Atlanta AWS Migration</div><div class="card-sub">PerfectServe DC → AWS · 5-Wave Migration</div></div>
+      <div class="rag rag-yellow">🟡 At Risk</div>
+    </div>
+    <div class="rag-reason">Timeline extended to December; staging blocked by infrastructure issue; production cutover strategy remains undefined.</div>
+    <div class="exec-summary">The Atlanta migration has been formally restructured into a 5-wave process running through December, replacing an unachievable August 31 hard deadline. The revised plan — using monthly maintenance windows — has been approved by Customer Success and is awaiting final SLT sign-off. Staging remains blocked by a suspected Palo Alto firmware bug with a downgrade scheduled for Wednesday, and the production cutover strategy is still undefined, representing the project's most significant open risk heading into the August Wave 1 gate.</div>
+    <div class="two-col">
+      <div>
+        <div class="section-label">Key Risks &amp; Blockers</div>
+        <ul class="item-list">
+          <li>⚠️ Staging blocked by Palo Alto firmware bug — downgrade Wed night; delay risk if unresolved</li>
+          <li>⚠️ Production cutover process undefined — notification &amp; RabbitMQ conflicts found in QA</li>
+          <li>⚠️ All build/test work must close by first week of August to enable Wave 1</li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-label">Recent Progress</div>
+        <ul class="item-list">
+          <li>✅ 5-wave plan approved by Customer Success; SLT approval in progress</li>
+          <li>✅ Dev environment fully migrated and stable</li>
+          <li>✅ QA verification test run scheduled with Betsy; failover tests planned this week</li>
+        </ul>
+      </div>
+    </div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">🏁 Complete all build/test by Aug 1 · Wave 1 cutover Aug/Sep</span></div>
+    <div class="sources">Sources: <a href="https://fathom.video/calls/717238964" target="_blank">Stand-up Jun 22</a> · <a href="https://fathom.video/calls/714298283" target="_blank">Stand-up Jun 18</a> · <a href="https://fathom.video/calls/712141200" target="_blank">QA Latency &amp; Risk Review Jun 16</a></div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <div><div class="card-name">Canada AWS Platform</div><div class="card-sub">Canadian Data Residency · Thunder Bay Scope</div></div>
+      <div class="rag rag-yellow">🟡 At Risk</div>
+    </div>
+    <div class="rag-reason">Foundation setup stalled on unresolved dependencies; out-of-plan scope accumulating without clear timeline impact assessment.</div>
+    <div class="exec-summary">The Canadian AWS platform has an approved architecture and active implementation underway across data plane, security, and EKS workstreams. However, the Master Accountant Network Foundation remains blocked on Tony's input for certificates and SES — a dependency outstanding despite multiple follow-ups — and EKS work is only now beginning. Out-of-plan scope items are accumulating and a new Confluence tracking process has been introduced to ensure executive visibility before these items impact the delivery timeline.</div>
+    <div class="two-col">
+      <div>
+        <div class="section-label">Key Risks &amp; Blockers</div>
+        <ul class="item-list">
+          <li>⚠️ Master Accountant Network Foundation stalled — pending Tony's certs &amp; SES input</li>
+          <li>⚠️ Out-of-plan scope items accumulating; timeline impact not yet assessed</li>
+          <li>⚠️ Compliance ticket blocked on legal clarification for Thunder Bay approval process</li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-label">Recent Progress</div>
+        <ul class="item-list">
+          <li>✅ Core architecture approved: 6 VPCs, TGW, AKS, Pilot Light DR</li>
+          <li>✅ GuardDuty enabled in detect-only mode, unblocking security validation epic</li>
+          <li>✅ SPV2 RDS instance backup setup underway in Canada West</li>
+        </ul>
+      </div>
+    </div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">🏁 EKS setup with Matt begins · Tony dependency resolved</span></div>
+    <div class="sources">Sources: <a href="https://fathom.video/calls/705823285" target="_blank">Check-in Jun 11</a> · <a href="https://fathom.video/calls/703321057" target="_blank">Stand-up Jun 9</a> · <a href="https://fathom.video/calls/677671171" target="_blank">Architecture Signoff May 20</a></div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <div><div class="card-name">OC West Expansion</div><div class="card-sub">Aurora Global DB · US-East → US-West-2</div></div>
+      <div class="rag rag-green">🟢 On Track</div>
+    </div>
+    <div class="rag-reason">Previously identified blockers resolved — Terraform deployment approval granted and application code access obtained; team cleared to execute.</div>
+    <div class="exec-summary">The OC West expansion is back on track following the resolution of two critical blockers that had threatened the July 3 deadline. Terraform deployment approval has been granted, enabling Aurora Global Cluster provisioning to proceed, and the team now has the Python/Django application code access needed to complete the database interaction analysis. With these gates cleared, the DMS migration and remaining infrastructure work can advance without dependency on external approvals.</div>
+    <div class="two-col">
+      <div>
+        <div class="section-label">Remaining Watch Items</div>
+        <ul class="item-list">
+          <li>👁 DMS migration task execution — primary remaining cost driver (~$400–500/mo)</li>
+          <li>👁 App code analysis findings — potential DB interaction issues still to be confirmed</li>
+          <li>👁 July 3 deadline — tight but now achievable with blockers cleared</li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-label">Recent Progress</div>
+        <ul class="item-list">
+          <li>✅ Terraform deployment approval granted — Aurora Global Cluster deploying</li>
+          <li>✅ Application code access obtained — DB interaction analysis unblocked</li>
+          <li>✅ VPC peering unblocked; Aurora PostgreSQL 17.9 &amp; Route 53 cutover plan finalized</li>
+        </ul>
+      </div>
+    </div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">🏁 Aurora provisioning + DMS migration · July 3 target</span></div>
+    <div class="sources">Sources: <a href="https://fathom.video/calls/717238962" target="_blank">Stand-up Jun 22</a> · <a href="https://fathom.video/calls/714298278" target="_blank">Stand-up Jun 18</a> · <a href="https://fathom.video/calls/708915703" target="_blank">Stand-up Jun 15</a></div>
+  </div>
+
+</div>
+
+<div class="footer">Generated June 24, 2026 · Analysis based on Fathom meeting recordings · PerfectServe Cloud Programs</div>
+
+</body>
+</html>
