@@ -24,11 +24,11 @@
     .header-date { font-size: 13px; font-weight: 600; color: var(--text); }
     .header-source { font-size: 11px; color: var(--subtext); margin-top: 4px; }
     .ai-pill { display: inline-block; background: #f0e6ff; color: #5243aa; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; margin-top: 6px; }
-    .summary-bar { max-width: 1200px; margin: 0 auto 22px; display: flex; gap: 12px; }
-    .summary-chip { background: var(--surface); border-radius: 10px; padding: 12px 18px; flex: 1; display: flex; align-items: center; gap: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 13px; font-weight: 600; }
+    .summary-bar { max-width: 1200px; margin: 0 auto 22px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .summary-chip { background: var(--surface); border-radius: 10px; padding: 12px 18px; display: flex; align-items: center; gap: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 13px; font-weight: 600; }
     .chip-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
     .dot-green { background: var(--green-fg); } .dot-yellow { background: var(--yellow-fg); } .dot-red { background: var(--red-fg); }
-    .grid { max-width: 1200px; margin: 0 auto 28px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .grid { max-width: 1200px; margin: 0 auto 28px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .card { background: var(--surface); border-radius: 14px; padding: 26px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border: 1px solid var(--border); display: flex; flex-direction: column; gap: 18px; }
     .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
     .card-name { font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.3; }
@@ -51,121 +51,152 @@
     .sources a:hover { color: #0052cc; }
     .footer { max-width: 1200px; margin: 0 auto; text-align: center; font-size: 11px; color: var(--subtext); padding: 8px 0 16px; line-height: 1.6; }
     @media print { body { background: white; padding: 16px; } .header, .card { box-shadow: none; border: 1px solid #ddd; } .summary-bar { display: none; } }
-    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } .two-col { grid-template-columns: 1fr; } .header { flex-direction: column; } .header-meta { text-align: left; } .summary-bar { flex-direction: column; } }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } .two-col { grid-template-columns: 1fr; } .header { flex-direction: column; } .header-meta { text-align: left; } .summary-bar { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .summary-bar { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
 
 <div class="header">
   <div>
-    <div class="header-title">☁️ AWS Projects — Executive Status Dashboard</div>
+    <div class="header-title">&#x2601;&#xFE0F; AWS Projects &#x2014; Executive Status Dashboard</div>
     <div class="header-sub">PerfectServe Cloud Migration &amp; Platform Programs</div>
-    <div class="ai-pill">✦ AI-Analyzed · Fathom Meeting Notes</div>
+    <div class="ai-pill">&#x2726; AI-Analyzed &middot; Fathom Meeting Notes</div>
   </div>
   <div class="header-meta">
     <div class="header-date">June 24, 2026</div>
-    <div class="header-source">Source: Fathom standup &amp; review recordings<br>3 active projects · 2 at risk · 1 on track</div>
+    <div class="header-source">Source: Fathom standup &amp; review recordings<br>4 active projects &middot; 3 at risk &middot; 1 on track</div>
   </div>
 </div>
 
 <div class="summary-bar">
-  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Atlanta AWS Migration — At Risk</div>
-  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Canada AWS Platform — At Risk</div>
-  <div class="summary-chip"><div class="chip-dot dot-green"></div>OC West Expansion — On Track</div>
+  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Atlanta AWS Migration &#x2014; At Risk</div>
+  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Canada AWS Platform &#x2014; At Risk</div>
+  <div class="summary-chip"><div class="chip-dot dot-green"></div>OC West Expansion &#x2014; On Track</div>
+  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>IDP &#x2014; At Risk</div>
 </div>
 
 <div class="grid">
 
   <div class="card">
     <div class="card-top">
-      <div><div class="card-name">Atlanta AWS Migration</div><div class="card-sub">PerfectServe DC → AWS · 5-Wave Migration</div></div>
-      <div class="rag rag-yellow">🟡 At Risk</div>
+      <div><div class="card-name">Atlanta AWS Migration</div><div class="card-sub">PerfectServe DC &#x2192; AWS &middot; 5-Wave Migration</div></div>
+      <div class="rag rag-yellow">&#x1F7E1; At Risk</div>
     </div>
     <div class="rag-reason">Timeline extended to December; staging blocked by infrastructure issue; production cutover strategy remains undefined.</div>
-    <div class="exec-summary">The Atlanta migration has been formally restructured into a 5-wave process running through December, replacing an unachievable August 31 hard deadline. The revised plan — using monthly maintenance windows — has been approved by Customer Success and is awaiting final SLT sign-off. Staging remains blocked by a suspected Palo Alto firmware bug with a downgrade scheduled for Wednesday, and the production cutover strategy is still undefined, representing the project's most significant open risk heading into the August Wave 1 gate.</div>
+    <div class="exec-summary">The Atlanta migration has been formally restructured into a 5-wave process running through December, replacing an unachievable August 31 hard deadline. The revised plan &#x2014; using monthly maintenance windows &#x2014; has been approved by Customer Success and is awaiting final SLT sign-off. Staging remains blocked by a suspected Palo Alto firmware bug with a downgrade scheduled for Wednesday, and the production cutover strategy is still undefined, representing the project&#x2019;s most significant open risk heading into the August Wave 1 gate.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>⚠️ Staging blocked by Palo Alto firmware bug — downgrade Wed night; delay risk if unresolved</li>
-          <li>⚠️ Production cutover process undefined — notification &amp; RabbitMQ conflicts found in QA</li>
-          <li>⚠️ All build/test work must close by first week of August to enable Wave 1</li>
+          <li>&#x26A0;&#xFE0F; Staging blocked by Palo Alto firmware bug &#x2014; downgrade Wed night; delay risk if unresolved</li>
+          <li>&#x26A0;&#xFE0F; Production cutover process undefined &#x2014; notification &amp; RabbitMQ conflicts found in QA</li>
+          <li>&#x26A0;&#xFE0F; All build/test work must close by first week of August to enable Wave 1</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>✅ 5-wave plan approved by Customer Success; SLT approval in progress</li>
-          <li>✅ Dev environment fully migrated and stable</li>
-          <li>✅ QA verification test run scheduled with Betsy; failover tests planned this week</li>
+          <li>&#x2705; 5-wave plan approved by Customer Success; SLT approval in progress</li>
+          <li>&#x2705; Dev environment fully migrated and stable</li>
+          <li>&#x2705; QA verification test run scheduled with Betsy; failover tests planned this week</li>
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">🏁 Complete all build/test by Aug 1 · Wave 1 cutover Aug/Sep</span></div>
-    <div class="sources">Sources: <a href="https://fathom.video/calls/717238964" target="_blank">Stand-up Jun 22</a> · <a href="https://fathom.video/calls/714298283" target="_blank">Stand-up Jun 18</a> · <a href="https://fathom.video/calls/712141200" target="_blank">QA Latency &amp; Risk Review Jun 16</a></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Complete all build/test by Aug 1 &middot; Wave 1 cutover Aug/Sep</span></div>
+    <div class="sources">Sources: <a href="https://fathom.video/calls/717238964" target="_blank">Stand-up Jun 22</a> &middot; <a href="https://fathom.video/calls/714298283" target="_blank">Stand-up Jun 18</a> &middot; <a href="https://fathom.video/calls/712141200" target="_blank">QA Latency &amp; Risk Review Jun 16</a></div>
   </div>
 
   <div class="card">
     <div class="card-top">
-      <div><div class="card-name">Canada AWS Platform</div><div class="card-sub">Canadian Data Residency · Thunder Bay Scope</div></div>
-      <div class="rag rag-yellow">🟡 At Risk</div>
+      <div><div class="card-name">Canada AWS Platform</div><div class="card-sub">Canadian Data Residency &middot; Thunder Bay Scope</div></div>
+      <div class="rag rag-yellow">&#x1F7E1; At Risk</div>
     </div>
     <div class="rag-reason">Foundation setup stalled on unresolved dependencies; out-of-plan scope accumulating without clear timeline impact assessment.</div>
-    <div class="exec-summary">The Canadian AWS platform has an approved architecture and active implementation underway across data plane, security, and EKS workstreams. However, the Master Accountant Network Foundation remains blocked on Tony's input for certificates and SES — a dependency outstanding despite multiple follow-ups — and EKS work is only now beginning. Out-of-plan scope items are accumulating and a new Confluence tracking process has been introduced to ensure executive visibility before these items impact the delivery timeline.</div>
+    <div class="exec-summary">The Canadian AWS platform has an approved architecture and active implementation underway across data plane, security, and EKS workstreams. However, the Master Accountant Network Foundation remains blocked on Tony&#x2019;s input for certificates and SES &#x2014; a dependency outstanding despite multiple follow-ups &#x2014; and EKS work is only now beginning. Out-of-plan scope items are accumulating and a new Confluence tracking process has been introduced to ensure executive visibility before these items impact the delivery timeline.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>⚠️ Master Accountant Network Foundation stalled — pending Tony's certs &amp; SES input</li>
-          <li>⚠️ Out-of-plan scope items accumulating; timeline impact not yet assessed</li>
-          <li>⚠️ Compliance ticket blocked on legal clarification for Thunder Bay approval process</li>
+          <li>&#x26A0;&#xFE0F; Master Accountant Network Foundation stalled &#x2014; pending Tony&#x2019;s certs &amp; SES input</li>
+          <li>&#x26A0;&#xFE0F; Out-of-plan scope items accumulating; timeline impact not yet assessed</li>
+          <li>&#x26A0;&#xFE0F; Compliance ticket blocked on legal clarification for Thunder Bay approval process</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>✅ Core architecture approved: 6 VPCs, TGW, AKS, Pilot Light DR</li>
-          <li>✅ GuardDuty enabled in detect-only mode, unblocking security validation epic</li>
-          <li>✅ SPV2 RDS instance backup setup underway in Canada West</li>
+          <li>&#x2705; Core architecture approved: 6 VPCs, TGW, AKS, Pilot Light DR</li>
+          <li>&#x2705; GuardDuty enabled in detect-only mode, unblocking security validation epic</li>
+          <li>&#x2705; SPV2 RDS instance backup setup underway in Canada West</li>
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">🏁 EKS setup with Matt begins · Tony dependency resolved</span></div>
-    <div class="sources">Sources: <a href="https://fathom.video/calls/705823285" target="_blank">Check-in Jun 11</a> · <a href="https://fathom.video/calls/703321057" target="_blank">Stand-up Jun 9</a> · <a href="https://fathom.video/calls/677671171" target="_blank">Architecture Signoff May 20</a></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; EKS setup with Matt begins &middot; Tony dependency resolved</span></div>
+    <div class="sources">Sources: <a href="https://fathom.video/calls/705823285" target="_blank">Check-in Jun 11</a> &middot; <a href="https://fathom.video/calls/703321057" target="_blank">Stand-up Jun 9</a> &middot; <a href="https://fathom.video/calls/677671171" target="_blank">Architecture Signoff May 20</a></div>
   </div>
 
   <div class="card">
     <div class="card-top">
-      <div><div class="card-name">OC West Expansion</div><div class="card-sub">Aurora Global DB · US-East → US-West-2</div></div>
-      <div class="rag rag-green">🟢 On Track</div>
+      <div><div class="card-name">OC West Expansion</div><div class="card-sub">Aurora Global DB &middot; US-East &#x2192; US-West-2</div></div>
+      <div class="rag rag-green">&#x1F7E2; On Track</div>
     </div>
-    <div class="rag-reason">Previously identified blockers resolved — Terraform deployment approval granted and application code access obtained; team cleared to execute.</div>
+    <div class="rag-reason">Previously identified blockers resolved &#x2014; Terraform deployment approval granted and application code access obtained; team cleared to execute.</div>
     <div class="exec-summary">The OC West expansion is back on track following the resolution of two critical blockers that had threatened the July 3 deadline. Terraform deployment approval has been granted, enabling Aurora Global Cluster provisioning to proceed, and the team now has the Python/Django application code access needed to complete the database interaction analysis. With these gates cleared, the DMS migration and remaining infrastructure work can advance without dependency on external approvals.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Remaining Watch Items</div>
         <ul class="item-list">
-          <li>👁 DMS migration task execution — primary remaining cost driver (~$400–500/mo)</li>
-          <li>👁 App code analysis findings — potential DB interaction issues still to be confirmed</li>
-          <li>👁 July 3 deadline — tight but now achievable with blockers cleared</li>
+          <li>&#x1F441; DMS migration task execution &#x2014; primary remaining cost driver (~$400&#x2013;500/mo)</li>
+          <li>&#x1F441; App code analysis findings &#x2014; potential DB interaction issues still to be confirmed</li>
+          <li>&#x1F441; July 3 deadline &#x2014; tight but now achievable with blockers cleared</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>✅ Terraform deployment approval granted — Aurora Global Cluster deploying</li>
-          <li>✅ Application code access obtained — DB interaction analysis unblocked</li>
-          <li>✅ VPC peering unblocked; Aurora PostgreSQL 17.9 &amp; Route 53 cutover plan finalized</li>
+          <li>&#x2705; Terraform deployment approval granted &#x2014; Aurora Global Cluster deploying</li>
+          <li>&#x2705; Application code access obtained &#x2014; DB interaction analysis unblocked</li>
+          <li>&#x2705; VPC peering unblocked; Aurora PostgreSQL 17.9 &amp; Route 53 cutover plan finalized</li>
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">🏁 Aurora provisioning + DMS migration · July 3 target</span></div>
-    <div class="sources">Sources: <a href="https://fathom.video/calls/717238962" target="_blank">Stand-up Jun 22</a> · <a href="https://fathom.video/calls/714298278" target="_blank">Stand-up Jun 18</a> · <a href="https://fathom.video/calls/708915703" target="_blank">Stand-up Jun 15</a></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Aurora provisioning + DMS migration &middot; July 3 target</span></div>
+    <div class="sources">Sources: <a href="https://fathom.video/calls/717238962" target="_blank">Stand-up Jun 22</a> &middot; <a href="https://fathom.video/calls/714298278" target="_blank">Stand-up Jun 18</a> &middot; <a href="https://fathom.video/calls/708915703" target="_blank">Stand-up Jun 15</a></div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <div><div class="card-name">IDP</div><div class="card-sub">Identity Provider Upgrade &middot; 4-Phase Roadmap (Aug&#x2013;Nov)</div></div>
+      <div class="rag rag-yellow">&#x1F7E1; At Risk</div>
+    </div>
+    <div class="rag-reason">IDP team is execution-ready but blocked by PerfectServe&#x2019;s TLS 1.1 deprecation and Matomi&#x2019;s policy preventing vNext deployment to lower environments until Phase 1 is live in production.</div>
+    <div class="exec-summary">The IDP project has been restructured into a 4-phase roadmap (Aug&#x2013;Nov) after a series of delays driven by PerfectServe&#x2019;s internal resource conflicts and a new policy blocking vNext deployment to lower environments until the Phase 1 upgrade reaches production on August 5. The IDP team is approximately 95% complete on vNext implementation and ready to deploy, but cannot proceed until PerfectServe&#x2019;s TLS 1.1 deprecation plan is finalized and executed. A proposal to decouple IDP releases from the monthly maintenance window is under discussion with Jamie to prevent future single-month slips from cascading across the roadmap.</div>
+    <div class="two-col">
+      <div>
+        <div class="section-label">Key Risks &amp; Blockers</div>
+        <ul class="item-list">
+          <li>&#x26A0;&#xFE0F; TLS 1.1 deprecation plan unclear &#x2014; July production strategy unvetted; could push Aug IDP release</li>
+          <li>&#x26A0;&#xFE0F; Matomi policy blocks vNext to lower environments until Phase 1 live Aug 5</li>
+          <li>&#x26A0;&#xFE0F; QA premature rollbacks masking intermittent front-end bugs; untracked in Jira</li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-label">Recent Progress</div>
+        <ul class="item-list">
+          <li>&#x2705; vNext implementation ~95% complete; team readiness confirmed to leadership</li>
+          <li>&#x2705; New Jira plan established mapping Aug&#x2013;Nov release windows as single source of truth</li>
+          <li>&#x2705; Old 2025 Jira items cleaned up; baseline timeline established</li>
+        </ul>
+      </div>
+    </div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Phase 1 production release Aug 5 &#x2192; unblocks vNext (Phase 2) Sep 2</span></div>
+    <div class="sources">Sources: <a href="https://fathom.video/calls/713223577" target="_blank">IDP Release Strategy Jun 16</a> &middot; <a href="https://fathom.video/calls/707790319" target="_blank">Scrum of Scrums Jun 12</a> &middot; <a href="https://fathom.video/calls/695467668" target="_blank">IDP Internal Sync Jun 3</a></div>
   </div>
 
 </div>
 
-<div class="footer">Generated June 24, 2026 · Analysis based on Fathom meeting recordings · PerfectServe Cloud Programs</div>
+<div class="footer">Generated June 24, 2026 &middot; Analysis based on Fathom meeting recordings &middot; PerfectServe Cloud Programs</div>
 
 </body>
 </html>
