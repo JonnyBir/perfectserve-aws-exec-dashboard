@@ -62,15 +62,15 @@
   </div>
   <div class="header-meta">
     <div class="header-date">June 25, 2026</div>
-    <div class="header-source">Source: Fathom standup &amp; review recordings<br>4 active projects &middot; 2 at risk &middot; 1 on track &middot; 1 critical</div>
+    <div class="header-source">Source: Fathom standup &amp; review recordings<br>4 active projects &middot; 3 at risk &middot; 1 critical</div>
   </div>
 </div>
 
-<div class="notice">&#x1F504; Ad hoc refresh &#x2014; June 25, 2026. OC West updated with latest standup notes (Jun 25).</div>
+<div class="notice">&#x1F504; Ad hoc refresh &#x2014; June 25, 2026. Canada updated with today&#x2019;s Internal Canadian Collab stand-up; OC West updated with Jun 25 standup notes.</div>
 
 <div class="summary-bar">
   <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Atlanta AWS Migration &#x2014; At Risk</div>
-  <div class="summary-chip"><div class="chip-dot dot-green"></div>Canada AWS Platform &#x2014; On Track</div>
+  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Canada AWS Platform &#x2014; At Risk</div>
   <div class="summary-chip"><div class="chip-dot dot-yellow"></div>OC West Expansion &#x2014; At Risk</div>
   <div class="summary-chip"><div class="chip-dot dot-red"></div>IDP &#x2014; Critical</div>
 </div>
@@ -110,37 +110,37 @@
     <div class="sources">Sources: <a href="https://fathom.video/calls/717238964" target="_blank">Stand-up 2026-06-22 (timeline extension)</a> &middot; <a href="https://fathom.video/calls/714298283" target="_blank">Stand-up 2026-06-18 (staging blocker)</a> &middot; <a href="https://fathom.video/calls/712141200" target="_blank">QA Latency &amp; Data-Lock Risk Review</a></div>
   </div>
 
-  <!-- Canada AWS Platform -->
+  <!-- Canada AWS Platform — UPDATED Jun 25 -->
   <div class="card">
     <div class="card-top">
       <div>
         <div class="card-name">Canada AWS Platform</div>
-        <div class="card-sub">Greenfield AWS build &middot; Multi-region Canadian infrastructure</div>
+        <div class="card-sub">Greenfield AWS build &middot; Multi-region Canadian infrastructure &middot; Updated Jun 25</div>
       </div>
-      <div class="rag rag-green">&#x2705; ON TRACK</div>
+      <div class="rag rag-yellow">&#x26A0;&#xFE0F; AT RISK</div>
     </div>
-    <div class="rag-reason">EKS deployed and RDS deployment underway; key epics closing with blockers being actively managed.</div>
-    <div class="exec-summary">The Canada AWS Platform is progressing well with major infrastructure milestones hit this week. The V3/V4 EKS module has been deployed and is awaiting Matt&#x2019;s verification, and RDS instance deployments are actively underway following approval. The S3 Certs epic was strategically closed to unblock downstream work, with the remaining integration cert tracked as a standalone ticket assigned to Tony Bacher.</div>
+    <div class="rag-reason">EKS cluster deployed but verification blocked &#x2014; no internal expert available for Telmedic&#x2019;s setup; RDS PR stalled on approvals while key reviewers are in PI planning.</div>
+    <div class="exec-summary">Infrastructure deployment is progressing &#x2014; EKS is deployed, Amazon MQ has 3 brokers live, and RDS instances are underway &#x2014; but the team hit a verification wall today: no internal expert exists to validate the new Canada EKS cluster against Telmedic&#x2019;s production environment (prior experts Alex and Josh have left). An AI-generated review from Matt was deemed unusable due to vague, uninterpretable action items. RDS PR approval remains blocked while Joe and Josh are in PI planning. Access tickets for the expanded team (Scott, Brandon, Russell, Lamine) have moved from hold to InfoSec standby.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; Integrations Epic (5765) blocked &#x2014; primary contact Kevin is out; Tony sourcing backup contact</li>
-          <li>&#x26A0;&#xFE0F; Lamine needs Telemedic Prod Canada access; Brandon &amp; Russell need GitHub/Terraform access</li>
-          <li>&#x26A0;&#xFE0F; Carpenter autoscaling and security standards questions open pending Platt channel response</li>
+          <li>&#x26A0;&#xFE0F; No internal EKS expert for Telmedic setup &#x2014; cluster cannot be verified; help request going to main channel</li>
+          <li>&#x26A0;&#xFE0F; RDS PR blocked &#x2014; approvers (Joe, Josh) unavailable during PI planning this week</li>
+          <li>&#x26A0;&#xFE0F; Looker provisioning needs a second resource &#x2014; Brandon onboarding is 1-week minimum; Lamine&#x2019;s Canada account access unconfirmed</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>&#x2705; EKS V3/V4 module deployed successfully by Dave Gamez</li>
-          <li>&#x2705; S3 Certs epic closed to unblock progress; integration cert tracked separately</li>
-          <li>&#x2705; RDS deployment initiated post-approval; Adam Bard to verify completion</li>
+          <li>&#x2705; Amazon MQ deployed &#x2014; 3 brokers live; VPC endpoints and SPV2 broker connection next</li>
+          <li>&#x2705; EKS V3/V4 module deployed; secrets generated; scope clarified (team owns infra, client owns Argo CD/Helm)</li>
+          <li>&#x2705; Access tickets for expanded team now with InfoSec (moved from hold to standby)</li>
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; EKS verification by Matt + RDS deployment sign-off (this week)</span></div>
-    <div class="sources">Sources: <a href="https://fathom.video/calls/719163103" target="_blank">Weekly Stand-up 2026-06-23 (EKS/RDS)</a> &middot; <a href="https://fathom.video/calls/705823285" target="_blank">30-Min Check-In 2026-06-11 (blockers)</a></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; EKS verification resolved + RDS PR approved (unblocks August 19 delivery)</span></div>
+    <div class="sources">Sources: <a href="https://fathom.video/calls/722649304" target="_blank">Internal Collab Stand-up 2026-06-25 (EKS blocker)</a> &middot; <a href="https://fathom.video/calls/717238955" target="_blank">Internal Collab Stand-up 2026-06-22 (RDS/Looker)</a> &middot; <a href="https://fathom.video/calls/719163103" target="_blank">Weekly Stand-up 2026-06-23</a></div>
   </div>
 
   <!-- OC West Expansion — UPDATED Jun 25 -->
@@ -211,6 +211,6 @@
 
 </div>
 
-<div class="footer">Generated June 25, 2026 (ad hoc refresh &#x2014; OC West updated) &middot; Analysis based on Fathom meeting recordings &middot; PerfectServe Cloud Programs</div>
+<div class="footer">Generated June 25, 2026 (ad hoc refresh &#x2014; Canada &amp; OC West updated) &middot; Analysis based on Fathom meeting recordings &middot; PerfectServe Cloud Programs</div>
 </body>
 </html>
