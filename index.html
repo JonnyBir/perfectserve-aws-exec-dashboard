@@ -149,23 +149,23 @@
       </div>
       <div class="rag rag-yellow">&#x26A0;&#xFE0F; AT RISK</div>
     </div>
-    <div class="rag-reason">Terraform deployment blocked on PerfectServe approval and a convention exception request is pending &#x2014; denial would force full workspace rebuild, directly threatening the July 3 deadline.</div>
-    <div class="exec-summary">Two parallel blockers are threatening the July 3 deadline. First, the Aurora Global Cluster Terraform workspace is staged and ready but awaiting PerfectServe&#x2019;s &#x201C;Confirm and Apply.&#x201D; Second, management has agreed to pursue a Terraform convention exception for the PoC phase (requested by Scott Manicke) &#x2014; if denied, Lamine will need to tear down and recreate all existing workspaces to meet naming standards, a costly rework. Forwarding code PRs covering both infrastructure and application layers have been resolved, representing solid technical progress. Application-level analysis of the Python/Django codebase remains stalled pending code access, and a lack of centralized coding documentation is flagged as a recurring risk for the team&#x2019;s long-term efficiency.</div>
+    <div class="rag-reason">Terraform deployment blocked on PerfectServe approval, and a convention exception decision is pending &#x2014; denial would force full workspace rebuild, threatening the July 3 deadline.</div>
+    <div class="exec-summary">The Aurora Global Cluster Terraform workspace is staged and ready, but remains blocked on PerfectServe&#x2019;s &#x201C;Confirm and Apply.&#x201D; A Terraform convention exception for the PoC phase has been agreed to pursue (Scott Manicke actioning) &#x2014; if denied, Lamine will need to tear down and recreate all workspaces to meet naming standards, a costly rework before July 3. App code access has been granted, unblocking Lamine&#x2019;s Python/Django database interaction analysis. Forwarding code PRs across infrastructure and application layers are resolved. The primary remaining risk is getting the two outstanding approvals this week.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
           <li>&#x26A0;&#xFE0F; Terraform convention exception pending (Scott Manicke) &#x2014; denial forces full workspace rebuild before July 3</li>
           <li>&#x26A0;&#xFE0F; &#x201C;Confirm and Apply&#x201D; approval still outstanding from PerfectServe &#x2014; blocks DMS workspace configuration</li>
-          <li>&#x26A0;&#xFE0F; Python/Django app code access not granted; database interaction analysis stalled &#x2014; unknown migration risks</li>
+          <li>&#x26A0;&#xFE0F; No centralized coding documentation &#x2014; recurring risk for onboarding and future development efficiency</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
+          <li>&#x2705; App code access granted &#x2014; Python/Django database analysis now unblocked</li>
           <li>&#x2705; Forwarding code PRs resolved across infrastructure and application layers</li>
-          <li>&#x2705; VPC peering unblocked &#x2014; new CIDR block from Tony; Aurora PR feedback fully addressed</li>
-          <li>&#x2705; Management aligned on pursuing PoC convention exception to protect existing workspace investment</li>
+          <li>&#x2705; VPC peering unblocked; Aurora provisioning PR feedback fully addressed</li>
         </ul>
       </div>
     </div>
