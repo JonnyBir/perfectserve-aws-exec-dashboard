@@ -66,7 +66,7 @@
   </div>
 </div>
 
-<div class="notice">&#x1F504; Ad hoc refresh &mdash; June 25, 2026. Most recent standup recordings: Atlanta (Jun 22), Canada (Jun 23), OC West (Jun 22), IDP (Jun 16). No new recordings since the scheduled morning run.</div>
+<div class="notice">&#x1F504; Ad hoc refresh &#x2014; June 25, 2026. OC West updated with latest standup notes (Jun 25).</div>
 
 <div class="summary-bar">
   <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Atlanta AWS Migration &#x2014; At Risk</div>
@@ -143,37 +143,37 @@
     <div class="sources">Sources: <a href="https://fathom.video/calls/719163103" target="_blank">Weekly Stand-up 2026-06-23 (EKS/RDS)</a> &middot; <a href="https://fathom.video/calls/705823285" target="_blank">30-Min Check-In 2026-06-11 (blockers)</a></div>
   </div>
 
-  <!-- OC West Expansion -->
+  <!-- OC West Expansion — UPDATED Jun 25 -->
   <div class="card">
     <div class="card-top">
       <div>
         <div class="card-name">OC West Expansion</div>
-        <div class="card-sub">Aurora Global Cluster &middot; US-West-2 DR/latency expansion</div>
+        <div class="card-sub">Aurora Global Cluster &middot; US-West-2 DR/latency expansion &middot; Updated Jun 25</div>
       </div>
       <div class="rag rag-yellow">&#x26A0;&#xFE0F; AT RISK</div>
     </div>
-    <div class="rag-reason">Terraform approval and app code access both pending from PerfectServe &#x2014; July 3 deadline at risk if not resolved immediately.</div>
-    <div class="exec-summary">OC West is at a critical decision point: the Aurora Global Cluster Terraform workspace is built and ready to deploy but awaits PerfectServe&#x2019;s approval to apply the plan. Simultaneously, application-level database analysis is stalled because Lamine needs access to the Python/Django codebase. The July 3 deadline remains achievable only if both approvals land this week. The DMS migration strategy is finalized with a zero-downtime Route 53 CNAME cutover design and instant rollback capability.</div>
+    <div class="rag-reason">Terraform convention exception pending management approval &#x2014; denial would force workspace rebuild and further delay the July 3 deadline.</div>
+    <div class="exec-summary">Forwarding code PRs are resolved across infrastructure and application layers, and resource planning is in place for expansion team readiness. The key unresolved issue is a Terraform workspace convention conflict: management has agreed to pursue a PoC-phase policy exception to avoid significant infrastructure rework. If the exception is denied, Lamine must remove and recreate existing workspaces to comply with standard conventions &#x2014; adding meaningful delay against the July 3 deadline. A lack of centralized coding documentation remains an ongoing efficiency risk.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; Terraform workspace deployment approval pending &#x2014; blocks all downstream DMS configuration</li>
-          <li>&#x26A0;&#xFE0F; Python/Django app code access not granted to Lamine &#x2014; application analysis stalled</li>
-          <li>&#x26A0;&#xFE0F; July 3 hard deadline at risk if PerfectServe responses are delayed beyond this week</li>
+          <li>&#x26A0;&#xFE0F; Terraform convention exception request pending &#x2014; denial forces full workspace rebuild (Scott Manicke to file)</li>
+          <li>&#x26A0;&#xFE0F; No centralized coding documentation &#x2014; recurring risk to development efficiency as team scales</li>
+          <li>&#x26A0;&#xFE0F; July 3 deadline remains tight; context-switching on shared resources adds delivery risk</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>&#x2705; VPC peering unblocked &#x2014; new CIDR block received from Tony; Lamine setting up peering</li>
-          <li>&#x2705; Aurora provisioning PR complete with all AI/HIPAA compliance feedback addressed</li>
-          <li>&#x2705; DMS zero-downtime cutover strategy finalized (Route 53 CNAME flip with instant rollback)</li>
+          <li>&#x2705; Forwarding code PRs resolved across both infrastructure and application layers</li>
+          <li>&#x2705; Management aligned on pursuing PoC-phase policy exception to preserve existing workspace work</li>
+          <li>&#x2705; Resource planning complete &#x2014; team capacity confirmed for expansion project despite context-switching</li>
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; PerfectServe approval to deploy Aurora Global Cluster &#x2014; July 3 deadline</span></div>
-    <div class="sources">Sources: <a href="https://fathom.video/calls/717238962" target="_blank">Stand-up 2026-06-22 (approval blocker)</a> &middot; <a href="https://fathom.video/calls/714298278" target="_blank">Stand-up 2026-06-18 (CIDR/PR progress)</a></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Terraform convention exception decision &#x2014; gates workspace deployment &amp; July 3 deadline</span></div>
+    <div class="sources">Sources: <a href="https://fathom.video/calls/717238962" target="_blank">Stand-up 2026-06-22 (approval blocker)</a> &middot; <a href="https://fathom.video/calls/714298278" target="_blank">Stand-up 2026-06-18 (CIDR/PR progress)</a> &middot; Jun 25 standup notes (policy exception)</div>
   </div>
 
   <!-- IDP -->
@@ -211,6 +211,6 @@
 
 </div>
 
-<div class="footer">Generated June 25, 2026 (ad hoc refresh) &middot; Analysis based on Fathom meeting recordings &middot; PerfectServe Cloud Programs</div>
+<div class="footer">Generated June 25, 2026 (ad hoc refresh &#x2014; OC West updated) &middot; Analysis based on Fathom meeting recordings &middot; PerfectServe Cloud Programs</div>
 </body>
 </html>
