@@ -149,27 +149,27 @@
       </div>
       <div class="rag rag-yellow">&#x26A0;&#xFE0F; AT RISK</div>
     </div>
-    <div class="rag-reason">Two concurrent blockers &#x2014; Terraform deployment awaiting PerfectServe approval and Python/Django app code access not yet granted &#x2014; threaten the July 3 deadline.</div>
-    <div class="exec-summary">Lamine has the first Terraform workspace ready with the Aurora Global Cluster deployment plan staged in Terraform Cloud, but is blocked waiting for a PerfectServe &#x201C;Confirm and Apply&#x201D; approval. Simultaneously, application-level analysis is stalled because Lamine needs access to the Python/Django codebase to validate database interaction patterns &#x2014; a working session with developer Adam Bard (via Matt Conyers) is proposed as the fastest unblock. Both items were escalated to Slack as of June 22; Jon is following up. VPC peering was unblocked earlier this week with a new CIDR block from Tony, and the Aurora provisioning PR feedback has been addressed. The July 3 deadline remains achievable only if approvals arrive this week.</div>
+    <div class="rag-reason">Terraform deployment blocked on PerfectServe approval and a convention exception request is pending &#x2014; denial would force full workspace rebuild, directly threatening the July 3 deadline.</div>
+    <div class="exec-summary">Two parallel blockers are threatening the July 3 deadline. First, the Aurora Global Cluster Terraform workspace is staged and ready but awaiting PerfectServe&#x2019;s &#x201C;Confirm and Apply.&#x201D; Second, management has agreed to pursue a Terraform convention exception for the PoC phase (requested by Scott Manicke) &#x2014; if denied, Lamine will need to tear down and recreate all existing workspaces to meet naming standards, a costly rework. Forwarding code PRs covering both infrastructure and application layers have been resolved, representing solid technical progress. Application-level analysis of the Python/Django codebase remains stalled pending code access, and a lack of centralized coding documentation is flagged as a recurring risk for the team&#x2019;s long-term efficiency.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; Terraform &#x201C;Confirm and Apply&#x201D; approval pending from PerfectServe &#x2014; blocks entire downstream DMS workspace</li>
-          <li>&#x26A0;&#xFE0F; Python/Django app code access not granted; application analysis stalled (potential hidden migration blockers unknown)</li>
-          <li>&#x26A0;&#xFE0F; July 3 deadline at risk if either approval extends into next week</li>
+          <li>&#x26A0;&#xFE0F; Terraform convention exception pending (Scott Manicke) &#x2014; denial forces full workspace rebuild before July 3</li>
+          <li>&#x26A0;&#xFE0F; &#x201C;Confirm and Apply&#x201D; approval still outstanding from PerfectServe &#x2014; blocks DMS workspace configuration</li>
+          <li>&#x26A0;&#xFE0F; Python/Django app code access not granted; database interaction analysis stalled &#x2014; unknown migration risks</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>&#x2705; VPC peering unblocked &#x2014; new CIDR block received from Tony (US-West-2 to EKS cluster)</li>
-          <li>&#x2705; Aurora provisioning PR feedback fully addressed; PostgreSQL 17.9 version confirmed for Global cluster</li>
-          <li>&#x2705; Testing strategy finalized &#x2014; UAT app in US-East connects to Aurora Global in US-West-2 for real-world latency validation</li>
+          <li>&#x2705; Forwarding code PRs resolved across infrastructure and application layers</li>
+          <li>&#x2705; VPC peering unblocked &#x2014; new CIDR block from Tony; Aurora PR feedback fully addressed</li>
+          <li>&#x2705; Management aligned on pursuing PoC convention exception to protect existing workspace investment</li>
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Terraform approval &amp; Aurora provisioning &#x2014; July 3, 2026</span></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Convention exception decision + Terraform approval &#x2014; July 3, 2026</span></div>
     <div class="sources">Sources: <a href="https://fathom.video/calls/717238962" target="_blank">Stand-up Jun 22</a> &middot; <a href="https://fathom.video/calls/714298278" target="_blank">Stand-up Jun 18</a> &middot; <a href="https://fathom.video/calls/708915703" target="_blank">Stand-up Jun 15</a></div>
   </div>
 
