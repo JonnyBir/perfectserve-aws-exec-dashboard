@@ -120,14 +120,14 @@
       </div>
       <div class="rag rag-yellow">&#x26A0;&#xFE0F; YELLOW</div>
     </div>
-    <div class="rag-reason">EKS deployment is complete but unverifiable due to a lack of internal Telmedic EKS expertise; single-developer bottleneck and multiple access gaps are slowing delivery against the August 19 deadline.</div>
-    <div class="exec-summary">Key infrastructure milestones are landing&#x2014;EKS module deployed, RDS instances deploying post-approval, and the S3 Certs Epic closed. However, EKS verification is stalled because no internal expert can validate the Canada cluster against Telmedic&#x2019;s production environment. The resource situation is improving with Brandon, Russell, and Lamine&#x2019;s access tickets now with InfoSec. The Twilio 10DLC registration strategy for Canadian SMS was also resolved, using the existing Telmedic Production-CA account to avoid a 3-week restart from scratch.</div>
+    <div class="rag-reason">EKS deployment is complete but unverifiable due to a lack of internal Telmediq EKS expertise; single-developer bottleneck and multiple access gaps are slowing delivery against the August 19 deadline.</div>
+    <div class="exec-summary">Key infrastructure milestones are landing&#x2014;EKS module deployed, RDS instances deploying post-approval, and the S3 Certs Epic closed. However, EKS verification is stalled because no internal expert can validate the Canada cluster against Telmediq&#x2019;s production environment. The resource situation is improving with Brandon, Russell, and Lamine&#x2019;s access tickets now with IAM. The Twilio 10DLC registration strategy for Canadian SMS was also resolved, using the existing Telmediq Production-CA account to avoid a 3-week restart from scratch.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
           <li>&#x26A0;&#xFE0F; No internal expert to verify the Canada EKS cluster; Matt&#x2019;s AI-generated review was unusable&#x2014;escalation to broader channel needed</li>
-          <li>&#x26A0;&#xFE0F; Resource bottleneck: Dave is sole active developer; Brandon/Russell/Lamine access still with InfoSec</li>
+          <li>&#x26A0;&#xFE0F; Resource bottleneck: Dave is sole active developer; Brandon/Russell/Lamine access tickets now in IAM (moved from infosec queue)</li>
           <li>&#x26A0;&#xFE0F; Integrations Epic 5765 blocked while primary contact Kevin is out; secondary contact needed from Tony</li>
         </ul>
       </div>
@@ -136,7 +136,7 @@
         <ul class="item-list">
           <li>&#x2705; EKS V3/V4 module deployed; RDS instances deploying post-Joe approval; Amazon MQ: 3 brokers up</li>
           <li>&#x2705; S3 Certs Epic closed; integration cert broken into standalone ticket to unblock pipeline</li>
-          <li>&#x2705; Twilio 10DLC Canada strategy defined; Telmedic Production-CA account activated and access granted</li>
+          <li>&#x2705; Twilio 10DLC Canada strategy defined; Telmediq Production-CA account activated and access granted</li>
         </ul>
       </div>
     </div>
@@ -194,13 +194,13 @@
       </div>
       <div class="rag rag-red">&#x1F534; RED</div>
     </div>
-    <div class="rag-reason">June 17 production release to Lightning Bolt failed and was rolled back; LB project at risk of being dropped from Q3 planning entirely by the OC team, which would push delivery to Q4.</div>
-    <div class="exec-summary">The June 17 Lightning Bolt environment release failed due to environment inconsistencies, testing gaps, and a missed deployment step. The RCA is complete and has been shared with the CIO. A new rollout plan is being developed (meeting with Raul scheduled), and the team is pursuing a process change to use the weekly application release window instead of the monthly maintenance window&#x2014;a detailed deployment checklist is being drafted by Brian. The larger strategic risk is the OC team threatening to drop the LB project from Q3 planning entirely; a final decision from Duncan was expected by June 25. The broader IDP roadmap (PSDU/A upgrade, Phases 2&#x2013;4) runs August through November, contingent on TLS 1.1 deprecation completing in July.</div>
+    <div class="rag-reason">June 17 production release to Lightning Bolt failed and was rolled back; the OC team&#x2019;s required engineering work for IDP is at risk of being dropped from Q3 &#x2014; not the LB release itself &#x2014; which would push delivery to Q4.</div>
+    <div class="exec-summary">The June 17 Lightning Bolt environment release failed due to environment inconsistencies, testing gaps, and a missed deployment step. The RCA is complete and has been shared with the CIO. A new rollout plan is being developed (meeting with Raul scheduled), and the team is pursuing a process change to use the weekly application release window instead of the monthly maintenance window&#x2014;a detailed deployment checklist is being drafted by Brian. The larger strategic risk is the OC team deprioritizing their required engineering work for IDP out of Q3 planning entirely &#x2014; this is distinct from the LB release itself; a final decision from Duncan was expected by June 25. The broader IDP roadmap (PSDU/A upgrade, Phases 2&#x2013;4) runs August through November, contingent on TLS 1.1 deprecation completing in July.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; LB project may be dropped from OC team Q3 planning &#x2014; would defer delivery to Q4; Duncan decision pending</li>
+          <li>&#x26A0;&#xFE0F; OC team&#x2019;s required IDP engineering work may be dropped from Q3 planning &#x2014; not the LB release, but the OC capacity to support it; Duncan decision pending</li>
           <li>&#x26A0;&#xFE0F; TLS 1.1 deprecation plan (July production window) still lacks a vetted rollout strategy and customer comms plan</li>
           <li>&#x26A0;&#xFE0F; Recurring maintenance window bumps; August release depends on PerfectServe team commitment to new JIRA roadmap</li>
         </ul>
