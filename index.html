@@ -83,21 +83,21 @@
       </div>
       <div class="rag rag-yellow">&#x26A0; YELLOW</div>
     </div>
-    <div class="rag-reason">Active blockers across staging (DC fix in progress) and production (V4 code dependency on DB38), but team is engaged and resolving issues daily.</div>
-    <div class="exec-summary">The Atlanta migration is progressing with the production plan now officially set &#x2014; monthly maintenance windows from August through December, presented to 50+ customers. QA testing is unblocked as of June 24 with New Relic metrics capture underway. Staging domain controller remediation is expected to complete by EOD June 30 or July 1, unblocking database configuration. The critical remaining risks are the undefined load testing plan and the V4 code dependency blocking production database DB38.</div>
+    <div class="rag-reason">Staging now unblocked &#x2014; DC fix validated, Fortified Data proceeding with database configuration; production DB38 remains blocked on V4 code completion.</div>
+    <div class="exec-summary">The Atlanta migration is progressing with the production plan officially set &#x2014; monthly maintenance windows from August through December, presented to 50+ customers. Staging is now unblocked following DC remediation, with Fortified Data moving forward on database configuration. QA testing is underway with New Relic metrics capture in progress. The critical remaining risks are the undefined load testing plan and the V4 code dependency blocking production database DB38.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
           <li>&#x26A0;&#xFE0F; Load testing plan undefined &#x2014; resource gap with Tony unavailable two weeks; QA cold-cache performance was poor and requires formal K6 test before prod wave</li>
           <li>&#x26A0;&#xFE0F; Production DB38 blocked by incomplete V4 code; David tracking and may take over from Angel to accelerate</li>
-          <li>&#x26A0;&#xFE0F; Staging DC fix in-flight; firewall ticket still pending to enable cross-environment phone traffic</li>
+          <li>&#x26A0;&#xFE0F; Firewall ticket still pending to enable cross-environment phone traffic (Dev &#x2192; AWS)</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>&#x2705; Production migration plan locked: 5-wave monthly cadence Aug&#x2013;Dec, presented to 50+ customers</li>
+          <li>&#x2705; Staging unblocked &#x2014; DC remediation complete; Fortified Data proceeding with database configuration</li>
           <li>&#x2705; QA environment unblocked; James &amp; Betsy running after-hours tests with New Relic instrumentation</li>
           <li>&#x2705; Angel&#x2019;s V4 PRs merged, unblocking further production build work</li>
         </ul>
