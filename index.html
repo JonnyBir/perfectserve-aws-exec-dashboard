@@ -83,29 +83,42 @@
       </div>
       <div class="rag rag-yellow">&#x26A0; YELLOW</div>
     </div>
-    <div class="rag-reason">Staging now unblocked &#x2014; DC fix validated, Fortified Data proceeding with database configuration; production DB38 remains blocked on V4 code completion.</div>
-    <div class="exec-summary">The Atlanta migration is progressing with the production plan officially set &#x2014; monthly maintenance windows from August through December, presented to 50+ customers. Staging is now unblocked following DC remediation, with Fortified Data moving forward on database configuration. QA testing is underway with New Relic metrics capture in progress. The critical remaining risks are the undefined load testing plan and the V4 code dependency blocking production database DB38.</div>
+    <div class="rag-reason">Multiple blockers actively resolving: staging SQL config starting, Redis unvalidated before shutdown, wildcard cert expired in ACM, and Dev ICS server connectivity under investigation.</div>
+    <div class="exec-summary">The Atlanta migration is moving across multiple workstreams as of June 30. Staging is unblocked &#x2014; Jimmy is now starting SQL staging config, Joe&#x2019;s NetApp spike has identified shares with migration plan forming, and the staging file server share migration kicks off Thursday. Ticket 5791 (web server config) is nearing closure with David running the final batch. Dev environment logging is restored (QLogger, Washer, Launcher, Viewer), though telephony in Dev is still under investigation. Redis/SignalR infra work is merged but untested &#x2014; Care API PR must merge before validation can begin, and Redis must be fully validated before Atlanta shutdown.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; Load testing plan undefined &#x2014; resource gap with Tony unavailable two weeks; QA cold-cache performance was poor and requires formal K6 test before prod wave</li>
-          <li>&#x26A0;&#xFE0F; Production DB38 blocked by incomplete V4 code; David tracking and may take over from Angel to accelerate</li>
-          <li>&#x26A0;&#xFE0F; Firewall ticket still pending to enable cross-environment phone traffic (Dev &#x2192; AWS)</li>
+          <li>&#x26A0;&#xFE0F; <strong>Wildcard cert expired in ACM</strong> &#x2014; <code>stagingps.com</code> cert expired ~2 weeks after May import; currently in S3 (wrong location); no automated rotation or Ansible role exists; recurs every ~6 months without a fix. Joe creating service desk ticket; complete by Thursday</li>
+          <li>&#x26A0;&#xFE0F; <strong>Redis/SignalR not validated</strong> &#x2014; infra merged (Angel PR Jun 15) but untested across all environments; Care API PR still pending before testing can begin; Redis must be validated before Atlanta shutdown. Validation ticket: <a href="https://smartpager.atlassian.net/browse/PLT-6033" target="_blank">PLT-6033</a></li>
+          <li>&#x26A0;&#xFE0F; <strong>Dev ICS server blocked</strong> &#x2014; cannot reach SQL or AWS; cross-dependency blocker for Dev environment testing; Esteban engaging Jonathan to investigate</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>&#x2705; Staging unblocked &#x2014; DC remediation complete; Fortified Data proceeding with database configuration</li>
-          <li>&#x2705; QA environment unblocked; James &amp; Betsy running after-hours tests with New Relic instrumentation</li>
-          <li>&#x2705; Angel&#x2019;s V4 PRs merged, unblocking further production build work</li>
+          <li>&#x2705; Staging SQL unblocked &#x2014; Jimmy starting staging SQL config now; staging file server share migration kicks off Thursday (Joe)</li>
+          <li>&#x2705; Dev logging restored &#x2014; config fixed for QLogger, Washer, Launcher, Viewer; devs can see logs again</li>
+          <li>&#x2705; Ticket 5791 nearing closure &#x2014; David running final web server config batch; Ticket 5369 (staging DNS) confirmed not a migration dependency, scoped to &#x201C;after&#x201D;</li>
         </ul>
       </div>
     </div>
     <div class="milestone">
       <span class="milestone-label">Next Critical Milestone</span>
-      <span class="milestone-value">&#x1F3C1; August 2026 &#x2014; Wave 1 production migration window</span>
+      <span class="milestone-value">&#x1F3C1; Thursday Jul 3 &#x2014; Staging file server migration + ACM cert fix &bull; August &#x2014; Wave 1 prod window</span>
+    </div>
+    <div style="font-size:11px;border-top:1px solid #f0f2f5;padding-top:10px;">
+      <div class="section-label" style="margin-bottom:6px;">Action Items</div>
+      <ul class="item-list">
+        <li>&#x1F538; Run final web server config batch &amp; close Ticket 5791 &#x2014; <em>David Schroeder</em></li>
+        <li>&#x1F538; Investigate &amp; resolve telephony issue in Dev &#x2014; <em>James Freeman</em></li>
+        <li>&#x1F538; Create service desk ticket: import staging wildcard cert into ACM (not S3); complete by Thursday &#x2014; <em>Joe Maloney</em></li>
+        <li>&#x1F538; Begin staging file server share migration Thursday &#x2014; <em>Joe Maloney</em></li>
+        <li>&#x1F538; Check with Jonathan re: unblocking Dev ICS server from reaching AWS &#x2014; <em>Esteban Jondahl</em></li>
+        <li>&#x1F538; Create Redis validation testing ticket (all stages) &amp; assign to James &#x2014; <em>Cherie Monteferrante</em></li>
+        <li>&#x1F538; Review Redis ticket chain; confirm Care API PR dependency &#x2014; <em>James Freeman</em></li>
+        <li>&#x1F538; Clean up tickets for Jimmy&#x2019;s SQL/staging work on return &#x2014; <em>Jon</em></li>
+      </ul>
     </div>
     <div class="sources">Sources:
       <a href="https://fathom.video/calls/728843358" target="_blank">Stand-up Jun 29</a> &middot;
