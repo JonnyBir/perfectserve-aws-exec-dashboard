@@ -47,6 +47,14 @@
     .sources a { color: #adb5bd; text-decoration: none; }
     .sources a:hover { color: #0052cc; }
     .footer { max-width: 1200px; margin: 0 auto; text-align: center; font-size: 11px; color: var(--subtext); padding: 8px 0 16px; line-height: 1.6; }
+
+    .owner-section { max-width: 1200px; margin: 0 auto 8px; }
+    .owner-header { max-width: 1200px; margin: 28px auto 14px; padding-bottom: 8px; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 10px; }
+    .owner-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--subtext); }
+    .owner-tag { padding: 3px 10px; border-radius: 4px; font-size: 10px; font-weight: 700; letter-spacing: 0.06em; }
+    .tag-cherie { background: #ede9fe; color: #6d28d9; }
+    .tag-jon    { background: #dbeafe; color: #1d4ed8; }
+    .tag-jashini{ background: #d1fae5; color: #065f46; }
     @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } .two-col { grid-template-columns: 1fr; } .header { flex-direction: column; } .header-meta { text-align: left; } .summary-bar { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 600px) { .summary-bar { grid-template-columns: 1fr; } }
   </style>
@@ -56,7 +64,7 @@
 <div class="header">
   <div>
     <div class="header-title">&#x2601;&#xFE0F; AWS Projects &#x2014; Executive Status Dashboard</div>
-    <div class="header-sub">PerfectServe Cloud Migration &amp; Platform Programs</div>
+    <div class="header-sub">PerfectServe Cloud Migration, Platform &amp; Integration Programs</div>
     <div class="ai-pill">&#x2726; AI-Analyzed &#xB7; Fathom Meeting Notes</div>
   </div>
   <div class="header-meta">
@@ -72,6 +80,93 @@
   <div class="summary-chip"><div class="chip-dot dot-red"></div>IDP &#x2014; OFF TRACK</div>
 </div>
 
+<!-- CHERIE-START -->
+<div class="owner-header">
+  <span class="owner-label">Cherie Monte&#x2019;s Projects</span>
+  <span class="owner-tag tag-cherie">PM &middot; Integrations &amp; Identity</span>
+</div>
+<div class="grid">
+
+  <div class="card">
+    <div class="card-top">
+      <div>
+        <div class="card-name">Genesys Deprecation &#x2192; Twilio</div>
+        <div class="card-sub">Atlanta DC &#x2192; Twilio/AWS &middot; Migration waves Aug&ndash;Dec</div>
+      </div>
+      <div class="rag rag-yellow">&#x26A0; AT RISK</div>
+    </div>
+    <div class="rag-reason">Final porting batches imminent (Jul 2 &amp; Jul 6); SFTP and Five9s tracks at risk of missing the July 30 milestone.</div>
+    <div class="exec-summary">All ~52k toll-free and local number submissions are complete with port dates July 2 &amp; July 6 locked. Residual risk centers on 11&#x2013;12 Five9s-managed numbers that may not be removable from Batch 7 and an SFTP track blocked on documentation delivery to CS. Contractors started July 1 to support the August push.</div>
+    <div class="two-col">
+      <div>
+        <div class="section-label">Key Risks &amp; Blockers</div>
+        <ul class="item-list">
+          <li>&#x26A0;&#xFE0F; 11&#x2013;12 Five9s numbers may not be removable from Jul 2 port batch &#x2014; routing failure risk post-port</li>
+          <li>&#x26A0;&#xFE0F; SFTP track blocked until docs and customer list delivered to CS &#x2014; threatens July 30 milestone</li>
+          <li>&#x26A0;&#xFE0F; Five9s SIP trunk setup pending PS configuration details; ~200k calls/month at risk</li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-label">Recent Progress</div>
+        <ul class="item-list">
+          <li>&#x2705; All ~52k number submissions complete; port dates Jul 2 &amp; Jul 6 locked with on-call coverage</li>
+          <li>&#x2705; Five9s confirmed SIP trunk capability &#x2014; migration proceeds once PS config details provided</li>
+          <li>&#x2705; July 30 milestone established: 50% migration target for OIDC, SFTP, and VPN to de-risk Aug 31</li>
+        </ul>
+      </div>
+    </div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; July 2 &#x2014; Toll-Free Batch 7 port (~28k numbers)</span></div>
+    <div class="sources">Sources:
+      <a href="https://fathom.video/calls/725797616" target="_blank">Stand-up Jun 29</a> &middot;
+      <a href="https://fathom.video/calls/724289274" target="_blank">Stand-up Jun 26</a> &middot;
+      <a href="https://fathom.video/calls/722873489" target="_blank">Stand-up Jun 25</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <div>
+        <div class="card-name">LDAP &#x2192; OIDC Customer Migration</div>
+        <div class="card-sub">Legacy LDAP Authenticators &#x2192; OIDC/CSP Portal &middot; Hard deadline Aug 31</div>
+      </div>
+      <div class="rag rag-yellow">&#x26A0; AT RISK</div>
+    </div>
+    <div class="rag-reason">Migration rate remains critically low against a hard Aug 31 deadline; new delete endpoint introduces domain-association data risk requiring UI guardrails before release.</div>
+    <div class="exec-summary">Customer engagement is improving post-webinar with Carilion scheduling a July 9 cutover after initially requesting a January delay. However, each cutover requires a dedicated Fortify engineer until the CSP Portal bulk upload goes live, creating a hard capacity constraint through August. A newly approved Phase 2 delete endpoint carries data risk without UI guardrails.</div>
+    <div class="two-col">
+      <div>
+        <div class="section-label">Key Risks &amp; Blockers</div>
+        <ul class="item-list">
+          <li>&#x26A0;&#xFE0F; Migration rate critically low against hard Aug 31 deadline &#x2014; CSA bandwidth is the top constraint</li>
+          <li>&#x26A0;&#xFE0F; Delete endpoint operates on domain name (not ID) &#x2014; affects all authenticators sharing a domain; data risk without UI guardrails</li>
+          <li>&#x26A0;&#xFE0F; Each cutover requires a dedicated Fortify engineer until bulk upload goes live &#x2014; hard capacity ceiling July&#x2013;August</li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-label">Recent Progress</div>
+        <ul class="item-list">
+          <li>&#x2705; Carilion scheduled July 9 cutover after requesting January delay &#x2014; webinar clarified Aug 31 hard stop</li>
+          <li>&#x2705; Phase 2 delete endpoint approved Jun 30 &#x2014; reduces manual support tickets once live with guardrails</li>
+          <li>&#x2705; Data cleanup underway &#x2014; vetting anomalous OIDC accounts to reduce migration scope</li>
+        </ul>
+      </div>
+    </div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; July 9 &#x2014; Carilion OIDC cutover (CAB approval required)</span></div>
+    <div class="sources">Sources:
+      <a href="https://fathom.video/calls/727821907" target="_blank">Stand-up Jun 30</a> &middot;
+      <a href="https://fathom.video/calls/724289274" target="_blank">Stand-up Jun 26</a> &middot;
+      <a href="https://fathom.video/calls/722873489" target="_blank">Stand-up Jun 25</a>
+    </div>
+  </div>
+
+</div>
+<!-- CHERIE-END -->
+
+<!-- JON-START -->
+<div class="owner-header">
+  <span class="owner-label">Jon&#x2019;s Projects</span>
+  <span class="owner-tag tag-jon">PM &middot; AWS Migration &amp; Platform</span>
+</div>
 <div class="grid">
 
   <div class="card">
@@ -187,6 +282,19 @@
   </div>
 
 </div>
+<!-- JON-END -->
+
+<!-- JASHINI-START -->
+<div class="owner-header">
+  <span class="owner-label">Jashini&#x2019;s Projects</span>
+  <span class="owner-tag tag-jashini">PM &middot; Workload Migration</span>
+</div>
+<div class="grid" style="min-height:80px;align-items:center;">
+  <div class="card" style="grid-column:1/-1;text-align:center;padding:32px;color:var(--subtext);font-size:13px;">
+    No projects configured yet &#x2014; Jashini&#x2019;s section will appear here once her skill is set up.
+  </div>
+</div>
+<!-- JASHINI-END -->
 
 <div class="footer">Generated 2026-07-01 &#xB7; Analysis based on Fathom meeting recordings &#xB7; PerfectServe Cloud Programs</div>
 </body>
