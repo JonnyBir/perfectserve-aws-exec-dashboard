@@ -136,29 +136,36 @@
       </div>
       <div class="rag rag-yellow">&#x26A0; YELLOW</div>
     </div>
-    <div class="rag-reason">EKS blocked by non-functional PerfectServe &#x201C;potted identities&#x201D; module; team access still pending IAM approval; holiday week availability compounds resolution risk.</div>
-    <div class="exec-summary">The Canada AWS Platform has made meaningful infrastructure progress &#x2014; EKS is deployed, RDS instances are being provisioned, and Amazon MQ has 3 brokers running. However, EKS is currently blocked by a non-functional PerfectServe module pending a fix from Matt, and team access for Brandon and Russell remains stuck in the IAM process. With key PerfectServe contacts (Adam, Matt) on vacation this holiday week, resolution timelines are uncertain and progress may stall.</div>
+    <div class="rag-reason">Redis work unblocked after resolving Terraform state drift; EKS pilot identities still under investigation with no resolution timeline; team out July 1 &#x2014; no progress until next week.</div>
+    <div class="exec-summary">The Canada AWS Platform is heading into the July 1 holiday with one key blocker resolved and one still open. Redis work is now unblocked &#x2014; Dave identified Terraform state drift where SG rules were manually configured in the AWS console rather than Terraform; he is migrating those rules into the Terraform repo to align state before the holiday. The EKS pilot identities issue remains under investigation by Matt with no resolution timeline; this is the only known blocker and will not progress until next week. Anna Simmons has no updates this week but expects more to share after the break.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; EKS blocked by non-functional PS &#x201C;potted identities&#x201D; module &#x2014; awaiting Matt fix; no internal K8s expert to independently verify deployment</li>
-          <li>&#x26A0;&#xFE0F; Team access (Brandon, Russell, Lamine) stuck in PerfectServe IAM process &#x2014; Jon escalating to IT Slack</li>
-          <li>&#x26A0;&#xFE0F; Holiday week: Adam and Matt largely unavailable; delays likely on approvals and EKS resolution</li>
+          <li>&#x26A0;&#xFE0F; <strong>Terraform state drift on Security Groups</strong> &#x2014; SG rules were manually configured in AWS console instead of Terraform; any <code>terraform apply</code> could overwrite console-managed rules; Dave actively resolving, but process gap needs documentation to prevent recurrence</li>
+          <li>&#x26A0;&#xFE0F; <strong>EKS pilot identities unresolved</strong> &#x2014; Matt still investigating; no resolution timeline; sole known platform blocker; will not progress until week of Jul 7 at earliest</li>
+          <li>&#x26A0;&#xFE0F; <strong>Holiday coverage gap</strong> &#x2014; team out July 1; any blockers handled async via Slack only; no formal on-call coverage</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>&#x2705; EKS V3/V4 module deployed by Dave Gamez; WAF/ALB PR created as parallel-track work</li>
-          <li>&#x2705; RDS instances deploying post-approval; Amazon MQ 3 brokers provisioned and running</li>
+          <li>&#x2705; Redis work unblocked &#x2014; Terraform state drift identified and Dave migrating console-configured SG rules into Terraform repo; no blockers heading into holiday</li>
+          <li>&#x2705; RDS instances deployed and running; Amazon MQ 3 brokers provisioned; WAF/ALB PR created</li>
           <li>&#x2705; S3 Certs Epic closed; IRSA ownership clarified (David Schroeder, Ticket #5675)</li>
         </ul>
       </div>
     </div>
     <div class="milestone">
       <span class="milestone-label">Next Critical Milestone</span>
-      <span class="milestone-value">&#x1F3C1; EKS verification &amp; team access unblock &#x2014; July 2026</span>
+      <span class="milestone-value">&#x1F3C1; EKS pilot identities resolution + Redis validation &#x2014; Week of Jul 7</span>
+    </div>
+    <div style="font-size:11px;border-top:1px solid #f0f2f5;padding-top:10px;">
+      <div class="section-label" style="margin-bottom:6px;">Action Items</div>
+      <ul class="item-list">
+        <li>&#x1F538; Migrate manually-configured SG rules from AWS console into Terraform repo; validate state alignment &#x2014; <em>Dave Gamez</em> &#x2014; This week</li>
+        <li>&#x1F538; Continue investigation of EKS pilot identities issue &#x2014; <em>Matt</em> &#x2014; Ongoing (resumes week of Jul 7)</li>
+      </ul>
     </div>
     <div class="sources">Sources:
       <a href="https://fathom.video/calls/725639518" target="_blank">Stand-up Jun 29</a> &middot;
