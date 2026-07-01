@@ -89,9 +89,9 @@
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; <strong>Wildcard cert expired in ACM</strong> &#x2014; <code>stagingps.com</code> cert expired ~2 weeks after May import; currently in S3 (wrong location); no automated rotation or Ansible role exists; recurs every ~6 months without a fix. Joe creating service desk ticket; complete by Thursday</li>
-          <li>&#x26A0;&#xFE0F; <strong>Redis/SignalR not validated</strong> &#x2014; infra merged (Angel PR Jun 15) but untested across all environments; Care API PR still pending before testing can begin; Redis must be validated before Atlanta shutdown. Validation ticket: <a href="https://smartpager.atlassian.net/browse/PLT-6033" target="_blank">PLT-6033</a></li>
-          <li>&#x26A0;&#xFE0F; <strong>Dev ICS server blocked</strong> &#x2014; cannot reach SQL or AWS; cross-dependency blocker for Dev environment testing; Esteban engaging Jonathan to investigate</li>
+          <li>&#x26A0;&#xFE0F; <strong>Wildcard cert expired in ACM</strong> &#x2014; staging cert lapsed and is in the wrong location; no automated rotation process exists; remediation targeted for Thursday</li>
+          <li>&#x26A0;&#xFE0F; <strong>Redis/SignalR not validated</strong> &#x2014; infrastructure complete but untested; pending dependency must resolve before validation can begin; Redis must be confirmed stable before Atlanta can shut down</li>
+          <li>&#x26A0;&#xFE0F; <strong>Dev environment connectivity gap</strong> &#x2014; ICS server unable to reach SQL and AWS; blocking Dev testing; under active investigation</li>
         </ul>
       </div>
       <div>
@@ -106,19 +106,6 @@
     <div class="milestone">
       <span class="milestone-label">Next Critical Milestone</span>
       <span class="milestone-value">&#x1F3C1; Thursday Jul 3 &#x2014; Staging file server migration + ACM cert fix &bull; August &#x2014; Wave 1 prod window</span>
-    </div>
-    <div style="font-size:11px;border-top:1px solid #f0f2f5;padding-top:10px;">
-      <div class="section-label" style="margin-bottom:6px;">Action Items</div>
-      <ul class="item-list">
-        <li>&#x1F538; Run final web server config batch &amp; close Ticket 5791 &#x2014; <em>David Schroeder</em></li>
-        <li>&#x1F538; Investigate &amp; resolve telephony issue in Dev &#x2014; <em>James Freeman</em></li>
-        <li>&#x1F538; Create service desk ticket: import staging wildcard cert into ACM (not S3); complete by Thursday &#x2014; <em>Joe Maloney</em></li>
-        <li>&#x1F538; Begin staging file server share migration Thursday &#x2014; <em>Joe Maloney</em></li>
-        <li>&#x1F538; Check with Jonathan re: unblocking Dev ICS server from reaching AWS &#x2014; <em>Esteban Jondahl</em></li>
-        <li>&#x1F538; Create Redis validation testing ticket (all stages) &amp; assign to James &#x2014; <em>Cherie Monteferrante</em></li>
-        <li>&#x1F538; Review Redis ticket chain; confirm Care API PR dependency &#x2014; <em>James Freeman</em></li>
-        <li>&#x1F538; Clean up tickets for Jimmy&#x2019;s SQL/staging work on return &#x2014; <em>Jon</em></li>
-      </ul>
     </div>
     <div class="sources">Sources:
       <a href="https://fathom.video/calls/728843358" target="_blank">Stand-up Jun 29</a> &middot;
@@ -137,12 +124,12 @@
       <div class="rag rag-yellow">&#x26A0; YELLOW</div>
     </div>
     <div class="rag-reason">Redis work unblocked after resolving Terraform state drift; EKS pilot identities still under investigation with no resolution timeline; team out July 1 &#x2014; no progress until next week.</div>
-    <div class="exec-summary">The Canada AWS Platform is heading into the July 1 holiday with one key blocker resolved and one still open. Redis work is now unblocked &#x2014; Dave identified Terraform state drift where SG rules were manually configured in the AWS console rather than Terraform; he is migrating those rules into the Terraform repo to align state before the holiday. The EKS pilot identities issue remains under investigation by Matt with no resolution timeline; this is the only known blocker and will not progress until next week. Anna Simmons has no updates this week but expects more to share after the break.</div>
+    <div class="exec-summary">The Canada AWS Platform heads into the July 1 holiday with momentum on Redis &#x2014; a Terraform state drift issue was identified and is being resolved, clearing the path for Redis work. The EKS pilot identities issue remains the sole open blocker and will not advance until the week of July 7. The team expects more progress to report after the holiday break.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; <strong>Terraform state drift on Security Groups</strong> &#x2014; SG rules were manually configured in AWS console instead of Terraform; any <code>terraform apply</code> could overwrite console-managed rules; Dave actively resolving, but process gap needs documentation to prevent recurrence</li>
+          <li>&#x26A0;&#xFE0F; <strong>Terraform state drift on Security Groups</strong> &#x2014; SG rules were manually configured outside IaC, creating drift risk; being remediated this week; process gap should be documented to prevent recurrence</li>
           <li>&#x26A0;&#xFE0F; <strong>EKS pilot identities unresolved</strong> &#x2014; Matt still investigating; no resolution timeline; sole known platform blocker; will not progress until week of Jul 7 at earliest</li>
           <li>&#x26A0;&#xFE0F; <strong>Holiday coverage gap</strong> &#x2014; team out July 1; any blockers handled async via Slack only; no formal on-call coverage</li>
         </ul>
@@ -159,13 +146,6 @@
     <div class="milestone">
       <span class="milestone-label">Next Critical Milestone</span>
       <span class="milestone-value">&#x1F3C1; EKS pilot identities resolution + Redis validation &#x2014; Week of Jul 7</span>
-    </div>
-    <div style="font-size:11px;border-top:1px solid #f0f2f5;padding-top:10px;">
-      <div class="section-label" style="margin-bottom:6px;">Action Items</div>
-      <ul class="item-list">
-        <li>&#x1F538; Migrate manually-configured SG rules from AWS console into Terraform repo; validate state alignment &#x2014; <em>Dave Gamez</em> &#x2014; This week</li>
-        <li>&#x1F538; Continue investigation of EKS pilot identities issue &#x2014; <em>Matt</em> &#x2014; Ongoing (resumes week of Jul 7)</li>
-      </ul>
     </div>
     <div class="sources">Sources:
       <a href="https://fathom.video/calls/725639518" target="_blank">Stand-up Jun 29</a> &middot;
