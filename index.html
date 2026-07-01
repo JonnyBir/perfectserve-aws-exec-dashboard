@@ -79,14 +79,14 @@
       <div><div class="card-name">Atlanta AWS Migration</div><div class="card-sub">Atlanta Data Center &#x2192; AWS Migration</div></div>
       <div class="rag rag-yellow">&#x26A0;&#xFE0F; AT RISK</div>
     </div>
-    <div class="rag-reason">Staging has hit repeated networking/domain-controller blockers week over week, and a newly surfaced cold-cache performance risk threatens the now-official, tightly-scheduled August production cutover.</div>
-    <div class="exec-summary">Dev and QA are progressing &#x2014; dev is nearing stability and QA testing is unblocked &#x2014; while the production cutover plan (5 waves, monthly maintenance windows, August&#x2013;December) is now official and has been presented to 50+ customers. However, staging has been blocked by domain-controller and firewall issues in nearly every recent stand-up, and QA load testing just surfaced a cold-cache performance risk that needs a formal load-testing plan before go-live.</div>
+    <div class="rag-reason">Staging is now unblocked and progressing; key risks are Redis validation required before shutdown, expired ACM cert needing remediation, and a formal load-test plan still needed before the August production cutover.</div>
+    <div class="exec-summary">Staging is unblocked as of June 30 &#x2014; SQL configuration is underway and the file server share migration begins Thursday. The production cutover plan (5 waves, monthly maintenance windows, August&#x2013;December) is official and has been presented to 50+ customers. Dev environment stability is improving, with a telephony issue under active investigation. The key outstanding risk is Redis/SignalR &#x2014; infrastructure is in place but unvalidated, and validation must complete before Atlanta can shut down.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
           <li>&#x26A0;&#xFE0F; Cold-cache performance issue found in QA load testing; a formal load-test plan is needed and the prior owner is unavailable for two weeks</li>
-          <li>&#x26A0;&#xFE0F; Staging has been blocked repeatedly by Palo Alto/Checkpoint domain-controller issues; FSMO role transfer to AWS is still outstanding in dev</li>
+          <li>&#x26A0;&#xFE0F; Redis/SignalR unvalidated across all environments &#x2014; infrastructure complete but testing pending a Care API dependency; must be confirmed stable before Atlanta shutdown</li>
           <li>&#x26A0;&#xFE0F; Final production database (DB38) is gated on V4 code completion, against a firm 5-wave migration plan with little schedule slack</li>
         </ul>
       </div>
