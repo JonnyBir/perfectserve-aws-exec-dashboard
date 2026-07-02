@@ -66,127 +66,131 @@
 </div>
 
 <div class="summary-bar">
-  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Atlanta Migration &#x2014; YELLOW</div>
-  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Canada Platform &#x2014; YELLOW</div>
-  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>OC West Expansion &#x2014; YELLOW</div>
-  <div class="summary-chip"><div class="chip-dot dot-red"></div>IDP &#x2014; RED</div>
+  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Atlanta AWS Migration &#x2014; AT RISK</div>
+  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Canada AWS Platform &#x2014; AT RISK</div>
+  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>OC West Expansion &#x2014; AT RISK</div>
+  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>IDP &#x2014; AT RISK</div>
 </div>
 
 <div class="grid">
 
+  <!-- Atlanta AWS Migration -->
   <div class="card">
     <div class="card-top">
       <div><div class="card-name">Atlanta AWS Migration</div><div class="card-sub">Goal: Exit the Atlanta data center by migrating all environments (dev, QA, staging, prod) to AWS with zero customer disruption. &middot; Timeline: Build complete early Aug &#x2192; 5 monthly production migration waves, Aug 5 &#x2013; Dec 2026.</div></div>
       <div class="rag rag-yellow">&#x1F7E1; YELLOW</div>
     </div>
-    <div class="rag-reason">Production build must complete by early August to hit the first Aug 5 migration window, with an expired certificate and unfinished V4 code still blocking key work.</div>
-    <div class="exec-summary">Per Tony&#x2019;s directive the team has pivoted from staging to the production build to protect the August 5 first migration window. Staging EC2s are nearly complete and the domain controller fix is in validation, but prod scope is larger than databases alone &#x2014; new web servers and RabbitMQ instances are required. The customer-facing 5-wave monthly migration plan (August&#x2013;December) is official; a production migration-path meeting is set for Monday.</div>
+    <div class="rag-reason">Priority has shifted to the production build to protect the tight Aug 5 first migration wave, while an expired certificate blocks staging and a formal load testing plan is still unowned.</div>
+    <div class="exec-summary">The migration plan is now official &#x2014; five monthly maintenance-window waves from August through December, presented to 50+ customers &#x2014; and per Tony&#x2019;s directive the team is pivoting from staging to the production build (web servers, RabbitMQ, app config) to hold the Aug 5 date. Staging EC2s are nearly complete and the problem domain controller fix is validating, but an expired cert is blocking ALB deployment and QA cold-cache performance revealed the need for a load testing plan with no clear owner. A Monday session will define the production migration path.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; Expired certificate blocking staging ALB deployment and RabbitMQ cert re-roll; David attempting self-service fix via S3/ACM</li>
-          <li>&#x26A0;&#xFE0F; Final prod database (DB38) blocked until V4 code is complete</li>
-          <li>&#x26A0;&#xFE0F; No formal load testing plan &#x2014; QA cold-cache performance was poor and plan owner (Tony) is unavailable for two weeks</li>
+          <li>&#x26A0;&#xFE0F; Expired certificate blocks Angel&#x2019;s staging ALB deployment and the RabbitMQ cert re-roll; David attempting a self-service S3&#x2192;ACM fix</li>
+          <li>&#x26A0;&#xFE0F; No formal load testing plan for cold-cache performance risk; previous owner (Tony) unavailable for two weeks</li>
+          <li>&#x26A0;&#xFE0F; Final prod database (DB38) blocked until V4 code completes; David may take over development to accelerate</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>&#x2705; Staging EC2 build nearly complete; final instance running</li>
-          <li>&#x2705; Production migration plan finalized and presented to 50+ customers (monthly windows Aug&#x2013;Dec)</li>
-          <li>&#x2705; Staging domain controller fix in progress, unblocking database configuration</li>
+          <li>&#x2705; Production migration plan finalized and presented to 50+ customers &#x2014; 5 monthly waves Aug&#x2013;Dec</li>
+          <li>&#x2705; Staging EC2 build nearly complete; problem domain controller fix in validation</li>
+          <li>&#x2705; Prod work unblocked after Angel&#x2019;s PRs merged; new prod instances spinning up soon</li>
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Aug 5 &#x2014; first production migration window (build complete early Aug)</span></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Aug 5 &#x2014; first production migration wave (build complete early Aug)</span></div>
     <div class="sources">Sources: <a href="https://fathom.video/calls/729864133" target="_blank">Stand-up Jul 1</a> &middot; <a href="https://fathom.video/calls/728843358" target="_blank">Stand-up Jun 29</a> &middot; <a href="https://fathom.video/calls/722649290" target="_blank">Stand-up Jun 25</a></div>
   </div>
 
+  <!-- Canada AWS Platform -->
   <div class="card">
     <div class="card-top">
       <div><div class="card-name">Canada AWS Platform</div><div class="card-sub">Goal: Stand up a production-grade Canadian AWS platform (EKS, RDS, Amazon MQ, WAF/ALB) to meet Canadian data-residency requirements. &middot; Timeline: Core infrastructure build through July; integrations targeted mid-July; EKS verification pending module fix.</div></div>
       <div class="rag rag-yellow">&#x1F7E1; YELLOW</div>
     </div>
-    <div class="rag-reason">EKS build is blocked by a broken PerfectServe module with no internal expert to verify the cluster, and holiday-week absences plus stalled IAM access are slowing resolution.</div>
-    <div class="exec-summary">Infrastructure delivery continues &#x2014; RDS deployments are underway, three Amazon MQ brokers are live, and WAF/ALB work is progressing &#x2014; but the EKS workstream is stalled on a non-functional &#x201C;pod identities&#x201D; module awaiting a fix from Matt. Cluster verification has no clear owner since prior K8s experts left. Jon is escalating AWS account access for new team members (Brandon, Russell) stuck in the PerfectServe IAM process.</div>
+    <div class="rag-reason">EKS remains blocked by a broken PerfectServe module with no fix yet from Matt, team AWS access is stalled in the client&#x2019;s IAM process, and holiday-week vacations threaten resolution speed.</div>
+    <div class="exec-summary">Core infrastructure continues to land &#x2014; RDS instances deployed, three Amazon MQ brokers up, and Dave has pivoted to WAF/ALB work with a WAF PR in review while EKS waits on a fix to the non-functional &#x201C;potted identities&#x201D; module. IRSA ownership was consolidated under David Schroeder (#5675) to eliminate duplicate work. The larger concern is throughput: no internal expert exists to verify the EKS cluster, new team members (Brandon, Russell) are still stuck in PerfectServe&#x2019;s IAM approval process, and key client contacts are out for the holiday week.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; EKS build blocked by non-functional PerfectServe pod-identities module; fix owed by Matt</li>
-          <li>&#x26A0;&#xFE0F; No internal expert to verify the new Canada EKS cluster; prior experts have left</li>
-          <li>&#x26A0;&#xFE0F; Team AWS account access stalled in PerfectServe IAM; key contacts (Matt, Adam, Tony) out for holiday week</li>
+          <li>&#x26A0;&#xFE0F; EKS build blocked by non-functional &#x201C;potted identities&#x201D; module; awaiting fix from Matt, escalated in the Canada channel</li>
+          <li>&#x26A0;&#xFE0F; Team AWS account access stalled in PerfectServe IAM; Jon escalating to unblock Brandon and Russell</li>
+          <li>&#x26A0;&#xFE0F; No internal expert to verify the Canada EKS cluster; key contacts (Matt, Adam, Tony) out during holiday week</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>&#x2705; RDS instance deployments underway post-approval; V3/V4 EKS module deployed</li>
-          <li>&#x2705; Amazon MQ live with 3 brokers; WAF PR created while EKS is blocked</li>
-          <li>&#x2705; IRSA ownership consolidated under one ticket (#5675) to eliminate duplicate work</li>
+          <li>&#x2705; RDS instances deployed post-approval; Amazon MQ brokers (3) stood up with VPC endpoints next</li>
+          <li>&#x2705; Pivoted to WAF/ALB while EKS is blocked &#x2014; WAF PR created</li>
+          <li>&#x2705; IRSA consolidated under one owner (Ticket #5675), leveraging the existing OIDC provider</li>
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; EKS module fix &amp; cluster verification to unblock platform build</span></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; EKS module fix &amp; cluster verification; integrations targeted mid-July</span></div>
     <div class="sources">Sources: <a href="https://fathom.video/calls/725639518" target="_blank">Stand-up Jun 29</a> &middot; <a href="https://fathom.video/calls/722649304" target="_blank">Stand-up Jun 25</a> &middot; <a href="https://fathom.video/calls/719163103" target="_blank">Weekly Jun 23</a></div>
   </div>
 
+  <!-- OC West Expansion -->
   <div class="card">
     <div class="card-top">
       <div><div class="card-name">OC West Expansion</div><div class="card-sub">Goal: Empirically validate latency for West-region (KP) users via an Aurora Global reader in us-west-2 to inform the production build vs. ROI decision. &middot; Timeline: POC infra complete &#x2192; DMS full load week of Jul 6 &#x2192; latency assessment &amp; Phase 5 ROI deck to follow.</div></div>
       <div class="rag rag-yellow">&#x1F7E1; YELLOW</div>
     </div>
-    <div class="rag-reason">The July 3 POC target is at risk pending a PerfectServe code change, and the project is at its 30-hour weekly budget ceiling.</div>
-    <div class="exec-summary">The Aurora Global cluster is provisioned via Terraform and the DMS full-load plan is staged, but execution waits on Miguel&#x2019;s connection-string change to the private hosted zone &#x2014; the sole dependency before data load can begin. With the full load itself taking 1&#x2013;2 days, the final latency assessment likely slips into the week of July 6. Phase 5 output is a high-level ROI slide deck to inform the production build decision.</div>
+    <div class="rag-reason">The Jul 3 POC target has slipped &#x2014; the DMS full load is blocked on a PerfectServe code change and the project is at its 30-hour weekly budget ceiling.</div>
+    <div class="exec-summary">POC infrastructure is done: the Aurora Global cluster is provisioned via Terraform and the DMS full-load workspace has a clean dry run (6 resources) ready to apply. The sole dependency is Miguel&#x2019;s connection-string change to the private hosted zone, without which applying DMS would risk a service outage. With the full load itself taking 1&#x2013;2 days, the latency assessment moves into the week of Jul 6. Lamine is managing hours against the 30-hour weekly budget cap, and the Phase 5 deliverable is confirmed as a high-level ROI slide deck for the contract decision.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; DMS full load blocked on Miguel&#x2019;s connection-string code change (private hosted zone)</li>
-          <li>&#x26A0;&#xFE0F; July 3 completion target at risk &#x2014; full load alone could take 1&#x2013;2 days</li>
-          <li>&#x26A0;&#xFE0F; Project at its 30-hour weekly budget cap; hours being actively managed to avoid overage</li>
+          <li>&#x26A0;&#xFE0F; DMS full load blocked on Miguel&#x2019;s connection-string change to the private hosted zone &#x2014; the sole remaining dependency</li>
+          <li>&#x26A0;&#xFE0F; Jul 3 completion target at risk; 1&#x2013;2 day full load pushes final assessment into the week of Jul 6</li>
+          <li>&#x26A0;&#xFE0F; Project at its 30-hour weekly budget cap; Lamine managing hours to avoid overage</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
           <li>&#x2705; Aurora Global cluster provisioned and running via Terraform</li>
-          <li>&#x2705; DMS full-load Terraform dry run ready (6 resources)</li>
-          <li>&#x2705; POC infrastructure approach approved; V4-standard rebuild deferred to production phase</li>
+          <li>&#x2705; DMS full-load Terraform dry run ready (6 resources) &#x2014; apply is one approval away</li>
+          <li>&#x2705; POC infrastructure approach approved; V4-standard rebuild deferred to the production phase</li>
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; DMS full load &amp; latency assessment &#x2014; slipping to week of Jul 6</span></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; DMS full load week of Jul 6 &#x2192; latency assessment &amp; Phase 5 ROI deck</span></div>
     <div class="sources">Sources: <a href="https://fathom.video/calls/725639508" target="_blank">Stand-up Jun 29</a> &middot; <a href="https://fathom.video/calls/725236168" target="_blank">POC Strategy Jun 25</a> &middot; <a href="https://fathom.video/calls/717238962" target="_blank">Stand-up Jun 22</a></div>
   </div>
 
+  <!-- IDP -->
   <div class="card">
     <div class="card-top">
-      <div><div class="card-name">IDP</div><div class="card-sub">Goal: Deploy the IDP/PS upgrade via weekly releases with near-zero downtime, replacing the monthly maintenance-window cadence. &middot; Timeline: Jul 8 TLS upgrade &#x2192; code review &amp; release challenge next week &#x2192; QA regression (1&#x2013;2 wks) &#x2192; August release; LB rollout mid-July.</div></div>
-      <div class="rag rag-red">&#x1F534; RED</div>
+      <div><div class="card-name">IDP</div><div class="card-sub">Goal: Deploy the IDP/PS upgrade via weekly releases with near-zero downtime, replacing the monthly maintenance-window cadence. &middot; Timeline: Jul 8 TLS upgrade &#x2192; code review &amp; release challenge &#x2192; QA regression (1&#x2013;2 wks) &#x2192; August release; LB rollout mid-July.</div></div>
+      <div class="rag rag-yellow">&#x1F7E1; YELLOW</div>
     </div>
-    <div class="rag-reason">All development is blocked by an unresolved local debugging failure, the QA code review slipped a week, and the LB project risks being dropped from Q3 planning &#x2014; escalation is underway.</div>
-    <div class="exec-summary">The PS upgrade cannot deploy to QA until a code review rescheduled to next week, and a queue-connection failure &#x2014; possibly tied to the PS Dev environment&#x2019;s AWS migration &#x2014; is blocking all development. The June 17 Lightning Bolt release failure has a completed RCA (environment inconsistencies, testing gaps, missed deployment step) shared with the CIO, with correction items identified for the next window. Weekly-release approval and the July 8 TLS prerequisite keep an August release achievable if blockers clear quickly.</div>
+    <div class="rag-reason">The weekly-release approval is a major win, but the final code review slipped a week, a local debugging failure is blocking all development, and QA capacity remains a single point of failure.</div>
+    <div class="exec-summary">IDP is approved for weekly releases with near-zero downtime &#x2014; the strategic outcome the team pushed for &#x2014; with the Jul 8 TLS upgrade as the hard prerequisite and an August release target. Momentum is at risk near-term: the final code review was rescheduled to next week after poor attendance, Brian&#x2019;s local queue-connection failure is blocking all development (possibly tied to the PS Dev AWS migration), and the on-prem vs. AWS deployment strategy is undefined. The June 17 Lightning Bolt release failure has a completed RCA shared with the CIO, with correction items identified for the next release window.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; Local debugging queue-connection failure blocking all development; Jon escalating to SRE Monday if unresolved</li>
-          <li>&#x26A0;&#xFE0F; LB project at risk of being dropped from Q3 planning by the OC team</li>
-          <li>&#x26A0;&#xFE0F; Betsy is a single QA point of failure across AWS, TLS, and IDP testing; deployment strategy (on-prem vs. AWS) still undefined</li>
+          <li>&#x26A0;&#xFE0F; Local debugging queue-connection failure blocking all development; Jon escalating to SRE if unresolved by Monday</li>
+          <li>&#x26A0;&#xFE0F; Final code review slipped to next week, delaying release challenge and QA deployment</li>
+          <li>&#x26A0;&#xFE0F; Betsy is a QA single point of failure across AWS, TLS, and IDP testing; deployment strategy (on-prem vs. AWS) undefined</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>&#x2705; IDP approved for weekly releases with near-zero downtime, escaping the monthly maintenance-window cadence</li>
-          <li>&#x2705; June 17 LB failure RCA completed, shared with CIO, correction items identified for next release window</li>
-          <li>&#x2705; July 8 TLS upgrade scheduled as the hard prerequisite for the IDP release</li>
+          <li>&#x2705; Approved for weekly release windows with near-zero downtime &#x2014; exits the monthly maintenance-window cadence</li>
+          <li>&#x2705; Jun 17 Lightning Bolt rollback RCA completed and shared with the CIO; correction items identified for the next release</li>
+          <li>&#x2705; Jul 8 TLS upgrade on track as the release prerequisite; test cases being added for QA</li>
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Jul 8 TLS upgrade &#x2014; hard prerequisite for August IDP release</span></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Jul 8 TLS upgrade, then code review &amp; release challenge next week</span></div>
     <div class="sources">Sources: <a href="https://fathom.video/calls/729864132" target="_blank">IDP Sync Jul 1</a> &middot; <a href="https://fathom.video/calls/724029421" target="_blank">Scrum of Scrums Jun 26</a> &middot; <a href="https://fathom.video/calls/721001569" target="_blank">IDP Sync Jun 24</a></div>
   </div>
 
