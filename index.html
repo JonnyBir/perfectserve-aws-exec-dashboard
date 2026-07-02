@@ -29,7 +29,7 @@
     .card { background: var(--surface); border-radius: 14px; padding: 26px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border: 1px solid var(--border); display: flex; flex-direction: column; gap: 18px; }
     .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
     .card-name { font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.3; }
-    .card-sub { font-size: 11px; color: var(--subtext); margin-top: 3px; }
+    .card-sub { font-size: 11px; color: var(--subtext); margin-top: 4px; line-height: 1.8; } .card-sub strong { font-weight: 700; color: var(--subtext); }
     .rag { flex-shrink: 0; padding: 5px 14px; border-radius: 24px; font-size: 12px; font-weight: 700; border: 2px solid; white-space: nowrap; }
     .rag-yellow { background: var(--yellow-bg); color: var(--yellow-fg); border-color: var(--yellow-border); }
     .rag-red    { background: var(--red-bg);    color: var(--red-fg);    border-color: var(--red-border); }
@@ -171,7 +171,7 @@
 
   <div class="card">
     <div class="card-top">
-      <div><div class="card-name">Atlanta AWS Migration</div><div class="card-sub">Atlanta Data Center &#x2192; AWS Migration</div></div>
+      <div><div class="card-name">Atlanta AWS Migration</div><div class="card-sub"><strong>Goal:</strong> Atlanta PS On-Prem migration to AWS<br><strong>Timeline:</strong> Dec 2025 &#x2013; August 2026</div></div>
       <div class="rag rag-yellow">&#x26A0;&#xFE0F; AT RISK</div>
     </div>
     <div class="rag-reason">Staging is now unblocked and progressing; key risks are Redis validation required before shutdown, expired ACM cert needing remediation, and a formal load-test plan still needed before the August production cutover.</div>
@@ -199,7 +199,7 @@
 
   <div class="card">
     <div class="card-top">
-      <div><div class="card-name">Canada AWS Platform</div><div class="card-sub">Canada AWS Platform Build</div></div>
+      <div><div class="card-name">Canada AWS Platform</div><div class="card-sub"><strong>Goal:</strong> Spin up new Telmediq instance for the Canada Region<br><strong>Timeline:</strong> April 22, 2026 &#x2013; August 19, 2026</div></div>
       <div class="rag rag-yellow">&#x26A0;&#xFE0F; AT RISK</div>
     </div>
     <div class="rag-reason">EKS build has no clear owner or timeline for its core blocker, and a holiday week plus a stalled account-access request are compounding the delay.</div>
@@ -227,7 +227,7 @@
 
   <div class="card">
     <div class="card-top">
-      <div><div class="card-name">OC West Expansion</div><div class="card-sub">OC West Expansion (POC Phase)</div></div>
+      <div><div class="card-name">OC West Expansion</div><div class="card-sub"><strong>Goal:</strong> Verify Latency for Aurora Global for OC West Expansion<br><strong>Timeline:</strong> June 22, 2026 &#x2013; July 3, 2026</div></div>
       <div class="rag rag-yellow">&#x26A0;&#xFE0F; AT RISK</div>
     </div>
     <div class="rag-reason">A single outstanding application code dependency and a tight budget ceiling threaten the July 3rd date, though the path to completion is otherwise clear and the deadline itself has flexibility.</div>
@@ -255,7 +255,7 @@
 
   <div class="card">
     <div class="card-top">
-      <div><div class="card-name">IDP</div><div class="card-sub">PerfectServe IDP / Lightning Bolt</div></div>
+      <div><div class="card-name">IDP</div><div class="card-sub"><strong>Goal:</strong> Upgrade the IDP to Duende and vNext<br><strong>Timeline:</strong> Dec 1, 2025 &#x2013; Nov 4, 2026</div></div>
       <div class="rag rag-red">&#x1F6D1; OFF TRACK</div>
     </div>
     <div class="rag-reason">An unresolved Lightning Bolt rollback, a roadmap deferral risk, and a QA single point of failure are stacking up against the release timeline and now require continued executive attention.</div>
