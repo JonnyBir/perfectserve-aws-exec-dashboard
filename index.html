@@ -36,11 +36,6 @@
     .rag-green  { background: var(--green-bg);  color: var(--green-fg);  border-color: var(--green-border); }
     .rag-reason { font-size: 12px; font-style: italic; color: var(--subtext); border-left: 3px solid var(--border); padding-left: 10px; line-height: 1.55; }
     .exec-summary { font-size: 13.5px; line-height: 1.7; color: var(--text); }
-    .goal-timeline { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .gt-box { background: #f4f5f7; border-radius: 8px; padding: 11px 14px; }
-    .gt-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--subtext); margin-bottom: 5px; }
-    .gt-value { font-size: 12px; line-height: 1.5; color: var(--text); }
-    @media (max-width: 900px) { .goal-timeline { grid-template-columns: 1fr; } }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .section-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.7px; color: var(--subtext); margin-bottom: 8px; }
     .item-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
@@ -81,15 +76,11 @@
 
   <div class="card">
     <div class="card-top">
-      <div><div class="card-name">Atlanta AWS Migration</div><div class="card-sub">Data center exit &#x2014; Atlanta to AWS, 5-wave production cutover Aug&#x2013;Dec</div></div>
+      <div><div class="card-name">Atlanta AWS Migration</div><div class="card-sub">Goal: Exit the Atlanta data center by migrating all environments (dev, QA, staging, prod) to AWS with zero customer disruption. &middot; Timeline: Build complete early Aug &#x2192; 5 monthly production migration waves, Aug 5 &#x2013; Dec 2026.</div></div>
       <div class="rag rag-yellow">&#x1F7E1; YELLOW</div>
     </div>
     <div class="rag-reason">Production build must complete by early August to hit the first Aug 5 migration window, with an expired certificate and unfinished V4 code still blocking key work.</div>
     <div class="exec-summary">Per Tony&#x2019;s directive the team has pivoted from staging to the production build to protect the August 5 first migration window. Staging EC2s are nearly complete and the domain controller fix is in validation, but prod scope is larger than databases alone &#x2014; new web servers and RabbitMQ instances are required. The customer-facing 5-wave monthly migration plan (August&#x2013;December) is official; a production migration-path meeting is set for Monday.</div>
-    <div class="goal-timeline">
-      <div class="gt-box"><div class="gt-label">&#x1F3AF; Project Goal</div><div class="gt-value">Exit the Atlanta data center by migrating all environments (dev, QA, staging, prod) to AWS with zero customer disruption.</div></div>
-      <div class="gt-box"><div class="gt-label">&#x1F4C5; Timeline</div><div class="gt-value">Build complete early Aug &#x2192; 5 monthly production migration waves, Aug 5 &#x2013; Dec 2026.</div></div>
-    </div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
@@ -114,15 +105,11 @@
 
   <div class="card">
     <div class="card-top">
-      <div><div class="card-name">Canada AWS Platform</div><div class="card-sub">New Canadian platform build &#x2014; EKS, RDS, MQ, WAF/ALB</div></div>
+      <div><div class="card-name">Canada AWS Platform</div><div class="card-sub">Goal: Stand up a production-grade Canadian AWS platform (EKS, RDS, Amazon MQ, WAF/ALB) to meet Canadian data-residency requirements. &middot; Timeline: Core infrastructure build through July; integrations targeted mid-July; EKS verification pending module fix.</div></div>
       <div class="rag rag-yellow">&#x1F7E1; YELLOW</div>
     </div>
     <div class="rag-reason">EKS build is blocked by a broken PerfectServe module with no internal expert to verify the cluster, and holiday-week absences plus stalled IAM access are slowing resolution.</div>
     <div class="exec-summary">Infrastructure delivery continues &#x2014; RDS deployments are underway, three Amazon MQ brokers are live, and WAF/ALB work is progressing &#x2014; but the EKS workstream is stalled on a non-functional &#x201C;pod identities&#x201D; module awaiting a fix from Matt. Cluster verification has no clear owner since prior K8s experts left. Jon is escalating AWS account access for new team members (Brandon, Russell) stuck in the PerfectServe IAM process.</div>
-    <div class="goal-timeline">
-      <div class="gt-box"><div class="gt-label">&#x1F3AF; Project Goal</div><div class="gt-value">Stand up a production-grade Canadian AWS platform (EKS, RDS, Amazon MQ, WAF/ALB) to meet Canadian data-residency requirements.</div></div>
-      <div class="gt-box"><div class="gt-label">&#x1F4C5; Timeline</div><div class="gt-value">Core infrastructure build through July; integrations targeted mid-July; EKS verification pending module fix.</div></div>
-    </div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
@@ -147,15 +134,11 @@
 
   <div class="card">
     <div class="card-top">
-      <div><div class="card-name">OC West Expansion</div><div class="card-sub">US-West-2 latency POC &#x2014; Aurora Global + DMS</div></div>
+      <div><div class="card-name">OC West Expansion</div><div class="card-sub">Goal: Empirically validate latency for West-region (KP) users via an Aurora Global reader in us-west-2 to inform the production build vs. ROI decision. &middot; Timeline: POC infra complete &#x2192; DMS full load week of Jul 6 &#x2192; latency assessment &amp; Phase 5 ROI deck to follow.</div></div>
       <div class="rag rag-yellow">&#x1F7E1; YELLOW</div>
     </div>
     <div class="rag-reason">The July 3 POC target is at risk pending a PerfectServe code change, and the project is at its 30-hour weekly budget ceiling.</div>
     <div class="exec-summary">The Aurora Global cluster is provisioned via Terraform and the DMS full-load plan is staged, but execution waits on Miguel&#x2019;s connection-string change to the private hosted zone &#x2014; the sole dependency before data load can begin. With the full load itself taking 1&#x2013;2 days, the final latency assessment likely slips into the week of July 6. Phase 5 output is a high-level ROI slide deck to inform the production build decision.</div>
-    <div class="goal-timeline">
-      <div class="gt-box"><div class="gt-label">&#x1F3AF; Project Goal</div><div class="gt-value">Empirically validate latency for West-region (KP) users via an Aurora Global reader in us-west-2 to inform the production build vs. ROI decision.</div></div>
-      <div class="gt-box"><div class="gt-label">&#x1F4C5; Timeline</div><div class="gt-value">POC infra complete &#x2192; DMS full load week of Jul 6 &#x2192; latency assessment &amp; Phase 5 ROI deck to follow.</div></div>
-    </div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
@@ -180,15 +163,11 @@
 
   <div class="card">
     <div class="card-top">
-      <div><div class="card-name">IDP</div><div class="card-sub">Identity provider rollout &#x2014; PS upgrade &amp; Lightning Bolt release</div></div>
+      <div><div class="card-name">IDP</div><div class="card-sub">Goal: Deploy the IDP/PS upgrade via weekly releases with near-zero downtime, replacing the monthly maintenance-window cadence. &middot; Timeline: Jul 8 TLS upgrade &#x2192; code review &amp; release challenge next week &#x2192; QA regression (1&#x2013;2 wks) &#x2192; August release; LB rollout mid-July.</div></div>
       <div class="rag rag-red">&#x1F534; RED</div>
     </div>
     <div class="rag-reason">All development is blocked by an unresolved local debugging failure, the QA code review slipped a week, and the LB project risks being dropped from Q3 planning &#x2014; escalation is underway.</div>
     <div class="exec-summary">The PS upgrade cannot deploy to QA until a code review rescheduled to next week, and a queue-connection failure &#x2014; possibly tied to the PS Dev environment&#x2019;s AWS migration &#x2014; is blocking all development. The June 17 Lightning Bolt release failure has a completed RCA (environment inconsistencies, testing gaps, missed deployment step) shared with the CIO, with correction items identified for the next window. Weekly-release approval and the July 8 TLS prerequisite keep an August release achievable if blockers clear quickly.</div>
-    <div class="goal-timeline">
-      <div class="gt-box"><div class="gt-label">&#x1F3AF; Project Goal</div><div class="gt-value">Deploy the IDP/PS upgrade via weekly releases with near-zero downtime, replacing the monthly maintenance-window cadence.</div></div>
-      <div class="gt-box"><div class="gt-label">&#x1F4C5; Timeline</div><div class="gt-value">Jul 8 TLS upgrade &#x2192; code review &amp; release challenge next week &#x2192; QA regression (1&#x2013;2 wks) &#x2192; August release; LB rollout mid-July.</div></div>
-    </div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
