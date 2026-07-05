@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AWS Projects &#x2014; Executive Status | July 4, 2026</title>
+  <title>AWS Projects &#x2014; Executive Status | July 5, 2026</title>
   <style>
     :root {
       --green-bg: #e3fcef; --green-fg: #006644; --green-border: #006644;
@@ -60,16 +60,16 @@
     <div class="ai-pill">&#x2726; AI-Analyzed &#xB7; Fathom Meeting Notes</div>
   </div>
   <div class="header-meta">
-    <div class="header-date">July 4, 2026</div>
-    <div class="header-source">Source: Fathom standup &amp; review recordings<br>4 active projects &#xB7; 3 at risk &#xB7; 1 off track</div>
+    <div class="header-date">July 5, 2026</div>
+    <div class="header-source">Source: Fathom standup &amp; review recordings<br>4 active projects &#xB7; 3 at risk &#xB7; 1 on track</div>
   </div>
 </div>
 
 <div class="summary-bar">
-  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Atlanta &#x2014; AT RISK</div>
-  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Canada &#x2014; AT RISK</div>
-  <div class="summary-chip"><div class="chip-dot dot-red"></div>OC West &#x2014; OFF TRACK</div>
-  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>IDP &#x2014; AT RISK</div>
+  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Atlanta AWS Migration &#x2014; YELLOW</div>
+  <div class="summary-chip"><div class="chip-dot dot-green"></div>Canada AWS Platform &#x2014; GREEN</div>
+  <div class="summary-chip"><div class="chip-dot dot-red"></div>OC West Expansion &#x2014; RED</div>
+  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>IDP &#x2014; YELLOW</div>
 </div>
 
 <div class="grid">
@@ -77,119 +77,120 @@
   <div class="card">
     <div class="card-top">
       <div><div class="card-name">Atlanta AWS Migration</div><div class="card-sub"><strong>Goal:</strong> Migrate PS Atlanta on-prem to AWS<br><strong>Timeline:</strong> Dec 2025 - August 2026.</div></div>
-      <div class="rag rag-yellow">&#x1F7E1; AT RISK</div>
+      <div class="rag rag-yellow">&#x1F7E1; YELLOW</div>
     </div>
-    <div class="rag-reason">Staging is one approval away from ready, but the team must pivot hard to production build-out now to hold the August 5 first migration wave.</div>
-    <div class="exec-summary">Staging is nearly complete &#x2014; blocked only by an FSx for ONTAP instance (&#x223C;$226/mo) awaiting Tony&#x2019;s sign-off &#x2014; and per Tony&#x2019;s directive the team is shifting focus to the production build (new web servers, RabbitMQ, app configuration) to meet the early-August window. The production migration plan is official and has been presented to 50+ customers as a phased monthly rollout through December, with core database EC2s already replicating in AWS.</div>
+    <div class="rag-reason">Team is pivoting to the production build under a tight August 5 first-wave deadline while staging awaits a final FSx for ONTAP approval.</div>
+    <div class="exec-summary">Staging is nearly ready, and per Tony&#x2019;s directive the team has shifted focus to the production build to hit the first migration window targeted for August 5. The customer migration is now a phased rollout of monthly maintenance windows through December, and core production database EC2s are already spun up and replicating. Remaining production scope &#x2014; new web servers, RabbitMQ, and application configuration &#x2014; is the critical path.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; FSx for ONTAP instance needs Tony&#x2019;s cost approval before staging can finish</li>
-          <li>&#x26A0;&#xFE0F; Expired certificate blocking staging ALB deployment and RabbitMQ cert re-roll</li>
-          <li>&#x26A0;&#xFE0F; No formal load-testing plan; QA showed poor cold-cache performance and owner (Tony) is out</li>
+          <li>&#x26A0;&#xFE0F; Staging FSx for ONTAP instance (~$226/mo) awaiting Tony&#x2019;s cost approval</li>
+          <li>&#x26A0;&#xFE0F; Production scope is larger than databases &#x2014; new web servers and RabbitMQ must be built before Aug 5</li>
+          <li>&#x26A0;&#xFE0F; No formal load-testing plan; cold-cache QA performance risk with previous owner unavailable</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>&#x2705; Production migration plan finalized and presented to 50+ customers</li>
-          <li>&#x2705; Staging EC2s nearly complete; core prod database EC2s replicating</li>
-          <li>&#x2705; Domain controller/load balancer issue stabilized with workaround</li>
+          <li>&#x2705; Core production database EC2s spun up and replicating</li>
+          <li>&#x2705; Staging EC2 build essentially complete; DC load-balancer issue worked around</li>
+          <li>&#x2705; Phased Aug&#x2013;Dec migration plan finalized and presented to 50+ customers</li>
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Aug 5, 2026 &#x2014; first production migration wave</span></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; First production migration wave &#x2014; Aug 5, 2026</span></div>
     <div class="sources">Sources: <a href="https://fathom.video/calls/730984635" target="_blank">Stand-up Jul 2</a> &#xB7; <a href="https://fathom.video/calls/729864133" target="_blank">Stand-up Jul 1</a> &#xB7; <a href="https://fathom.video/calls/728843358" target="_blank">Stand-up Jun 29</a></div>
   </div>
 
   <div class="card">
     <div class="card-top">
       <div><div class="card-name">Canada AWS Platform</div><div class="card-sub"><strong>Goal:</strong> Spin up new Telmediq environment in the Canada region<br><strong>Timeline:</strong> April 22, 2026 - August 19, 2026.</div></div>
-      <div class="rag rag-yellow">&#x1F7E1; AT RISK</div>
+      <div class="rag rag-green">&#x1F7E2; GREEN</div>
     </div>
-    <div class="rag-reason">Build momentum is good, but EKS sign-off, Argo/Helm alignment, and team AWS access remain open with limited PerfectServe expert availability.</div>
-    <div class="exec-summary">The platform build is progressing: the EKS cluster is deployed and awaits a final sign-off check-in with Matt next week, Brandon has taken over Looker provisioning to add data-plane capacity, and Dave&#x2019;s Redis security group fixes are in PR review. Open items center on verification &#x2014; no internal expert exists for the Telmediq EKS setup &#x2014; plus a needed Argo CD/Helm alignment meeting with the dev team and AWS account access still working through the PerfectServe IAM process.</div>
+    <div class="rag-reason">EKS, Redis, and data-plane workstreams are all moving; remaining items are sign-offs and coordination rather than hard blockers.</div>
+    <div class="exec-summary">The platform build is progressing well: the EKS cluster is nearing a final sign-off check-in with Matt next week, Brandon has taken over Looker provisioning to add data-plane capacity, and Redis security-group fixes are in PR review. Earlier blockers around the PerfectServe identities module and AWS account access for new team members have largely cleared, keeping the August 19 target in view.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; No internal expert to verify the Canada EKS cluster; sign-off depends on Matt&#x2019;s limited availability</li>
-          <li>&#x26A0;&#xFE0F; Team AWS account access (Brandon, Russell) stalled in PerfectServe IAM process</li>
-          <li>&#x26A0;&#xFE0F; Argo CD/Helm setup needs dev alignment with Adam, delayed by vacations</li>
+          <li>&#x26A0;&#xFE0F; EKS sign-off and Argo CD/Helm setup depend on PerfectServe SMEs (Matt, Adam) with limited availability</li>
+          <li>&#x26A0;&#xFE0F; No internal expert on the Telmediq EKS setup, slowing cluster verification</li>
+          <li>&#x26A0;&#xFE0F; AWS account access for new LucidPoint team members has been slow through PerfectServe IAM</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>&#x2705; EKS V3/V4 module deployed; final sign-off check-in being scheduled</li>
-          <li>&#x2705; Brandon now leading Looker provisioning, adding team capacity</li>
-          <li>&#x2705; Shared Redis security group fix submitted for PR review</li>
+          <li>&#x2705; Brandon now leading Looker provisioning, expanding team capacity</li>
+          <li>&#x2705; Shared Redis security-group fix and module PRs submitted for Monday review</li>
+          <li>&#x2705; EKS module and Amazon MQ brokers deployed</li>
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Week of Jul 6 &#x2014; EKS sign-off with Matt + Argo/Helm alignment</span></div>
-    <div class="sources">Sources: <a href="https://fathom.video/calls/730984642" target="_blank">Weekly Check-In Jul 2</a> &#xB7; <a href="https://fathom.video/calls/725639518" target="_blank">Stand-up Jun 29</a> &#xB7; <a href="https://fathom.video/calls/722649304" target="_blank">Stand-up Jun 25</a></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; EKS sign-off with Matt + Argo/Helm session &#x2014; week of Jul 6</span></div>
+    <div class="sources">Sources: <a href="https://fathom.video/calls/730984642" target="_blank">Check-in Jul 2</a> &#xB7; <a href="https://fathom.video/calls/725639518" target="_blank">Stand-up Jun 29</a> &#xB7; <a href="https://fathom.video/calls/722649304" target="_blank">Stand-up Jun 25</a></div>
   </div>
 
   <div class="card">
     <div class="card-top">
       <div><div class="card-name">OC West Expansion</div><div class="card-sub"><strong>Goal:</strong> Test Latency of Aurora Global for the OC West expansion.<br><strong>Timeline:</strong> June 22, 2026 - July 3, 2026.</div></div>
-      <div class="rag rag-red">&#x1F534; OFF TRACK</div>
+      <div class="rag rag-red">&#x1F534; RED</div>
     </div>
-    <div class="rag-reason">The POC is stalled past its July 3 target by two unresolved PerfectServe dependencies, and escalation to Jason is now in motion.</div>
-    <div class="exec-summary">The POC is in its final stage but fully blocked by two PerfectServe dependencies: a missing connection-string code change from Miguel Rosales and an RDS flag flip needed to enable logical replication for the DMS migration &#x2014; a change to a shared Dev/QA instance that is unlikely to be approved out-of-cycle. The Aurora Global cluster is provisioned, DMS Terraform is staged, and migration documentation is complete; Lamine has paused billing hours while Jon escalates the blockers in the OC West channel and a handoff plan is prepared in case Lamine departs.</div>
+    <div class="rag-reason">The July 3 POC target was missed; the DMS migration cannot start until PerfectServe delivers a code change and approves an RDS flag flip.</div>
+    <div class="exec-summary">The POC infrastructure is essentially done &#x2014; the Aurora Global cluster is provisioned in us-west-2 and the DMS Terraform is dry-run ready &#x2014; but the project is stalled on two PerfectServe dependencies: a missing connection-string code change from Miguel Rosales and an RDS logical-replication flag flip on a shared Dev/QA instance. Jon is escalating in the OC West channel tagging Jason, and Lamine has paused billed hours until the project is unblocked.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; Promised code change from Miguel Rosales is missing and cannot be located in the repo</li>
-          <li>&#x26A0;&#xFE0F; RDS flag flip on shared Dev/QA instance required to start DMS; out-of-cycle change unlikely</li>
-          <li>&#x26A0;&#xFE0F; Lamine may leave for a new role; handoff plan to an existing LP resource needed</li>
+          <li>&#x26A0;&#xFE0F; RDS flag flip requires an out-of-cycle change on a shared Dev/QA instance &#x2014; approval unlikely soon</li>
+          <li>&#x26A0;&#xFE0F; Promised code change from Miguel is missing and could not be located in the repository</li>
+          <li>&#x26A0;&#xFE0F; Lamine may depart for a new role &#x2014; handoff plan needed to avoid a 3-week onboarding restart</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>&#x2705; Aurora Global cluster provisioned via Terraform; DMS full-load Terraform staged</li>
-          <li>&#x2705; Migration plan and schema analysis documentation completed</li>
+          <li>&#x2705; Aurora Global cluster provisioned via Terraform in us-west-2</li>
+          <li>&#x2705; Migration plan and schema analysis documentation complete; DMS full-load Terraform dry-run ready</li>
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; RDS flag-flip approval &#x2192; DMS full load &amp; latency assessment</span></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; RDS flag flip approval &#x2192; DMS full load &amp; latency assessment</span></div>
     <div class="sources">Sources: <a href="https://fathom.video/calls/730984648" target="_blank">Stand-up Jul 2</a> &#xB7; <a href="https://fathom.video/calls/725639508" target="_blank">Stand-up Jun 29</a> &#xB7; <a href="https://fathom.video/calls/725236168" target="_blank">POC Strategy Jun 25</a></div>
   </div>
 
   <div class="card">
     <div class="card-top">
       <div><div class="card-name">IDP</div><div class="card-sub"><strong>Goal:</strong> Upgrade the IDP to Duende and vNext<br><strong>Timeline:</strong> Dec 1, 2025 - Nov 4, 2026.</div></div>
-      <div class="rag rag-yellow">&#x1F7E1; AT RISK</div>
+      <div class="rag rag-yellow">&#x1F7E1; YELLOW</div>
     </div>
-    <div class="rag-reason">Weekly-release approval is a major win, but the August release depends on the July 8 TLS upgrade, a slipped code review, and an overloaded QA resource.</div>
-    <div class="exec-summary">IDP releases are now approved for weekly release windows with near-zero downtime &#x2014; escaping the monthly maintenance window that caused the 30-day rollback delay in the June 17 Lightning Bolt incident, for which the RCA is complete and corrective items are identified for the next release window. The August target now hinges on the July 8 TLS upgrade as a hard prerequisite, a final code review rescheduled to next week, and resolution of a local debugging blocker affecting all development.</div>
+    <div class="rag-reason">The weekly-release path is approved, but QA deployment is blocked on a rescheduled code review and a dev-environment debugging failure.</div>
+    <div class="exec-summary">IDP secured approval to ship via weekly release windows with near-zero downtime, ending the 30-day maintenance-window delays &#x2014; a major process win. The June 17 release to the Lightning Bolt environment failed; the RCA is complete and correction items are identified for the next release window. The PS upgrade remains blocked from QA pending a rescheduled code review, and a local queue-connection failure is blocking development, keeping the August release target under pressure.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; Final code review slipped to next week, blocking QA deployment of the PS upgrade</li>
-          <li>&#x26A0;&#xFE0F; Local debugging failure (queue connection) blocking all development; may stem from AWS Dev migration</li>
-          <li>&#x26A0;&#xFE0F; Betsy is a single point of failure for QA across AWS, TLS, and IDP testing</li>
+          <li>&#x26A0;&#xFE0F; Betsy is a single QA point of failure across concurrent AWS, TLS, and IDP testing</li>
+          <li>&#x26A0;&#xFE0F; July 8 TLS upgrade is a hard prerequisite gating the August IDP release</li>
+          <li>&#x26A0;&#xFE0F; Local debugging queue-connection failure blocking all development; deployment strategy (on-prem vs. AWS) still undefined</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>&#x2705; IDP approved for weekly releases with near-zero downtime, exiting the maintenance window</li>
-          <li>&#x2705; June 17 rollback RCA completed, shared with CIO, and corrective items identified</li>
+          <li>&#x2705; Weekly-release approval secured &#x2014; no more 30-day maintenance-window delays</li>
+          <li>&#x2705; June 17 rollback RCA completed and shared with the CIO, with correction items identified</li>
+          <li>&#x2705; New Jira release plan maps IDP releases Aug&#x2013;Nov</li>
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Jul 8, 2026 &#x2014; TLS upgrade (hard prerequisite for August IDP release)</span></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; July 8 TLS upgrade &#x2014; gates the August IDP release</span></div>
     <div class="sources">Sources: <a href="https://fathom.video/calls/729864132" target="_blank">IDP Sync Jul 1</a> &#xB7; <a href="https://fathom.video/calls/724029421" target="_blank">Scrum of Scrums Jun 26</a> &#xB7; <a href="https://fathom.video/calls/721001569" target="_blank">IDP Sync Jun 24</a></div>
   </div>
 
 </div>
 
-<div class="footer">Generated July 4, 2026 &#xB7; Analysis based on Fathom meeting recordings &#xB7; PerfectServe Cloud Programs</div>
+<div class="footer">Generated July 5, 2026 &#xB7; Analysis based on Fathom meeting recordings &#xB7; PerfectServe Cloud Programs</div>
 </body>
 </html>
