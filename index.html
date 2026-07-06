@@ -21,10 +21,11 @@
     .header-date { font-size: 13px; font-weight: 600; color: var(--text); }
     .header-source { font-size: 11px; color: var(--subtext); margin-top: 4px; }
     .ai-pill { display: inline-block; background: #f0e6ff; color: #5243aa; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; margin-top: 6px; }
-    .summary-bar { max-width: 1200px; margin: 0 auto 22px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .summary-bar { max-width: 1200px; margin: 0 auto 22px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
     .summary-chip { background: var(--surface); border-radius: 10px; padding: 12px 18px; display: flex; align-items: center; gap: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 13px; font-weight: 600; }
     .chip-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
     .dot-green { background: var(--green-fg); } .dot-yellow { background: var(--yellow-fg); } .dot-red { background: var(--red-fg); }
+    .section-heading { max-width: 1200px; margin: 0 auto 14px; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--subtext); padding-bottom: 6px; border-bottom: 1px solid var(--border); }
     .grid { max-width: 1200px; margin: 0 auto 28px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .card { background: var(--surface); border-radius: 14px; padding: 26px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border: 1px solid var(--border); display: flex; flex-direction: column; gap: 18px; }
     .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
@@ -56,12 +57,12 @@
 <div class="header">
   <div>
     <div class="header-title">&#x2601;&#xFE0F; AWS Projects &#x2014; Executive Status Dashboard</div>
-    <div class="header-sub">PerfectServe Cloud Migration &amp; Platform Programs</div>
+    <div class="header-sub">PerfectServe Cloud Migration &amp; Platform Programs &#xB7; Combined PM View</div>
     <div class="ai-pill">&#x2726; AI-Analyzed &#xB7; Fathom Meeting Notes</div>
   </div>
   <div class="header-meta">
     <div class="header-date">July 6, 2026</div>
-    <div class="header-source">Source: Fathom standup &amp; review recordings<br>4 active projects &#xB7; 3 at risk &#xB7; 1 on track</div>
+    <div class="header-source">Source: Fathom standup &amp; review recordings<br>6 active projects &#xB7; 5 at risk &#xB7; 1 on track</div>
   </div>
 </div>
 
@@ -70,8 +71,11 @@
   <div class="summary-chip"><div class="chip-dot dot-green"></div>Canada AWS Platform &#x2014; ON TRACK</div>
   <div class="summary-chip"><div class="chip-dot dot-red"></div>OC West Expansion &#x2014; OFF TRACK</div>
   <div class="summary-chip"><div class="chip-dot dot-yellow"></div>IDP &#x2014; AT RISK</div>
+  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Genesys &#x2192; Twilio &#x2014; AT RISK</div>
+  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>LDAP &#x2192; OIDC &#x2014; AT RISK</div>
 </div>
 
+<div class="section-heading">Jon Birgel &#xB7; PM &#x2014; AWS Platform &amp; Infrastructure</div>
 <div class="grid">
 
   <div class="card">
@@ -191,6 +195,71 @@
 
 </div>
 
-<div class="footer">Generated July 6, 2026 &#xB7; Analysis based on Fathom meeting recordings &#xB7; PerfectServe Cloud Programs</div>
+<!-- BEGIN CHERIE SECTION : sourced from https://github.com/cheriemonte/PS-Projects -->
+<div class="section-heading">Cherie Monteferrante &#xB7; PM &#x2014; Genesys &amp; OIDC Migration Workstreams</div>
+<div class="grid">
+
+  <div class="card">
+    <div class="card-top">
+      <div><div class="card-name">Genesys Deprecation &#x2192; Twilio</div><div class="card-sub"><strong>Goal:</strong> Replace the legacy Genesys platform and eventually turning it off<br><strong>Timeline:</strong> Dec 2025 - July 2027.</div></div>
+      <div class="rag rag-yellow">&#x1F7E1; YELLOW</div>
+    </div>
+    <div class="rag-reason">Twilio routing update: 28,492 remaining toll-free numbers from July 2 finished the morning of July 6; local numbers scheduled for July 6.</div>
+    <div class="exec-summary">All ~52k toll-free and local number submissions are complete. Residual risk centers on 11&#x2013;12 Five9s-managed numbers that may not be removable from Batch 7. SFTP is blocked on documentation and customer list delivery to CS, and Five9s SIP trunk setup awaits PS configuration details. Contractors started July 1 to support User Call Routing.</div>
+    <div class="two-col">
+      <div>
+        <div class="section-label">Key Risks &amp; Blockers</div>
+        <ul class="item-list">
+          <li>&#x26A0;&#xFE0F; Batch 7 Five9s numbers: 11&#x2013;12 may not be removable from the July 2 AT&amp;T port batch &#x2014; routing failure risk post-port</li>
+          <li>&#x26A0;&#xFE0F; SFTP blocked: CS cannot schedule migrations until docs and customer list are delivered &#x2014; threatens July 30 milestone</li>
+          <li>&#x26A0;&#xFE0F; Five9s SIP pending: &lt;24 numbers carry ~200k calls/month; setup blocked until PS provides trunk config details</li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-label">Recent Progress</div>
+        <ul class="item-list">
+          <li>&#x2705; All submissions complete: port dates July 2 &amp; July 6 locked; Esteban on-call, Tom Donnelly SIP backup</li>
+          <li>&#x2705; Five9s unblocked: SIP trunk capability confirmed &#x2014; migration proceeds once config details provided</li>
+          <li>&#x2705; July 30 milestone set: 50% migration target for OIDC, SFTP, and VPN to de-risk August 31</li>
+        </ul>
+      </div>
+    </div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Toll-free Batch 7 port (~28k) &#xB7; Local Batch 8 &#x2014; Jul 6</span></div>
+    <div class="sources">Sources: <a href="https://fathom.video/calls/725797616" target="_blank">Jun 29</a> &#xB7; <a href="https://fathom.video/calls/724289274" target="_blank">Jun 26</a> &#xB7; <a href="https://fathom.video/calls/722873489" target="_blank">Jun 25</a></div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <div><div class="card-name">LDAP &#x2192; OIDC Customer Migration</div><div class="card-sub"><strong>Goal:</strong> Migrate all LDAP PS customers to OIDC before the decommission of the Atlanta datacenter<br><strong>Timeline:</strong> Dec 15, 2025 - August 31, 2026.</div></div>
+      <div class="rag rag-yellow">&#x1F7E1; YELLOW</div>
+    </div>
+    <div class="rag-reason">Customer engagement improving post-webinar but migration rate remains critically low; the new delete endpoint introduces domain-association data risk requiring UI guardrails before release.</div>
+    <div class="exec-summary">Carilion shifted from a January delay to a July 9 cutover after the webinar clarified the August 31 hard stop. The Phase 2 delete endpoint was approved June 30, but a legacy domain-based flaw means removals affect all authenticators sharing a domain. Each cutover requires a dedicated Fortify engineer until the CSP Portal bulk upload goes live.</div>
+    <div class="two-col">
+      <div>
+        <div class="section-label">Key Risks &amp; Blockers</div>
+        <ul class="item-list">
+          <li>&#x26A0;&#xFE0F; Low migration rate: OIDC previously missed the June 9 target; August 31 is hard-communicated &#x2014; CSA bandwidth is top risk</li>
+          <li>&#x26A0;&#xFE0F; Domain delete flaw: endpoint operates on domain name (not ID) &#x2014; affects ALL authenticators sharing a domain; data deletion risk without UI guardrails</li>
+          <li>&#x26A0;&#xFE0F; Fortify bottleneck: each cutover needs a dedicated Fortify engineer until bulk upload goes live &#x2014; hard capacity constraint July&#x2013;August</li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-label">Recent Progress</div>
+        <ul class="item-list">
+          <li>&#x2705; Carilion July 9 cutover scheduled; Kevin to confirm via CAB</li>
+          <li>&#x2705; Delete endpoint approved June 30; reduces manual support tickets once live with proper guardrails</li>
+          <li>&#x2705; Data cleanup underway: Jeremy vetting anomalous OIDC accounts to reduce scope</li>
+        </ul>
+      </div>
+    </div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Jul 9 &#x2014; Carilion OIDC cutover (CAB approval + Fortify engineer)</span></div>
+    <div class="sources">Sources: <a href="https://fathom.video/calls/727821907" target="_blank">Jun 30</a> &#xB7; <a href="https://fathom.video/calls/724289274" target="_blank">Jun 26</a> &#xB7; <a href="https://fathom.video/calls/722873489" target="_blank">Jun 25</a></div>
+  </div>
+
+</div>
+<!-- END CHERIE SECTION -->
+
+<div class="footer">Generated July 6, 2026 &#xB7; Analysis based on Fathom meeting recordings &#xB7; PerfectServe Cloud Programs &#xB7; Combined view: Jon Birgel &amp; Cherie Monteferrante</div>
 </body>
 </html>
