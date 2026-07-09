@@ -84,12 +84,12 @@
       <div class="rag rag-yellow">&#x1F7E1; AT RISK</div>
     </div>
     <div class="rag-reason">The Aug 5 first-wave date is under active pressure &#x2014; QA validation is the gate and RabbitMQ parity plus James&#x2019;s bandwidth are the constraints &#x2014; but the team is executing a clear mitigation plan.</div>
-    <div class="exec-summary">The team has pivoted to a production-first push for the August 5 first cutover wave (23 must-have items) and will temporarily take over QA, mirroring production in the QA environment to bypass the testing bottleneck. QA testing had been blocked by a RabbitMQ parity gap; a new &#x201C;ServicePlus 2&#x201D; cluster is being deployed to unblock it, while Esteban scripts the DNS-flip runbook for cutover with a draft due next week. Post-Phase 1, QA will mirror each production phase sequentially to provide soak time.</div>
+    <div class="exec-summary">The team has pivoted to a production-first push for the August 5 first cutover wave (23 must-have items) and will temporarily take over QA, mirroring production in the QA environment to bypass the testing bottleneck. QA testing had been blocked by a RabbitMQ parity gap; a new RabbitMQ cluster is being deployed in QA to unblock it, while Esteban scripts the DNS-flip runbook for cutover with a draft due next week. Post-Phase 1, QA will mirror each production phase sequentially to provide soak time.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; QA testing blocked by a RabbitMQ parity gap until the new &#x201C;ServicePlus 2&#x201D; cluster is deployed in QA</li>
+          <li>&#x26A0;&#xFE0F; QA testing blocked by a RabbitMQ parity gap until the new QA RabbitMQ cluster is deployed</li>
           <li>&#x26A0;&#xFE0F; James remains single-threaded on application configuration &#x2014; the top constraint on the Aug 5 date</li>
           <li>&#x26A0;&#xFE0F; Ops bandwidth reduced: Hassan&#x2019;s pull to Lightning Bolt cuts Ops desk capacity amid conflicting stakeholder priorities</li>
         </ul>
