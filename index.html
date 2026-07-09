@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AWS Projects &#x2014; Executive Status | 2026-07-09</title>
+  <title>AWS Projects &#x2014; Executive Status | July 9, 2026</title>
   <style>
     :root {
       --green-bg: #e3fcef; --green-fg: #006644; --green-border: #006644;
@@ -24,7 +24,7 @@
     .summary-bar { max-width: 1200px; margin: 0 auto 22px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
     .summary-chip { background: var(--surface); border-radius: 10px; padding: 12px 18px; display: flex; align-items: center; gap: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 13px; font-weight: 600; }
     .chip-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
-    .dot-green  { background: var(--green-fg); } .dot-yellow { background: var(--yellow-fg); } .dot-red { background: var(--red-fg); }
+    .dot-green { background: var(--green-fg); } .dot-yellow { background: var(--yellow-fg); } .dot-red { background: var(--red-fg); }
     .section-heading { max-width: 1200px; margin: 0 auto 14px; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--subtext); padding-bottom: 6px; border-bottom: 1px solid var(--border); }
     .grid { max-width: 1200px; margin: 0 auto 28px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .card { background: var(--surface); border-radius: 14px; padding: 26px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border: 1px solid var(--border); display: flex; flex-direction: column; gap: 18px; }
@@ -61,18 +61,18 @@
     <div class="ai-pill">&#x2726; AI-Analyzed &#xB7; Fathom Meeting Notes</div>
   </div>
   <div class="header-meta">
-    <div class="header-date">2026-07-09</div>
+    <div class="header-date">July 9, 2026</div>
     <div class="header-source">Source: Fathom standup &amp; review recordings<br>6 active projects &#xB7; 5 at risk &#xB7; 1 on track</div>
   </div>
 </div>
 
 <div class="summary-bar">
-  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Atlanta AWS Migration &#x2014; AT RISK</div>
-  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Canada AWS Platform &#x2014; AT RISK</div>
-  <div class="summary-chip"><div class="chip-dot dot-green"></div>OC West Expansion &#x2014; ON TRACK</div>
-  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>IDP &#x2014; AT RISK</div>
-  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Genesys &#x2192; Twilio &#x2014; AT RISK</div>
-  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>LDAP &#x2192; OIDC &#x2014; AT RISK</div>
+  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Atlanta AWS Migration &#x2014; At Risk</div>
+  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Canada AWS Platform &#x2014; At Risk</div>
+  <div class="summary-chip"><div class="chip-dot dot-green"></div>OC West Expansion &#x2014; On Track</div>
+  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>IDP &#x2014; At Risk</div>
+  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Genesys &#x2192; Twilio &#x2014; At Risk</div>
+  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>LDAP &#x2192; OIDC &#x2014; At Risk</div>
 </div>
 
 <div class="section-heading">Jon Birgel &#xB7; PM &#x2014; AWS Platform &amp; Infrastructure</div>
@@ -83,27 +83,27 @@
       <div><div class="card-name">Atlanta AWS Migration</div><div class="card-sub"><strong>Goal:</strong> Migrate PS Atlanta on-prem to AWS<br><strong>Timeline:</strong> Dec 2025 - August 2026.</div></div>
       <div class="rag rag-yellow">&#x1F7E1; AT RISK</div>
     </div>
-    <div class="rag-reason">The Aug 5 first-wave date is under active pressure &#x2014; QA validation is the gate and RabbitMQ parity plus James&#x2019;s bandwidth are the constraints &#x2014; but the team is executing a clear mitigation plan.</div>
-    <div class="exec-summary">The team has pivoted to a production-first push for the August 5 first cutover wave (23 must-have items) and will temporarily take over QA, mirroring production in the QA environment to bypass the testing bottleneck. QA testing had been blocked by a RabbitMQ parity gap; a new RabbitMQ cluster is being deployed in QA to unblock it, while Esteban scripts the DNS-flip runbook for cutover with a draft due next week. Post-Phase 1, QA will mirror each production phase sequentially to provide soak time.</div>
+    <div class="rag-reason">Aug 5 first-wave cutover remains achievable, but QA validation is gated on a new RabbitMQ cluster in QA and James&#x2019;s single-threaded configuration work.</div>
+    <div class="exec-summary">The team pivoted to a production-first QA strategy for the Aug 5 cutover: QA will mirror production phase-by-phase with soak time per wave, and all QA DNS will be unified to point at Atlanta QA. The master migration list is now fully assigned, Esteban is scripting the DNS-flip runbook (draft due next week), and staging databases are being rebuilt. QA testing is temporarily blocked pending a new RabbitMQ cluster in QA to enable an apples-to-apples comparison with production.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; QA testing blocked by a RabbitMQ parity gap until the new QA RabbitMQ cluster is deployed</li>
-          <li>&#x26A0;&#xFE0F; James remains single-threaded on application configuration &#x2014; the top constraint on the Aug 5 date</li>
-          <li>&#x26A0;&#xFE0F; Ops bandwidth reduced: Hassan&#x2019;s pull to Lightning Bolt cuts Ops desk capacity amid conflicting stakeholder priorities</li>
+          <li>&#x26A0;&#xFE0F; QA testing blocked until a new RabbitMQ cluster in QA delivers Ansible-managed users and a service bus matching production</li>
+          <li>&#x26A0;&#xFE0F; James remains a single-threaded dependency for application configuration, keeping the Aug 5 date under pressure</li>
+          <li>&#x26A0;&#xFE0F; QA reliance on Betsy plus Hassan&#x2019;s pull to Lightning Bolt stretch team capacity across concurrent workstreams</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>&#x2705; QA strategy shift agreed &#x2014; team takes over QA, mirroring prod, with phased soak time per wave</li>
-          <li>&#x2705; Master migration list fully assigned; ALB and DNS cutover moved to Joseph Maloney to de-risk Josh&#x2019;s leave</li>
-          <li>&#x2705; Cutover runbook underway &#x2014; Esteban scripting the DNS flip, draft ready for review next week</li>
+          <li>&#x2705; Master migration list fully assigned &#x2014; ALB and DNS cutover shifted to Joseph Maloney to de-risk the timeline</li>
+          <li>&#x2705; QA strategy shift approved: team takes over QA, mirroring prod with phased soak time per migration wave</li>
+          <li>&#x2705; DNS-flip runbook scripting underway with prod/QA URLs in hand; draft ready for review next week</li>
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; QA validation session Thu Jul 16 &#x2014; gate for the Aug 5 first cutover wave</span></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Aug 5 production cutover wave 1 &#x2014; QA validation session next Thursday</span></div>
     <div class="sources">Sources: <a href="https://fathom.video/calls/737286290" target="_blank">Stand-up Jul 8</a> &#xB7; <a href="https://fathom.video/calls/738535380" target="_blank">Cutover Breakout Pt 3 Jul 8</a> &#xB7; <a href="https://fathom.video/calls/735906316" target="_blank">Stand-up Jul 7</a></div>
   </div>
 
@@ -112,15 +112,15 @@
       <div><div class="card-name">Canada AWS Platform</div><div class="card-sub"><strong>Goal:</strong> Spin up new Telmediq environment in the Canada region<br><strong>Timeline:</strong> April 22, 2026 - August 19, 2026.</div></div>
       <div class="rag rag-yellow">&#x1F7E1; AT RISK</div>
     </div>
-    <div class="rag-reason">The EKS cluster is provisioned but not operational, and the ArgoCD expertise gap after Vinny&#x2019;s departure blocks application deployment; expert sourcing is in motion.</div>
-    <div class="exec-summary">Infrastructure momentum is solid &#x2014; the Carpenter module blocker is resolved and PG Bouncer was descoped to an EC2 MVP to protect the Aug 19 timeline &#x2014; but the Canadian EKS cluster shows &#x201C;unknown&#x201D; status in ArgoCD and cannot take deployments. With no internal ArgoCD expert remaining, Jason is searching internally and Scott will source externally if needed, while Adam&#x2019;s team proceeds with Helm chart configuration in parallel. The July 15 Helm migration date is considered unrealistic given the current blockers.</div>
+    <div class="rag-reason">The EKS cluster is provisioned but not operational, and an ArgoCD expertise gap makes the July 15 Helm migration milestone unrealistic.</div>
+    <div class="exec-summary">The Canadian EKS cluster is provisioned but unusable &#x2014; ArgoCD reports its connection status as &#x201C;unknown&#x201D; &#x2014; blocking application deployment and testing. With no internal ArgoCD expert after Vinny&#x2019;s departure, Jason is searching internally and Scott will source externally if needed. Meanwhile Adam&#x2019;s team is proceeding with Helm chart configuration (independent of cluster status), and scope decisions such as the PG Bouncer EC2 MVP continue to protect the Aug 19 timeline.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; EKS cluster unusable &#x2014; ArgoCD status &#x201C;unknown&#x201D; with no internal expert to resolve it after Vinny&#x2019;s departure</li>
-          <li>&#x26A0;&#xFE0F; July 15 Helm chart migration deadline deemed unrealistic given blockers and the knowledge gap</li>
-          <li>&#x26A0;&#xFE0F; Hassan&#x2019;s reassignment to Lightning Bolt halts three integration tickets; escalation to Tony in motion</li>
+          <li>&#x26A0;&#xFE0F; EKS cluster not operational &#x2014; ArgoCD &#x201C;unknown&#x201D; status blocks deployment and end-to-end testing</li>
+          <li>&#x26A0;&#xFE0F; ArgoCD expertise gap after Vinny&#x2019;s departure makes the July 15 Helm chart deadline unrealistic</li>
+          <li>&#x26A0;&#xFE0F; Hassan reassigned to Lightning Bolt, halting three integration tickets; escalation to Tony in motion</li>
         </ul>
       </div>
       <div>
@@ -128,11 +128,11 @@
         <ul class="item-list">
           <li>&#x2705; EKS Carpenter blocker resolved via a new module version supporting external policies</li>
           <li>&#x2705; PG Bouncer descoped to an EC2 MVP, protecting the timeline; EKS modernization moved to a nice-to-do epic</li>
-          <li>&#x2705; Helm chart configuration proceeding in parallel, independent of the cluster&#x2019;s operational status</li>
+          <li>&#x2705; Adam&#x2019;s team proceeding with Helm chart configuration for Canadian deployments</li>
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Secure ArgoCD expert &amp; bring the EKS cluster operational &#x2014; gate for app deployment</span></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; ArgoCD expert onboarded &#x2192; EKS cluster operational for Helm deployment</span></div>
     <div class="sources">Sources: <a href="https://fathom.video/calls/739662177" target="_blank">ArgoCD/Helm Discussion Jul 8</a> &#xB7; <a href="https://fathom.video/calls/735906313" target="_blank">Weekly Stand-up Jul 7</a> &#xB7; <a href="https://fathom.video/calls/725639518" target="_blank">Collab Stand-up Jun 29</a></div>
   </div>
 
@@ -141,27 +141,27 @@
       <div><div class="card-name">OC West Expansion</div><div class="card-sub"><strong>Goal:</strong> Test Latency of Aurora Global for the OC West expansion.<br><strong>Timeline:</strong> June 22, 2026 - July 3, 2026.</div></div>
       <div class="rag rag-green">&#x1F7E2; ON TRACK</div>
     </div>
-    <div class="rag-reason">All blockers cleared &#x2014; approvals landed and the DMS full load kicked off the night of July 8; execution is proceeding with no open blockers.</div>
-    <div class="exec-summary">The DMS full load is running &#x2014; the RDS reboot and DNS flag flip executed cleanly the night of July 8, after the flip was validated safe via a connectivity test from inside the app&#x2019;s VPC. The load (est. 1&#x2013;2 days) is being monitored in CloudWatch. The remaining deliverable is the final East-vs-West latency assessment that informs the customer&#x2019;s contract-vs-ROI decision.</div>
+    <div class="rag-reason">DMS full load kicked off the night of July 8 with all approvals landed and no open blockers.</div>
+    <div class="exec-summary">The DMS full load is executing &#x2014; kicked off the night of July 8 after all approvals landed &#x2014; with an estimated 1&#x2013;2 day run monitored in CloudWatch. The DNS flip was previously validated safe via an in-VPC connectivity test, and the Aurora Global cluster, migration plan, and schema analysis are complete. The remaining deliverable is the final East-vs-West latency assessment that informs the customer&#x2019;s contract-vs-ROI decision.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; DMS full-load duration est. 1&#x2013;2 days &#x2014; monitoring CloudWatch for errors or overrun</li>
-          <li>&#x26A0;&#xFE0F; Lamine may depart for a new role &#x2014; handoff plan to an existing LP resource remains prudent</li>
-          <li>&#x26A0;&#xFE0F; Project at its 30-hour weekly budget; hours managed through the final assessment</li>
+          <li>&#x26A0;&#xFE0F; Watch item: full-load duration estimated at 1&#x2013;2 days; completion being monitored in CloudWatch</li>
+          <li>&#x26A0;&#xFE0F; Watch item: handoff contingency needed if Lamine departs &#x2014; existing LP resource preferred to avoid re-onboarding</li>
+          <li>&#x26A0;&#xFE0F; Watch item: project at its 30-hour weekly budget; hours managed through the final assessment</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>&#x2705; DMS full load kicked off the night of July 8 &#x2014; all approvals secured, no open blockers</li>
-          <li>&#x2705; RDS reboot and DNS flag flip executed cleanly; flip pre-validated from inside the app&#x2019;s VPC</li>
+          <li>&#x2705; All approvals landed &#x2014; DMS full load kicked off the night of July 8</li>
+          <li>&#x2705; DNS flip validated safe via an in-VPC connectivity test from the app&#x2019;s VPC</li>
           <li>&#x2705; Aurora Global cluster provisioned via Terraform; migration plan and schema analysis documented</li>
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; DMS full load complete &#x2192; final latency assessment (East vs. West)</span></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Full load completion (est. 1&#x2013;2 days) &#x2192; final East-vs-West latency assessment</span></div>
     <div class="sources">Sources: <a href="https://fathom.video/calls/733722096" target="_blank">Stand-up Jul 6</a> &#xB7; <a href="https://fathom.video/calls/730984648" target="_blank">Stand-up Jul 2</a> &#xB7; <a href="https://fathom.video/calls/725639508" target="_blank">Stand-up Jun 29</a></div>
   </div>
 
@@ -170,27 +170,27 @@
       <div><div class="card-name">IDP</div><div class="card-sub"><strong>Goal:</strong> Upgrade the IDP to Duende and vNext<br><strong>Timeline:</strong> Dec 1, 2025 - Nov 4, 2026.</div></div>
       <div class="rag rag-yellow">&#x1F7E1; AT RISK</div>
     </div>
-    <div class="rag-reason">The upgrade path is on track for the July 15 release challenge, but CC/OC work omitted from the Q3 PI plan plus dev and QA bottlenecks keep the program at risk.</div>
-    <div class="exec-summary">The upgrade project is on track for its July 15 release challenge, clearing the path for the vNext deployment, and the OCCC team was unblocked by configuring the upgrade environment for their Phase 3 spike. CC and OC work was omitted from the Q3 PI plan, so spikes &#x2014; with Brian helping Adan define scope &#x2014; will inform a capacity trade-off decision; Brian is also updating hybrid SCIM design artifacts and targeting an Identity vNext environment deployment within 2&#x2013;3 weeks for introspection testing. Lightning Bolt go-live moved to mid-August with a completed RCA from the failed June 17 release; the shift adds buffer and sits off the critical path.</div>
+    <div class="rag-reason">The upgrade path is on track for the July 15 release challenge, but CC/OC work omitted from the Q3 PI plan leaves capacity and timeline unresolved.</div>
+    <div class="exec-summary">The upgrade project is on track for its July 15 release challenge, clearing the path for the vNext deployment; Brian unblocked the OCCC team by configuring the upgrade environment for their Phase 3 spike. CC and OC work was omitted from the Q3 PI plan, so a trade-off discussion is needed &#x2014; the team will run spikes first to define the technical work, with findings driving the Q3 scheduling decision. Brian Noyes is updating hybrid SCIM design diagrams and story details, helping Adan scope the CC/OC spike, and deploying Identity vNext to an environment within 2&#x2013;3 weeks for introspection testing. Lightning Bolt go-live moved to mid-August as a scheduling buffer.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; CC/OC work omitted from the Q3 PI plan &#x2014; timeline and capacity reallocation unresolved until spike findings land</li>
-          <li>&#x26A0;&#xFE0F; Local debugging queue-connection failure blocking development, possibly tied to the Dev AWS migration</li>
+          <li>&#x26A0;&#xFE0F; CC/OC work omitted from the Q3 PI plan &#x2014; capacity reallocation and timeline unresolved pending spike findings</li>
+          <li>&#x26A0;&#xFE0F; Local debugging queue-connection failure blocking development; root cause possibly tied to the Dev AWS migration</li>
           <li>&#x26A0;&#xFE0F; Betsy remains a single-point QA bottleneck across concurrent AWS, TLS, and IDP testing</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>&#x2705; OCCC team unblocked &#x2014; upgrade environment configured for their Phase 3 spike/POC</li>
-          <li>&#x2705; Upgrade on track for the July 15 release challenge; weekly-release approval already secured</li>
-          <li>&#x2705; June 17 Lightning Bolt RCA complete with corrections identified; go-live rebased to mid-August with buffer</li>
+          <li>&#x2705; OCCC team unblocked via upgrade-environment configuration, bypassing the vNext deployment dependency</li>
+          <li>&#x2705; Weekly-release approval secured; June 17 Lightning Bolt release failure RCA completed with correction items identified for the next release window</li>
+          <li>&#x2705; Identity vNext environment deployment targeted within 2&#x2013;3 weeks to enable introspection testing</li>
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Jul 15 upgrade release challenge &#x2192; vNext deployment; vNext env in 2&#x2013;3 weeks</span></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Jul 15 upgrade release challenge &#x2192; vNext deployment path</span></div>
     <div class="sources">Sources: <a href="https://fathom.video/calls/737286259" target="_blank">IDP Sync Jul 8</a> &#xB7; <a href="https://fathom.video/calls/729864132" target="_blank">IDP Sync Jul 1</a> &#xB7; <a href="https://fathom.video/calls/724029421" target="_blank">Scrum of Scrums Jun 26</a></div>
   </div>
 
@@ -225,7 +225,7 @@
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Complete remaining local numbers: TBD (July 2, 2026)</span></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Complete remaining local numbers: TBD (from July 2, 2026)</span></div>
     <div class="sources">Sources: <a href="https://fathom.video/calls/725797616" target="_blank">Jun 29</a> &#xB7; <a href="https://fathom.video/calls/724289274" target="_blank">Jun 26</a> &#xB7; <a href="https://fathom.video/calls/722873489" target="_blank">Jun 25</a></div>
   </div>
 
@@ -254,13 +254,13 @@
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; July 9, 2026 &#x2014; Carilion OIDC Cutover &#x2014; CAB approval + Fortify engineer</span></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; July 9, 2026 &#x2014; Carilion OIDC Cutover (CAB approval + Fortify engineer)</span></div>
     <div class="sources">Sources: <a href="https://fathom.video/calls/727821907" target="_blank">Jun 30</a> &#xB7; <a href="https://fathom.video/calls/724289274" target="_blank">Jun 26</a> &#xB7; <a href="https://fathom.video/calls/722873489" target="_blank">Jun 25</a></div>
   </div>
 
 </div>
 <!-- END CHERIE SECTION -->
 
-<div class="footer">Generated 2026-07-09 &#xB7; Analysis based on Fathom meeting recordings &#xB7; PerfectServe Cloud Programs &#xB7; Combined view: Jon Birgel &amp; Cherie Monteferrante</div>
+<div class="footer">Generated July 9, 2026 &#xB7; Analysis based on Fathom meeting recordings &#xB7; PerfectServe Cloud Programs &#xB7; Combined view: Jon Birgel &amp; Cherie Monteferrante</div>
 </body>
 </html>
