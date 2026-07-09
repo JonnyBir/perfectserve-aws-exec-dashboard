@@ -62,14 +62,14 @@
   </div>
   <div class="header-meta">
     <div class="header-date">2026-07-09</div>
-    <div class="header-source">Source: Fathom standup &amp; review recordings<br>6 active projects &#xB7; 6 at risk &#xB7; 0 on track</div>
+    <div class="header-source">Source: Fathom standup &amp; review recordings<br>6 active projects &#xB7; 5 at risk &#xB7; 1 on track</div>
   </div>
 </div>
 
 <div class="summary-bar">
   <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Atlanta AWS Migration &#x2014; AT RISK</div>
   <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Canada AWS Platform &#x2014; AT RISK</div>
-  <div class="summary-chip"><div class="chip-dot dot-red"></div>OC West Expansion &#x2014; OFF TRACK</div>
+  <div class="summary-chip"><div class="chip-dot dot-green"></div>OC West Expansion &#x2014; ON TRACK</div>
   <div class="summary-chip"><div class="chip-dot dot-yellow"></div>IDP &#x2014; AT RISK</div>
   <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Genesys &#x2192; Twilio &#x2014; AT RISK</div>
   <div class="summary-chip"><div class="chip-dot dot-yellow"></div>LDAP &#x2192; OIDC &#x2014; AT RISK</div>
@@ -139,29 +139,29 @@
   <div class="card">
     <div class="card-top">
       <div><div class="card-name">OC West Expansion</div><div class="card-sub"><strong>Goal:</strong> Test Latency of Aurora Global for the OC West expansion.<br><strong>Timeline:</strong> June 22, 2026 - July 3, 2026.</div></div>
-      <div class="rag rag-red">&#x1F534; OFF TRACK</div>
+      <div class="rag rag-green">&#x1F7E2; ON TRACK</div>
     </div>
-    <div class="rag-reason">Past the July 3 target with deployment stalled on two approvals &#x2014; the PR review on Lamine&#x2019;s change and Jason&#x2019;s go/no-go &#x2014; and escalation to Jason is in motion.</div>
-    <div class="exec-summary">Technical readiness is proven &#x2014; the DNS flip was validated safe via a connectivity test from inside the app&#x2019;s VPC, and Lamine is ready to execute the RDS reboot, flag flip, and DMS full load &#x2014; but execution awaits a PR review (Miguel lacks approval authority) and Jason&#x2019;s go/no-go decision. Jon and Scott are presenting the case to Jason directly in their 1-on-1. Once released, the full load (est. 1&#x2013;2 days) leads to the final East-vs-West latency assessment that informs the customer&#x2019;s contract-vs-ROI decision.</div>
+    <div class="rag-reason">All blockers cleared &#x2014; approvals landed and the DMS full load kicked off the night of July 8; execution is proceeding with no open blockers.</div>
+    <div class="exec-summary">The DMS full load is running &#x2014; the RDS reboot and DNS flag flip executed cleanly the night of July 8, after the flip was validated safe via a connectivity test from inside the app&#x2019;s VPC. The load (est. 1&#x2013;2 days) is being monitored in CloudWatch. The remaining deliverable is the final East-vs-West latency assessment that informs the customer&#x2019;s contract-vs-ROI decision.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; Deployment stalled pending Jason&#x2019;s go/no-go and a manager sign-off on Lamine&#x2019;s PR</li>
-          <li>&#x26A0;&#xFE0F; Lamine may depart for a new role &#x2014; handoff plan to an existing LP resource still needed</li>
-          <li>&#x26A0;&#xFE0F; Project at its 30-hour weekly budget while the timeline extends past the July 3 target</li>
+          <li>&#x26A0;&#xFE0F; DMS full-load duration est. 1&#x2013;2 days &#x2014; monitoring CloudWatch for errors or overrun</li>
+          <li>&#x26A0;&#xFE0F; Lamine may depart for a new role &#x2014; handoff plan to an existing LP resource remains prudent</li>
+          <li>&#x26A0;&#xFE0F; Project at its 30-hour weekly budget; hours managed through the final assessment</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>&#x2705; DNS flip validated safe via a connectivity test from inside the app&#x2019;s VPC</li>
-          <li>&#x2705; Aurora Global cluster provisioned via Terraform; DMS full-load Terraform staged and ready</li>
-          <li>&#x2705; Migration plan and schema analysis documented, easing any resource handoff</li>
+          <li>&#x2705; DMS full load kicked off the night of July 8 &#x2014; all approvals secured, no open blockers</li>
+          <li>&#x2705; RDS reboot and DNS flag flip executed cleanly; flip pre-validated from inside the app&#x2019;s VPC</li>
+          <li>&#x2705; Aurora Global cluster provisioned via Terraform; migration plan and schema analysis documented</li>
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Go/no-go approval &#x2192; DMS full load &#x2192; final latency assessment (East vs. West)</span></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; DMS full load complete &#x2192; final latency assessment (East vs. West)</span></div>
     <div class="sources">Sources: <a href="https://fathom.video/calls/733722096" target="_blank">Stand-up Jul 6</a> &#xB7; <a href="https://fathom.video/calls/730984648" target="_blank">Stand-up Jul 2</a> &#xB7; <a href="https://fathom.video/calls/725639508" target="_blank">Stand-up Jun 29</a></div>
   </div>
 
