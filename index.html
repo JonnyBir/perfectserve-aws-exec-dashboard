@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AWS Projects &#x2014; Executive Status | July 12, 2026</title>
+  <title>AWS Projects &#x2014; Executive Status | July 13, 2026</title>
   <style>
     :root {
       --green-bg: #e3fcef; --green-fg: #006644; --green-border: #006644;
@@ -61,7 +61,7 @@
     <div class="ai-pill">&#x2726; AI-Analyzed &#xB7; Fathom Meeting Notes</div>
   </div>
   <div class="header-meta">
-    <div class="header-date">July 12, 2026</div>
+    <div class="header-date">July 13, 2026</div>
     <div class="header-source">Source: Fathom standup &amp; review recordings<br>6 active projects &#xB7; 5 at risk &#xB7; 1 on track</div>
   </div>
 </div>
@@ -84,7 +84,7 @@
       <div class="rag rag-yellow">&#x1F7E1; At Risk</div>
     </div>
     <div class="rag-reason">Aug 5 wave-1 cutover is holding, but a blocked V4 import and an unresolved load-testing gap keep schedule pressure on the critical path.</div>
-    <div class="exec-summary">QA testing is unblocked &#x2014; staging databases were rebuilt, a new RabbitMQ cluster in QA is standing up, and QA traffic now routes to Atlanta, enabling granular app-flip testing for Groups 1 and 2. The team has taken over QA for the Aug 5 deadline, mirroring production phase-by-phase with soak time between waves. Esteban&#x2019;s DNS-flip migration runbook is due for review by Thursday, and a load-testing plan (likely K6, informed by Pendo hotspot data) will be scoped with James and Tony this week.</div>
+    <div class="exec-summary">QA testing is unblocked &#x2014; staging databases were rebuilt, a new RabbitMQ cluster in QA is standing up, and QA traffic now routes to Atlanta, enabling granular app-flip testing for Groups 1 and 2. The team has taken over QA for the Aug 5 deadline, mirroring production phase-by-phase with soak time between waves, and all QA DNS is being unified to Atlanta QA. Esteban&#x2019;s DNS-flip migration runbook is due for review Thursday, and a load-testing plan (likely K6, informed by Pendo hotspot data) will be scoped with James and Tony this week.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
@@ -141,13 +141,13 @@
       <div><div class="card-name">OC West Expansion</div><div class="card-sub"><strong>Goal:</strong> Test Latency of Aurora Global for the OC West expansion.<br><strong>Timeline:</strong> June 22, 2026 - July 3, 2026.</div></div>
       <div class="rag rag-green">&#x1F7E2; On Track</div>
     </div>
-    <div class="rag-reason">DMS full load reached ~100% with no open approval blockers; the CNAME flip is gated only by large-table retries completing and replication lag holding under 5 seconds.</div>
-    <div class="exec-summary">The DMS full load kicked off the night of July 8 and reached roughly 100% by July 9; a handful of large, JSON-heavy tables (2&#x2013;3M rows, 1GB+) failed and are being manually retried &#x2014; a known DMS limitation &#x2014; with resolution targeted over the weekend and progress monitored in CloudWatch. A dashboard tracks replication lag against the 5-second go/no-go threshold gating the CNAME flip to Aurora, after which a US-West-2 instance will be provisioned via Terraform for the final East-vs-West latency assessment informing the customer&#x2019;s contract-vs-ROI decision. Full expansion is estimated for the end of next week.</div>
+    <div class="rag-reason">DMS full load is executing at ~100% with no open approval blockers; the CNAME flip is gated only by remaining large-table retries and replication lag holding under 5 seconds.</div>
+    <div class="exec-summary">The DMS full load kicked off the night of July 8 and reached roughly 100% by July 9; a handful of large, JSON-heavy tables (2&#x2013;3M rows, 1GB+) failed and are being manually retried &#x2014; a known DMS limitation &#x2014; with progress monitored in CloudWatch and resolution targeted over the weekend. A dashboard tracks replication lag against the 5-second go/no-go threshold gating the CNAME flip to Aurora, after which a US-West-2 instance will be provisioned via Terraform for the final East-vs-West latency assessment informing the customer&#x2019;s contract-vs-ROI decision. Full expansion is estimated for the end of this week.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; Watch item: large-table load failures require manual retries and could stretch the load window through the weekend</li>
+          <li>&#x26A0;&#xFE0F; Watch item: large-table load failures require manual retries and could stretch the load window</li>
           <li>&#x26A0;&#xFE0F; Watch item: replication lag must hold consistently below 5 seconds before the CNAME flip can proceed</li>
           <li>&#x26A0;&#xFE0F; Watch item: single-resource dependency on Lamine; Mark can source AWS DMS SMEs if a major blocker arises</li>
         </ul>
@@ -202,7 +202,7 @@
 
   <div class="card">
     <div class="card-top">
-      <div><div class="card-name">Genesys Deprecation &#x2192; Twilio</div><div class="card-sub"><strong>Goal:</strong> Replace the legacy Genesys platform and eventually turning it off<br><strong>Timeline:</strong> Dec 2025 - July 2027</div></div>
+      <div><div class="card-name">&#x1F4DE; Genesys Deprecation &#x2192; Twilio</div><div class="card-sub"><strong>Goal:</strong> Replace the legacy Genesys platform and eventually turning it off<br><strong>Timeline:</strong> Dec 2025 - July 2027</div></div>
       <div class="rag rag-yellow">&#x1F7E1; At Risk</div>
     </div>
     <div class="rag-reason">Twilio routing update: 28,492 remaining Toll Free numbers from July 2nd finished the morning of July 6th. Local numbers scheduled for July 6th.</div>
@@ -225,13 +225,13 @@
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Complete remaining local numbers: TBD (ref. July 2, 2026)</span></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Complete remaining local numbers: TBD (as of July 2, 2026)</span></div>
     <div class="sources">Sources: <a href="https://fathom.video/calls/725797616" target="_blank">Jun 29</a> &#xB7; <a href="https://fathom.video/calls/724289274" target="_blank">Jun 26</a> &#xB7; <a href="https://fathom.video/calls/722873489" target="_blank">Jun 25</a></div>
   </div>
 
   <div class="card">
     <div class="card-top">
-      <div><div class="card-name">LDAP &#x2192; OIDC Customer Migration</div><div class="card-sub"><strong>Goal:</strong> Migrate all LDAP PS customers to OIDC before the decommission of the Atlanta datacenter<br><strong>Timeline:</strong> Dec 15, 2025 - August 31, 2026</div></div>
+      <div><div class="card-name">&#x1F510; LDAP &#x2192; OIDC Customer Migration</div><div class="card-sub"><strong>Goal:</strong> Migrate all LDAP PS customers to OIDC before the decommission of the Atlanta datacenter<br><strong>Timeline:</strong> Dec 15, 2025 - August 31, 2026</div></div>
       <div class="rag rag-yellow">&#x1F7E1; At Risk</div>
     </div>
     <div class="rag-reason">Customer engagement improving post-webinar but migration rate remains critically low. New delete endpoint introduces domain-association data risk requiring UI guardrails before release.</div>
@@ -254,13 +254,13 @@
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Carilion OIDC Cutover (July 9, 2026) &#x2014; CAB approval + Fortify engineer</span></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; July 9, 2026 &#x2014; Carilion OIDC Cutover &#x2014; CAB approval + Fortify engineer</span></div>
     <div class="sources">Sources: <a href="https://fathom.video/calls/727821907" target="_blank">Jun 30</a> &#xB7; <a href="https://fathom.video/calls/724289274" target="_blank">Jun 26</a> &#xB7; <a href="https://fathom.video/calls/722873489" target="_blank">Jun 25</a></div>
   </div>
 
 </div>
 <!-- END CHERIE SECTION -->
 
-<div class="footer">Generated July 12, 2026 &#xB7; Analysis based on Fathom meeting recordings &#xB7; PerfectServe Cloud Programs &#xB7; Combined view: Jon Birgel &amp; Cherie Monteferrante</div>
+<div class="footer">Generated July 13, 2026 &#xB7; Analysis based on Fathom meeting recordings &#xB7; PerfectServe Cloud Programs &#xB7; Combined view: Jon Birgel &amp; Cherie Monteferrante</div>
 </body>
 </html>
