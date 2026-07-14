@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AWS Projects &#x2014; Executive Status | July 13, 2026</title>
+  <title>AWS Projects &#x2014; Executive Status | July 14, 2026</title>
   <style>
     :root {
       --green-bg: #e3fcef; --green-fg: #006644; --green-border: #006644;
@@ -13,7 +13,7 @@
       --surface: #ffffff; --page: #eef1f5;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif; background: var(--page); color: var(--text); padding: 32px 24px; min-height: 100vh; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif; background: var(--page); color: var(--text); padding: 32px 24px; min-height: 100vh; }
     .header { max-width: 1200px; margin: 0 auto 28px; background: var(--surface); border-radius: 14px; padding: 24px 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
     .header-title { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
     .header-sub { font-size: 13px; color: var(--subtext); margin-top: 5px; }
@@ -69,18 +69,18 @@
     <div class="ai-pill">&#x2726; AI-Analyzed &#xB7; Fathom Meeting Notes</div>
   </div>
   <div class="header-meta">
-    <div class="header-date">July 13, 2026</div>
+    <div class="header-date">July 14, 2026</div>
     <div class="header-source">Source: Fathom standup &amp; review recordings<br>6 active projects &#xB7; 5 at risk &#xB7; 1 on track</div>
   </div>
 </div>
 
 <div class="summary-bar">
-  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Atlanta AWS Migration &#x2014; At Risk</div>
-  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Canada AWS Platform &#x2014; At Risk</div>
-  <div class="summary-chip"><div class="chip-dot dot-green"></div>OC West Expansion &#x2014; On Track</div>
-  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>IDP &#x2014; At Risk</div>
-  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Genesys &#x2192; Twilio &#x2014; At Risk</div>
-  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>LDAP &#x2192; OIDC &#x2014; At Risk</div>
+  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Atlanta AWS Migration &#x2014; AT RISK</div>
+  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Canada AWS Platform &#x2014; AT RISK</div>
+  <div class="summary-chip"><div class="chip-dot dot-green"></div>OC West Expansion &#x2014; ON TRACK</div>
+  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>IDP &#x2014; AT RISK</div>
+  <div class="summary-chip"><div class="chip-dot dot-red"></div>Genesys Deprecation &#x2192; Twilio &#x2014; OFF TRACK</div>
+  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>LDAP &#x2192; OIDC Migration &#x2014; AT RISK</div>
 </div>
 
 <div class="section-heading">Jon Birgel &#xB7; PM &#x2014; AWS Platform &amp; Infrastructure</div>
@@ -88,40 +88,40 @@
 
   <div class="card">
     <div class="card-top">
-      <div><div class="card-name">Atlanta AWS Migration</div><div class="card-sub"><strong>Goal:</strong> Migrate PS Atlanta on-prem to AWS<br><strong>Timeline:</strong> Dec 2025 - August 2026.</div></div>
+      <div><div class="card-name">&#x1F3D7;&#xFE0F; Atlanta AWS Migration</div><div class="card-sub"><strong>Goal:</strong> Migrate PS Atlanta on-prem to AWS<br><strong>Timeline:</strong> Dec 2025 - August 2026.</div></div>
       <div class="rag rag-yellow">&#x1F7E1; At Risk</div>
     </div>
-    <div class="rag-reason">Aug 5 wave-1 cutover is holding, but a blocked V4 import and an unresolved load-testing gap keep schedule pressure on the critical path.</div>
-    <div class="exec-summary">QA testing is unblocked &#x2014; staging databases were rebuilt, a new RabbitMQ cluster in QA is standing up, and QA traffic now routes to Atlanta, enabling granular app-flip testing for Groups 1 and 2. The team has taken over QA for the Aug 5 deadline, mirroring production phase-by-phase with soak time between waves. Esteban&#x2019;s DNS-flip migration runbook is due for review Thursday, and a load-testing plan (likely K6, informed by Pendo hotspot data) will be scoped with James and Tony this week.</div>
+    <div class="rag-reason">V4 migration remains the primary blocker and the stalled Workspaces POC threatens the September user migration, keeping pressure on the Aug 5 wave-1 launch.</div>
+    <div class="exec-summary">All remaining production tasks are now tagged to a phased deployment plan (Aug 5, Sep 2, Nov 4, Dec 2), and the board is being reorganized into date-based epics to sharpen focus on the critical August 5th launch. A QA-leads-production strategy will migrate each wave in QA first and let it bake for weeks before cutover, providing a safety net for validating the new ALB. V4 migration remains the primary blocker, and Jon is escalating the long-stalled Workspaces POC with Tim as a critical-path item for the September user migration.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; Joe&#x2019;s V4 import blocked pending security group and EC2 workspace setup; David&#x2019;s related PR needs review</li>
-          <li>&#x26A0;&#xFE0F; Load-testing gap: Pendo tracks clicks, not load &#x2014; a K6-style plan must be scoped with James and Tony before cutover confidence</li>
-          <li>&#x26A0;&#xFE0F; James remains a single-threaded dependency for app configuration, with QA capacity concentrated in Betsy</li>
+          <li>&#x26A0;&#xFE0F; V4 migration stalled &#x2014; importing V3 state into the DR site without live changes forces a slow, deliberate approach, holding up production-side tasks</li>
+          <li>&#x26A0;&#xFE0F; Workspaces POC must land by Aug 5 at the latest or the September Citrix user migration and CX training slip; escalation with Tim in motion</li>
+          <li>&#x26A0;&#xFE0F; Load-testing gap &#x2014; Pendo tracks clicks, not load; new K6 stories (James leading) must stand up before cutover confidence</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>&#x2705; QA testing unblocked: staging DBs rebuilt, a new RabbitMQ cluster in QA, and QA traffic rerouted to ATL</li>
-          <li>&#x2705; QA strategy approved: team-run QA mirrors prod with phased soak time per wave; QA DNS unified to Atlanta QA</li>
-          <li>&#x2705; DNS-flip runbook scripting on track &#x2014; code due for review Thursday</li>
+          <li>&#x2705; Phased deployment plan locked &#x2014; every remaining prod task tagged to an Aug 5 / Sep 2 / Nov 4 / Dec 2 bucket</li>
+          <li>&#x2705; QA testing unblocked: staging DBs rebuilt, a new RabbitMQ cluster in QA, and QA traffic routed to ATL</li>
+          <li>&#x2705; LucidPoint continuing post-August on remaining contract hours, letting full DR shift later without risking Aug 5</li>
         </ul>
       </div>
     </div>
-    <div class="hours"><div class="hours-top"><span class="hours-label"><span class="hours-dot" style="background:var(--green-fg)"></span>Budget Hours &#xB7; On Budget &#xB7; Smartsheet 7/11</span><span class="hours-nums">3,020.5 / 6,245 hrs used</span></div><div class="hours-bar"><div class="hours-fill" style="width:48.4%; background:var(--green-fg)"></div></div><div class="hours-sub">3,224.5 hrs remaining &#xB7; 48.4% of budget consumed &#xB7; Source: PER Atlanta DC Mobilization + PER PS App DB Migration Mobilization</div></div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Aug 5 wave-1 production cutover &#x2014; DNS-flip runbook review Thu Jul 16</span></div>
-    <div class="sources">Sources: <a href="https://fathom.video/calls/739636433" target="_blank">Stand-up Jul 9</a> &#xB7; <a href="https://fathom.video/calls/737286290" target="_blank">Stand-up Jul 8</a> &#xB7; <a href="https://fathom.video/calls/738535380" target="_blank">Cutover Breakout Jul 8</a></div>
+    <div class="hours"><div class="hours-top"><span class="hours-label"><span class="hours-dot" style="background:var(--green-fg)"></span>Budget Hours &#xB7; On Budget &#xB7; Smartsheet 7/13</span><span class="hours-nums">3,026 / 6,245 hrs used</span></div><div class="hours-bar"><div class="hours-fill" style="width:48.5%; background:var(--green-fg)"></div></div><div class="hours-sub">3,219 hrs remaining &#xB7; 48.5% of budget consumed &#xB7; Source: PER Atlanta DC Mobilization + PER PS App DB Migration Mobilization</div></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Aug 5 Phase 1 production launch &#x2014; Workspaces POC due same day</span></div>
+    <div class="sources">Sources: <a href="https://fathom.video/calls/742124121" target="_blank">Stand-up Jul 13</a> &#xB7; <a href="https://fathom.video/calls/745055129" target="_blank">Phased Review w/ Tony Jul 13</a> &#xB7; <a href="https://fathom.video/calls/739636433" target="_blank">Stand-up Jul 9</a></div>
   </div>
 
   <div class="card">
     <div class="card-top">
-      <div><div class="card-name">Canada AWS Platform</div><div class="card-sub"><strong>Goal:</strong> Spin up new Telmediq environment in the Canada region<br><strong>Timeline:</strong> April 22, 2026 - August 19, 2026.</div></div>
+      <div><div class="card-name">&#x1F1E8;&#x1F1E6; Canada AWS Platform</div><div class="card-sub"><strong>Goal:</strong> Spin up new Telmediq environment in the Canada region<br><strong>Timeline:</strong> April 22, 2026 - August 19, 2026.</div></div>
       <div class="rag rag-yellow">&#x1F7E1; At Risk</div>
     </div>
-    <div class="rag-reason">The provisioned EKS cluster is not operational and an ArgoCD expertise gap makes the July 15 Helm chart milestone unrealistic.</div>
+    <div class="rag-reason">The provisioned EKS cluster is not operational and the ArgoCD expertise gap makes the July 15 Helm chart milestone unrealistic.</div>
     <div class="exec-summary">The Canadian EKS cluster is provisioned but unusable &#x2014; ArgoCD reports its connection status as unknown &#x2014; blocking application deployment and end-to-end testing. With no internal ArgoCD expert after Vinny&#x2019;s departure, Jason is searching internally and Scott will source externally if needed. Adam&#x2019;s team is proceeding with Helm chart configuration independent of cluster status, and scope decisions such as the PG Bouncer EC2 MVP continue to protect the Aug 19 finish.</div>
     <div class="two-col">
       <div>
@@ -141,23 +141,23 @@
         </ul>
       </div>
     </div>
-    <div class="hours"><div class="hours-top"><span class="hours-label"><span class="hours-dot" style="background:var(--green-fg)"></span>Budget Hours &#xB7; On Budget &#xB7; Smartsheet 7/11</span><span class="hours-nums">513.75 / 2,210 hrs used</span></div><div class="hours-bar"><div class="hours-fill" style="width:23.2%; background:var(--green-fg)"></div></div><div class="hours-sub">1,696.25 hrs remaining &#xB7; 23.2% of budget consumed &#xB7; Source: PER Canadian CC Platform</div></div>
+    <div class="hours"><div class="hours-top"><span class="hours-label"><span class="hours-dot" style="background:var(--green-fg)"></span>Budget Hours &#xB7; On Budget &#xB7; Smartsheet 7/13</span><span class="hours-nums">530.25 / 2,210 hrs used</span></div><div class="hours-bar"><div class="hours-fill" style="width:24.0%; background:var(--green-fg)"></div></div><div class="hours-sub">1,679.75 hrs remaining &#xB7; 24.0% of budget consumed &#xB7; Source: PER Canadian CC Platform</div></div>
     <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; ArgoCD expert onboarded &#x2192; EKS cluster operational for Helm deployment</span></div>
     <div class="sources">Sources: <a href="https://fathom.video/calls/739662177" target="_blank">ArgoCD/Helm Discussion Jul 8</a> &#xB7; <a href="https://fathom.video/calls/735906313" target="_blank">Weekly Stand-up Jul 7</a> &#xB7; <a href="https://fathom.video/calls/725639518" target="_blank">Collab Stand-up Jun 29</a></div>
   </div>
 
   <div class="card">
     <div class="card-top">
-      <div><div class="card-name">OC West Expansion</div><div class="card-sub"><strong>Goal:</strong> Test Latency of Aurora Global for the OC West expansion.<br><strong>Timeline:</strong> June 22, 2026 - July 3, 2026.</div></div>
+      <div><div class="card-name">&#x1F310; OC West Expansion</div><div class="card-sub"><strong>Goal:</strong> Test Latency of Aurora Global for the OC West expansion.<br><strong>Timeline:</strong> June 22, 2026 - July 3, 2026.</div></div>
       <div class="rag rag-green">&#x1F7E2; On Track</div>
     </div>
-    <div class="rag-reason">DMS full load executing with no open blockers; the CNAME flip is gated only by large-table retries completing and replication lag holding under 5 seconds.</div>
-    <div class="exec-summary">The DMS full load kicked off the night of July 8 and reached roughly 100% by July 9; a handful of large, JSON-heavy tables (2&#x2013;3M rows, 1GB+) failed and are being manually retried &#x2014; a known DMS limitation &#x2014; with progress monitored in CloudWatch and resolution targeted over the weekend. A dashboard tracks replication lag against the 5-second go/no-go threshold gating the CNAME flip to Aurora, after which a US-West-2 instance will be provisioned via Terraform for the remaining deliverable: the final East-vs-West latency assessment informing the customer&#x2019;s contract-vs-ROI decision. Full expansion is estimated for the end of next week.</div>
+    <div class="rag-reason">DMS full load is executing with no open blockers &#x2014; all approvals landed; the CNAME flip is gated only on final table syncs and replication lag holding under 5 seconds.</div>
+    <div class="exec-summary">The DMS full load kicked off the night of July 8 and reached roughly 100% by July 9; a handful of large, JSON-heavy tables (2&#x2013;3M rows, 1GB+) required manual retries &#x2014; a known DMS limitation &#x2014; with progress monitored in CloudWatch. A dashboard tracks replication lag against the 5-second go/no-go threshold gating the CNAME flip to Aurora, after which a US-West-2 instance will be provisioned via Terraform for the remaining deliverable: the final East-vs-West latency assessment informing the customer&#x2019;s contract-vs-ROI decision. Full expansion is estimated for the end of this week.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; Watch item: large-table load failures require manual retries and could stretch the load window through the weekend</li>
+          <li>&#x26A0;&#xFE0F; Watch item: large-table load failures require manual retries and could stretch the load window</li>
           <li>&#x26A0;&#xFE0F; Watch item: replication lag must hold consistently below 5 seconds before the CNAME flip can proceed</li>
           <li>&#x26A0;&#xFE0F; Watch item: single-resource dependency on Lamine; Mark can source AWS DMS SMEs if a major blocker arises</li>
         </ul>
@@ -171,25 +171,25 @@
         </ul>
       </div>
     </div>
-    <div class="hours"><div class="hours-top"><span class="hours-label"><span class="hours-dot" style="background:var(--green-fg)"></span>Budget Hours &#xB7; On Budget &#xB7; Smartsheet 7/11</span><span class="hours-nums">22 / 118 hrs used</span></div><div class="hours-bar"><div class="hours-fill" style="width:18.6%; background:var(--green-fg)"></div></div><div class="hours-sub">96 hrs remaining &#xB7; 18.6% of budget consumed &#xB7; Source: PER OC Multi-Region Active POC</div></div>
+    <div class="hours"><div class="hours-top"><span class="hours-label"><span class="hours-dot" style="background:var(--green-fg)"></span>Budget Hours &#xB7; On Budget &#xB7; Smartsheet 7/13</span><span class="hours-nums">22 / 118 hrs used</span></div><div class="hours-bar"><div class="hours-fill" style="width:18.6%; background:var(--green-fg)"></div></div><div class="hours-sub">96 hrs remaining &#xB7; 18.6% of budget consumed &#xB7; Source: PER OC Multi-Region Active POC</div></div>
     <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; CNAME flip to Aurora once tables sync &amp; lag &lt; 5s &#x2014; East-vs-West latency assessment to follow</span></div>
     <div class="sources">Sources: <a href="https://fathom.video/calls/739636434" target="_blank">Stand-up Jul 9</a> &#xB7; <a href="https://fathom.video/calls/733722096" target="_blank">Stand-up Jul 6</a> &#xB7; <a href="https://fathom.video/calls/730984648" target="_blank">Stand-up Jul 2</a></div>
   </div>
 
   <div class="card">
     <div class="card-top">
-      <div><div class="card-name">IDP</div><div class="card-sub"><strong>Goal:</strong> Upgrade the IDP to Duende and vNext<br><strong>Timeline:</strong> Dec 1, 2025 - Nov 4, 2026.</div></div>
+      <div><div class="card-name">&#x1F510; IDP</div><div class="card-sub"><strong>Goal:</strong> Upgrade the IDP to Duende and vNext<br><strong>Timeline:</strong> Dec 1, 2025 - Nov 4, 2026.</div></div>
       <div class="rag rag-yellow">&#x1F7E1; At Risk</div>
     </div>
     <div class="rag-reason">The upgrade path is on track for the July 15 release challenge, but CC/OC work omitted from the Q3 PI plan leaves capacity and timeline unresolved.</div>
-    <div class="exec-summary">The upgrade project is on track for its July 15 release challenge, clearing the path to QA regression and a production release within roughly two weeks; Brian unblocked the OCCC team by configuring the upgrade environment for their Phase 3 spike. CC and OC work was omitted from the Q3 PI plan, so a trade-off discussion is needed &#x2014; the team will run spikes first to define the technical work, with findings driving the Q3 scheduling decision. Brian Noyes is updating hybrid SCIM design diagrams and story details, helping Adan scope the CC/OC spike, and deploying Identity vNext to an environment within 2&#x2013;3 weeks for introspection testing. Lightning Bolt go-live moved to mid-August as a scheduling buffer; the June 17 Lightning Bolt release failure has a completed RCA with correction items identified for the next window.</div>
+    <div class="exec-summary">The upgrade project is on track for its July 15 release challenge, clearing the path to QA regression and a production release within roughly two weeks; Brian unblocked the OCCC team by configuring the upgrade environment for their Phase 3 spike. CC and OC work was omitted from the Q3 PI plan, so a trade-off discussion is needed &#x2014; the team will run spikes first to define the technical work, with findings driving the Q3 scheduling decision. Brian Noyes is updating hybrid SCIM design diagrams and story details, helping Adan define the CC/OC spike scope, and deploying Identity vNext to an environment within 2&#x2013;3 weeks to enable introspection testing. Lightning Bolt go-live moved to mid-August as a scheduling buffer; the June 17 Lightning Bolt release failure has a completed RCA with correction items identified for the next release window.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
           <li>&#x26A0;&#xFE0F; CC/OC work omitted from the Q3 PI plan &#x2014; capacity reallocation and timeline unresolved pending spike findings</li>
           <li>&#x26A0;&#xFE0F; Local debugging queue-connection failure blocking development; root cause possibly tied to the Dev AWS migration</li>
-          <li>&#x26A0;&#xFE0F; Betsy remains a single-point QA bottleneck across concurrent AWS, TLS, and IDP testing</li>
+          <li>&#x26A0;&#xFE0F; Betsy remains a single-point QA bottleneck; Lightning Bolt deployment still gated by the client&#x2019;s maintenance-window availability</li>
         </ul>
       </div>
       <div>
@@ -201,9 +201,9 @@
         </ul>
       </div>
     </div>
-    <div class="hours"><div class="hours-top"><span class="hours-label"><span class="hours-dot" style="background:var(--green-fg)"></span>Budget Hours &#xB7; On Budget &#xB7; Smartsheet 7/11</span><span class="hours-nums">152 / 260 hrs used</span></div><div class="hours-bar"><div class="hours-fill" style="width:58.5%; background:var(--green-fg)"></div></div><div class="hours-sub">108 hrs remaining &#xB7; 58.5% of budget consumed &#xB7; Source: PER Solliance Identity Server Rollout</div></div>
+    <div class="hours"><div class="hours-top"><span class="hours-label"><span class="hours-dot" style="background:var(--green-fg)"></span>Budget Hours &#xB7; On Budget &#xB7; Smartsheet 7/13</span><span class="hours-nums">152 / 260 hrs used</span></div><div class="hours-bar"><div class="hours-fill" style="width:58.5%; background:var(--green-fg)"></div></div><div class="hours-sub">108 hrs remaining &#xB7; 58.5% of budget consumed &#xB7; Source: PER Solliance Identity Server Rollout</div></div>
     <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Jul 15 upgrade release challenge &#x2192; QA regression &#x2192; prod within ~2 weeks</span></div>
-    <div class="sources">Sources: <a href="https://fathom.video/calls/737286259" target="_blank">IDP Sync Jul 8</a> &#xB7; <a href="https://fathom.video/calls/729864132" target="_blank">IDP Sync Jul 1</a> &#xB7; <a href="https://fathom.video/calls/724029421" target="_blank">Scrum of Scrums Jun 26</a></div>
+    <div class="sources">Sources: <a href="https://fathom.video/calls/737286259" target="_blank">IDP Sync Jul 8</a> &#xB7; <a href="https://fathom.video/calls/729864132" target="_blank">IDP Sync Jul 1</a> &#xB7; <a href="https://fathom.video/calls/721001569" target="_blank">IDP Sync Jun 24</a></div>
   </div>
 
 </div>
@@ -214,65 +214,65 @@
 
   <div class="card">
     <div class="card-top">
-      <div><div class="card-name">Genesys Deprecation &#x2192; Twilio</div><div class="card-sub"><strong>Goal:</strong> Replace the legacy Genesys platform and eventually turning it off<br><strong>Timeline:</strong> Dec 2025 - July 2027</div></div>
-      <div class="rag rag-yellow">&#x1F7E1; At Risk</div>
+      <div><div class="card-name">&#x1F4DE; Genesys Deprecation &#x2192; Twilio</div><div class="card-sub"><strong>Goal:</strong> Replace the legacy Genesys platform and eventually turning it off<br><strong>Timeline:</strong> Dec 2025 - July 2027<br><strong>% Complete:</strong> TBD</div></div>
+      <div class="rag rag-red">&#x1F534; Off Track</div>
     </div>
-    <div class="rag-reason">Twilio routing update: 28,492 remaining Toll Free numbers from July 2nd finished the morning of July 6th. Local numbers scheduled for July 6th.</div>
-    <div class="exec-summary">28,000 TFNs completed July 2&#x2013;6. 657 local numbers ported July 6 with some resubmitted; awaiting Twilio confirmation on port date for 276 resubmitted numbers. Team is focusing on prerequisite code cleanup to prevent environment inconsistencies before contractors begin work.</div>
+    <div class="rag-reason">Status as of 7/13/26: ~24 TFNs remain unported &#x2014; roughly half unassigned/test customers, the other half pending Five9s confirmation. Local number porting has run into additional issues; awaiting update from Doug. Team pivoting to prerequisites and epic grooming.</div>
+    <div class="exec-summary">28,000 TFNs completed July 2&#x2013;6. Approximately 24 TFNs remain unported: roughly half are unassigned or test customers; the other half are being confirmed with Five9s. Local number status is pending &#x2014; Doug is working through additional issues that have surfaced. Team is focusing on prerequisites and epic grooming before contractors begin development work. Dev &amp; QA environment issues continue to slow development and deployments.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; <strong>276 Resubmitted Local Numbers:</strong> Awaiting Twilio confirmation on port date. Status TBD.</li>
-          <li>&#x26A0;&#xFE0F; <strong>SFTP Blocked:</strong> CS can&#x2019;t schedule migrations until docs and customer list delivered &#x2014; threatens July 30 milestone.</li>
-          <li>&#x26A0;&#xFE0F; <strong>Dev &amp; QA Environment Issues:</strong> Environment instability is slowing development and deployments, delaying contractor onboarding readiness.</li>
+          <li>&#x26A0;&#xFE0F; <strong>~24 TFNs Unported:</strong> ~Half are unassigned/test customers; remaining half pending Five9s confirmation. Final resolution TBD.</li>
+          <li>&#x26A0;&#xFE0F; <strong>Local Number Issues:</strong> Local number porting has run into additional issues. Awaiting specific status update from Doug.</li>
+          <li>&#x26A0;&#xFE0F; <strong>Dev &amp; QA Environment Issues:</strong> Ongoing environment instability is slowing development and deployments, blocking contractor readiness and sprint progress.</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
           <li>&#x2705; <strong>28,000 TFNs Ported:</strong> Toll-free number porting completed July 2&#x2013;6. 657 local numbers ported July 6.</li>
-          <li>&#x2705; <strong>Five9s Unblocked:</strong> Five9s confirmed SIP trunk capability &#x2014; migration proceeds once config details provided.</li>
-          <li>&#x2705; <strong>Contractors Onboarded:</strong> Team completing code prerequisite cleanup to ensure environment consistency before contractor work begins.</li>
+          <li>&#x2705; <strong>Prerequisites Underway:</strong> Team focused on epic grooming and prerequisite cleanup to ensure code consistency before contractors start work.</li>
+          <li>&#x2705; <strong>Five9s Coordination Active:</strong> Confirming ~12 remaining TFNs with Five9s to close out final unported numbers.</li>
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; July 2, 2026 &#xB7; Complete remaining local numbers: TBD</span></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; July 2, 2026 &#xB7; Complete remaining local numbers: TBD &#x2014; ~24 TFNs pending (Five9s confirmation + Doug&#x2019;s local number update) &#xB7; Team on prerequisites &amp; epic grooming</span></div>
     <div class="sources">Sources: <a href="https://fathom.video/calls/725797616" target="_blank">Jun 29</a> &#xB7; <a href="https://fathom.video/calls/724289274" target="_blank">Jun 26</a> &#xB7; <a href="https://fathom.video/calls/722873489" target="_blank">Jun 25</a></div>
   </div>
 
   <div class="card">
     <div class="card-top">
-      <div><div class="card-name">LDAP &#x2192; OIDC Customer Migration</div><div class="card-sub"><strong>Goal:</strong> Migrate all LDAP PS customers to OIDC before the decommission of the Atlanta datacenter<br><strong>Timeline:</strong> Dec 15, 2025 - August 31, 2026</div></div>
+      <div><div class="card-name">&#x1F511; LDAP &#x2192; OIDC Customer Migration</div><div class="card-sub"><strong>Goal:</strong> Migrate all LDAP PS customers to OIDC before the decommission of the Atlanta datacenter<br><strong>Timeline:</strong> Dec 15, 2025 - August 31, 2026</div></div>
       <div class="rag rag-yellow">&#x1F7E1; At Risk</div>
     </div>
-    <div class="rag-reason">Customer engagement improving post-webinar but migration rate remains critically low. New delete endpoint introduces domain-association data risk requiring UI guardrails before release.</div>
-    <div class="exec-summary">Carilion shifted from a January delay to a July 9 cutover after webinar clarified the August 31 hard stop. Phase 2 delete endpoint approved Jun 30 but a legacy domain-based flaw means removals affect all authenticators sharing a domain. Each cutover requires a dedicated Fortify engineer until CSP Portal bulk upload goes live.</div>
+    <div class="rag-reason">Customer engagement is a growing concern &#x2014; many customers not responding to outreach. Progress is happening but needs to accelerate significantly to hit the 50% migration milestone by July 30.</div>
+    <div class="exec-summary">Customer engagement remains a critical concern with many customers not responding to outreach &#x2014; migration pace must accelerate significantly to reach the 50% milestone by July 30. Two new issues surfaced: a testing coordination gap where CS lacks a defined process for test-user calls (engineering confirmed they should be on standby only, not configuring test users), and a Mercy domain bug where Mercy&#x2019;s domains added to CSP are incorrectly pulling in Mercy Des Moines organizations (5 wrong HSOs) &#x2014; a DevPort bug ticket needs to be created and posted in PS Engineering.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; <strong>Low Migration Rate:</strong> OIDC previously missed June 9 target. August 31 is hard-communicated &#x2014; CSA bandwidth is top risk.</li>
-          <li>&#x26A0;&#xFE0F; <strong>Domain Delete Flaw:</strong> Endpoint operates on domain name (not ID) &#x2014; affects ALL authenticators sharing a domain. Data deletion risk without UI guardrails.</li>
-          <li>&#x26A0;&#xFE0F; <strong>Fortify Bottleneck:</strong> Each cutover needs a dedicated Fortify engineer until bulk upload goes live &#x2014; hard capacity constraint July&#x2013;August.</li>
+          <li>&#x26A0;&#xFE0F; <strong>Customer Engagement Critical:</strong> Many customers not responding to outreach. Must accelerate significantly to hit 50% migration milestone by July 30.</li>
+          <li>&#x26A0;&#xFE0F; <strong>OIDC Testing Coordination Gap:</strong> CS lacks a defined process for test-user calls &#x2014; who sets up users, who is on engineering standby, and how to reserve engineering time via Support ticket. Engineering should NOT configure test users; standby for real-time issue support only.</li>
+          <li>&#x26A0;&#xFE0F; <strong>Mercy Domain Bug:</strong> Mercy domains added to CSP are incorrectly pulling in Mercy Des Moines organizations (5 wrong HSOs). DevPort bug ticket must be created and posted in PS Engineering.</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>&#x2705; <strong>Carilion Jul 9 Scheduled:</strong> After requesting January delay, Carilion submitted July 9 ticket. Kevin to confirm via CAB.</li>
-          <li>&#x2705; <strong>Delete Endpoint Approved:</strong> Phase 2 approved Jun 30; reduces manual support tickets once live with proper guardrails.</li>
-          <li>&#x2705; <strong>Data Cleanup Underway:</strong> Jeremy vetting anomalous OIDC accounts to identify deactivation candidates and reduce scope.</li>
+          <li>&#x2705; <strong>Migration Progress Ongoing:</strong> Customers are migrating &#x2014; pace must accelerate to meet July 30 milestone. CSA outreach continuing.</li>
+          <li>&#x2705; <strong>Engineering Standby Process Clarified:</strong> Engineering confirmed role boundary &#x2014; available for real-time issue support during cutovers, not test user configuration.</li>
+          <li>&#x2705; <strong>Mercy Bug Identified:</strong> Domain misconfiguration caught early &#x2014; DevPort ticket being created to resolve 5 incorrect HSO associations before they impact cutovers.</li>
         </ul>
       </div>
     </div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; July 9, 2026 &#xB7; Carilion OIDC Cutover &#x2014; CAB approval + Fortify engineer</span></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; July 9, 2026 &#xB7; 50% customer migration by July 30 &#x2014; accelerate CSA outreach + resolve Mercy domain bug + define testing coordination process</span></div>
     <div class="sources">Sources: <a href="https://fathom.video/calls/727821907" target="_blank">Jun 30</a> &#xB7; <a href="https://fathom.video/calls/724289274" target="_blank">Jun 26</a> &#xB7; <a href="https://fathom.video/calls/722873489" target="_blank">Jun 25</a></div>
   </div>
 
 </div>
 <!-- END CHERIE SECTION -->
 
-<div class="footer">Generated July 13, 2026 &#xB7; Analysis based on Fathom meeting recordings &#xB7; PerfectServe Cloud Programs &#xB7; Combined view: Jon Birgel &amp; Cherie Monteferrante</div>
+<div class="footer">Generated July 14, 2026 &#xB7; Analysis based on Fathom meeting recordings &#xB7; PerfectServe Cloud Programs &#xB7; Combined view: Jon Birgel &amp; Cherie Monteferrante</div>
 </body>
 </html>
