@@ -78,7 +78,7 @@
   <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Atlanta AWS Migration &#x2014; AT RISK</div>
   <div class="summary-chip"><div class="chip-dot dot-yellow"></div>Canada AWS Platform &#x2014; AT RISK</div>
   <div class="summary-chip"><div class="chip-dot dot-green"></div>OC West Expansion &#x2014; ON TRACK</div>
-  <div class="summary-chip"><div class="chip-dot dot-yellow"></div>IDP &#x2014; AT RISK</div>
+  <div class="summary-chip"><div class="chip-dot dot-red"></div>IDP &#x2014; OFF TRACK</div>
   <div class="summary-chip"><div class="chip-dot dot-red"></div>Genesys Deprecation &#x2192; Twilio &#x2014; OFF TRACK</div>
   <div class="summary-chip"><div class="chip-dot dot-yellow"></div>LDAP &#x2192; OIDC Migration &#x2014; AT RISK</div>
 </div>
@@ -179,17 +179,17 @@
   <div class="card">
     <div class="card-top">
       <div><div class="card-name">&#x1F510; IDP</div><div class="card-sub"><strong>Goal:</strong> Upgrade the IDP to Duende and vNext<br><strong>Timeline:</strong> Dec 1, 2025 - Nov 4, 2026.</div></div>
-      <div class="rag rag-yellow">&#x1F7E1; AT RISK</div>
+      <div class="rag rag-red">&#x1F534; OFF TRACK</div>
     </div>
-    <div class="rag-reason">The upgrade release challenge lands July 15 on schedule, but CC/OC work omitted from the Q3 PI plan leaves capacity and timeline unresolved.</div>
-    <div class="exec-summary">The upgrade project reached its July 15 release challenge on track, clearing the path to QA regression and a production release within roughly two weeks; Brian unblocked the OCCC team&#x2019;s Phase 3 spike by configuring the upgrade environment. CC and OC work was omitted from the Q3 PI plan, so a trade-off discussion is needed &#x2014; the team will run spikes first to define the technical work, with findings driving the Q3 scheduling decision. Brian Noyes is updating hybrid SCIM design diagrams and story details, helping Adan define the CC/OC spike scope, and deploying Identity vNext to an environment within 2&#x2013;3 weeks to enable introspection testing; Lightning Bolt go-live moved to mid-August as a buffer, with the June 17 release-failure RCA complete and correction items identified for the next release window.</div>
+    <div class="rag-reason">Orrian has pushed the Lightning Bolt production release to the end of the year, citing tight Q3/Q4 release and maintenance windows &#x2014; a slip past the Nov 4 project end date that triggers the planned escalation path.</div>
+    <div class="exec-summary">The upgrade project reached its July 15 release challenge on track, clearing the path to QA regression and a production release within roughly two weeks; Brian unblocked the OCCC team&#x2019;s Phase 3 spike by configuring the upgrade environment. However, Orrian notified the team on July 14 that tight Q3/Q4 release and maintenance windows are pushing the Lightning Bolt production work to the end of the year &#x2014; a slip from the mid-August target that lands beyond the Nov 4 project timeline; Orrian has offered to meet, and the pre-agreed escalation path to Steve, Olga, and Jason now applies. CC and OC work also remains omitted from the Q3 PI plan &#x2014; spikes will define the technical work and drive the scheduling decision &#x2014; while Brian Noyes updates hybrid SCIM design diagrams, helps Adan scope the CC/OC spike, and deploys Identity vNext within 2&#x2013;3 weeks for introspection testing.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
+          <li>&#x26A0;&#xFE0F; Orrian pushed the Lightning Bolt production release from mid-August to end of year over tight Q3/Q4 release windows &#x2014; beyond the Nov 4 project end; escalation to Steve, Olga, and Jason warranted and Orrian has offered a follow-up meeting</li>
           <li>&#x26A0;&#xFE0F; CC/OC work omitted from the Q3 PI plan &#x2014; trade-off discussion and possible capacity reallocation pending spike findings</li>
           <li>&#x26A0;&#xFE0F; Local debugging queue-connection failure blocking development; root cause possibly tied to the Dev AWS migration</li>
-          <li>&#x26A0;&#xFE0F; Betsy remains a single-point QA bottleneck; Lightning Bolt deployment gated by the client&#x2019;s maintenance-window availability</li>
         </ul>
       </div>
       <div>
@@ -202,7 +202,7 @@
       </div>
     </div>
     <div class="hours"><div class="hours-top"><span class="hours-label"><span class="hours-dot" style="background:var(--green-fg)"></span>Budget Hours &#xB7; On Budget &#xB7; Smartsheet 7/14</span><span class="hours-nums">152 / 260 hrs used</span></div><div class="hours-bar"><div class="hours-fill" style="width:58.5%; background:var(--green-fg)"></div></div><div class="hours-sub">108 hrs remaining &#xB7; 58.5% of budget consumed &#xB7; Source: PER Solliance Identity Server Rollout</div></div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Jul 15 upgrade release challenge &#x2192; QA regression &#x2192; prod within ~2 weeks</span></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Jul 15 upgrade release challenge &#x2192; QA regression &#x2192; prod within ~2 weeks &#xB7; align new LB release window with Orrian</span></div>
     <div class="sources">Sources: <a href="https://fathom.video/calls/737286259" target="_blank">IDP Sync Jul 8</a> &#xB7; <a href="https://fathom.video/calls/729864132" target="_blank">IDP Sync Jul 1</a> &#xB7; <a href="https://fathom.video/calls/721001569" target="_blank">IDP Sync Jun 24</a></div>
   </div>
 
