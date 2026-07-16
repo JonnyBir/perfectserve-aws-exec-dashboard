@@ -121,29 +121,29 @@
       <div><div class="card-name">&#x1F1E8;&#x1F1E6; Canada AWS Platform</div><div class="card-sub"><strong>Goal:</strong> Spin up new Telmediq environment in the Canada region<br><strong>Timeline:</strong> April 22, 2026 - August 19, 2026.</div></div>
       <div class="rag rag-yellow">&#x1F7E1; AT RISK</div>
     </div>
-    <div class="rag-reason">The provisioned EKS cluster is not operational (ArgoCD status &#x201C;unknown&#x201D;) and the ArgoCD expertise gap makes the Helm chart milestone unrealistic.</div>
-    <div class="exec-summary">The Canadian EKS cluster is provisioned but unusable &#x2014; ArgoCD reports its connection status as unknown &#x2014; blocking application deployment and end-to-end testing. With no internal ArgoCD expert after Vinny&#x2019;s departure, Jason is searching internally and Scott will source one externally if needed, while Adam&#x2019;s team proceeds with Helm chart configuration independent of cluster status. Scope decisions such as the PG Bouncer EC2 MVP continue to protect the Aug 19 finish.</div>
+    <div class="rag-reason">EKS is built and ArgoCD is now running, but LucidPoint cannot yet validate cluster health &#x2014; Dave and David are submitting access tickets for the new prod.argo cluster &#x2014; and deferring validation toward August pressures the Aug 19 finish.</div>
+    <div class="exec-summary">Vinny and Matt built out the EKS cluster and ArgoCD is now running, resolving the operational blocker. Dave and David need access to the new prod.argo cluster to validate from our side that ArgoCD is showing healthy; they are submitting access tickets, and Jon is requesting access in the main channel to document due diligence. A phased validation plan (Hogger first, then SPV2) will exercise the cluster once access lands, with application deployments targeted for late July/early August &#x2014; Looker and data-plane work proceed in parallel.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; EKS cluster not operational &#x2014; ArgoCD &#x201C;unknown&#x201D; status blocks deployment and end-to-end testing</li>
-          <li>&#x26A0;&#xFE0F; ArgoCD expertise gap after Vinny&#x2019;s departure makes the July 15 Helm chart deadline unrealistic</li>
-          <li>&#x26A0;&#xFE0F; Hassan reassigned to Lightning Bolt, halting three integration tickets; escalation to Tony in motion</li>
+          <li>&#x26A0;&#xFE0F; ArgoCD health not yet validated from our side &#x2014; Dave and David&#x2019;s access tickets pending; if access is denied, the client team assumes responsibility for cluster functionality</li>
+          <li>&#x26A0;&#xFE0F; Deferring cluster testing toward August risks a last-minute scramble before the Aug 19 deadline; a canary validation was previously rejected</li>
+          <li>&#x26A0;&#xFE0F; Hassan&#x2019;s integration work paused for Lightning Bolt; Tony checking site-to-site VPN status with Kevin Johnson to see if the task can be reassigned</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>&#x2705; EKS Carpenter blocker resolved via a new module version supporting external policies</li>
-          <li>&#x2705; PG Bouncer descoped to an EC2 MVP, protecting the timeline; EKS modernization moved to a nice-to-do epic</li>
-          <li>&#x2705; Adam&#x2019;s team proceeding with Helm chart configuration for Canadian deployments</li>
+          <li>&#x2705; EKS cluster built out by Vinny and Matt &#x2014; ArgoCD is now running</li>
+          <li>&#x2705; Phased EKS validation plan set: deploy Hogger (simplest app) first, then SPV2, to isolate and test cluster functionality</li>
+          <li>&#x2705; Looker work unblocked &#x2014; Brandon resuming by end of week; Adam&#x2019;s RDS SCP block being fixed via platform permissions</li>
         </ul>
       </div>
     </div>
     <div class="hours"><div class="hours-top"><span class="hours-label"><span class="hours-dot" style="background:var(--green-fg)"></span>Budget Hours &#xB7; On Budget &#xB7; Smartsheet 7/15</span><span class="hours-nums">533.25 / 2,210 hrs used</span></div><div class="hours-bar"><div class="hours-fill" style="width:24.1%; background:var(--green-fg)"></div></div><div class="hours-sub">1,676.75 hrs remaining &#xB7; 24.1% of budget consumed &#xB7; Source: PER Canadian CC Platform</div></div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; ArgoCD expert onboarded &#x2192; EKS cluster operational for Helm deployment</span></div>
-    <div class="sources">Sources: <a href="https://fathom.video/calls/739662177" target="_blank">ArgoCD/Helm Discussion Jul 8</a> &#xB7; <a href="https://fathom.video/calls/735906313" target="_blank">Weekly Stand-up Jul 7</a> &#xB7; <a href="https://fathom.video/calls/730984642" target="_blank">Weekly Check-In Jul 2</a></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; ArgoCD access granted &#x2192; validate cluster health &#x2192; phased deployments (Hogger &#x2192; SPV2) late July/early Aug</span></div>
+    <div class="sources">Sources: <a href="https://fathom.video/calls/746285833" target="_blank">Collab Stand-up Jul 15</a> &#xB7; <a href="https://fathom.video/calls/745311988" target="_blank">Weekly Stand-up Jul 14</a> &#xB7; <a href="https://fathom.video/calls/744360281" target="_blank">Collab Stand-up Jul 14</a></div>
   </div>
 
   <div class="card">
