@@ -1,0 +1,106 @@
+{
+  "updated": "2026-07-16",
+  "dates": [
+    "2026-06-24",
+    "2026-06-25",
+    "2026-06-26",
+    "2026-06-27",
+    "2026-06-28",
+    "2026-06-29",
+    "2026-06-30",
+    "2026-07-01",
+    "2026-07-02",
+    "2026-07-03",
+    "2026-07-04",
+    "2026-07-05",
+    "2026-07-06",
+    "2026-07-07",
+    "2026-07-08",
+    "2026-07-09",
+    "2026-07-10",
+    "2026-07-11",
+    "2026-07-12",
+    "2026-07-13",
+    "2026-07-14",
+    "2026-07-15",
+    "2026-07-16"
+  ],
+  "rag_legend": {
+    "G": "on track",
+    "Y": "at risk",
+    "R": "off track",
+    ".": "not tracked"
+  },
+  "rag": {
+    "Atlanta AWS Migration": "YYYYYYYYYYYYYRYYYYYYYYY",
+    "Canada AWS Platform": "YYYYYYYYYGYGGGGYYYYYYYY",
+    "OC West Expansion": "YYYYYYYYYRRRRRYGGGGGGGR",
+    "IDP": "RRYRYYYRRYYYYYYYYYYYYRR",
+    "Genesys to Twilio": ".......YY...YYYYYYYYRRR",
+    "LDAP to OIDC": ".......YY...YYYYYYYYYYY"
+  },
+  "risk_counts": {
+    "2026-07-16": {
+      "Atlanta AWS Migration": 3,
+      "Canada AWS Platform": 3,
+      "OC West Expansion": 3,
+      "IDP": 3,
+      "Genesys to Twilio": 3,
+      "LDAP to OIDC": 3
+    }
+  },
+  "milestones": [
+    {
+      "project": "Atlanta AWS Migration",
+      "name": "Wave 1 go-live",
+      "baseline": "2026-08-05",
+      "current": "2026-08-05",
+      "history": [
+        {
+          "date": "2026-07-16",
+          "current": "2026-08-05",
+          "note": "baseline set"
+        }
+      ]
+    },
+    {
+      "project": "Canada AWS Platform",
+      "name": "Platform complete",
+      "baseline": "2026-08-19",
+      "current": "2026-08-19",
+      "history": [
+        {
+          "date": "2026-07-16",
+          "current": "2026-08-19",
+          "note": "baseline set"
+        }
+      ]
+    },
+    {
+      "project": "OC West Expansion",
+      "name": "East-vs-West latency assessment",
+      "baseline": "2026-07-03",
+      "current": "2026-07-24",
+      "history": [
+        {
+          "date": "2026-07-16",
+          "current": "2026-07-24",
+          "note": "estimate; blocked by Glaucus idle-in-transaction session interfering with DMS"
+        }
+      ]
+    },
+    {
+      "project": "IDP",
+      "name": "Lightning Bolt production release",
+      "baseline": "2026-08-15",
+      "current": "2026-12-31",
+      "history": [
+        {
+          "date": "2026-07-16",
+          "current": "2026-12-31",
+          "note": "Orrian pushed LB prod work to end of year (Slack to Tracy Canepa, Jul 14)"
+        }
+      ]
+    }
+  ]
+}
