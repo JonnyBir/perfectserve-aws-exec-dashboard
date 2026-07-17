@@ -86,6 +86,11 @@
           "date": "2026-07-16",
           "current": "2026-07-24",
           "note": "estimate; blocked by Glaucus idle-in-transaction session interfering with DMS"
+        },
+        {
+          "date": "2026-07-17",
+          "current": "2026-07-24",
+          "note": "DMS unblocked via periodic bastion kill loop clearing Glaucus idle transactions (workaround); remaining: latency tests, 13-table manual export in RDS outage window, DNS cutover"
         }
       ]
     },
