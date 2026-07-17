@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-16",
+  "updated": "2026-07-17",
   "dates": [
     "2026-06-24",
     "2026-06-25",
@@ -23,7 +23,8 @@
     "2026-07-13",
     "2026-07-14",
     "2026-07-15",
-    "2026-07-16"
+    "2026-07-16",
+    "2026-07-17"
   ],
   "rag_legend": {
     "G": "on track",
@@ -32,12 +33,12 @@
     ".": "not tracked"
   },
   "rag": {
-    "Atlanta AWS Migration": "YYYYYYYYYYYYYRYYYYYYYYY",
-    "Canada AWS Platform": "YYYYYYYYYGYGGGGYYYYYYYY",
-    "OC West Expansion": "YYYYYYYYYRRRRRYGGGGGGGR",
-    "IDP": "RRYRYYYRRYYYYYYYYYYYYRR",
-    "Genesys to Twilio": ".......YY...YYYYYYYYRRR",
-    "LDAP to OIDC": ".......YY...YYYYYYYYYYY"
+    "Atlanta AWS Migration": "YYYYYYYYYYYYYRYYYYYYYYYY",
+    "Canada AWS Platform": "YYYYYYYYYGYGGGGYYYYYYYYY",
+    "OC West Expansion": "YYYYYYYYYRRRRRYGGGGGGGRG",
+    "IDP": "RRYRYYYRRYYYYYYYYYYYYRRR",
+    "Genesys to Twilio": ".......YY...YYYYYYYYRRRR",
+    "LDAP to OIDC": ".......YY...YYYYYYYYYYYY"
   },
   "milestones": [
     {
