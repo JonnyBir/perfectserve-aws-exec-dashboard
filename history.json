@@ -39,16 +39,6 @@
     "Genesys to Twilio": ".......YY...YYYYYYYYRRR",
     "LDAP to OIDC": ".......YY...YYYYYYYYYYY"
   },
-  "risk_counts": {
-    "2026-07-16": {
-      "Atlanta AWS Migration": 3,
-      "Canada AWS Platform": 3,
-      "OC West Expansion": 3,
-      "IDP": 3,
-      "Genesys to Twilio": 3,
-      "LDAP to OIDC": 3
-    }
-  },
   "milestones": [
     {
       "project": "Atlanta AWS Migration",
