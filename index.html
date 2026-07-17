@@ -95,29 +95,29 @@
       <div><div class="card-name">&#x1F3D7;&#xFE0F; Atlanta AWS Migration</div><div class="card-sub"><strong>Goal:</strong> Migrate PS Atlanta on-prem to AWS<br><strong>Timeline:</strong> Dec 2025 - August 2026.</div></div>
       <div class="rag rag-yellow">&#x1F7E1; AT RISK</div>
     </div>
-    <div class="rag-reason">The Aug 5 Wave 1 deadline is firm with customer comms out; the prod build is moving again, but the V3 core-services import and the Workspaces POC keep schedule pressure high.</div>
-    <div class="exec-summary">The prod build is unblocked &#x2014; David is spinning up V4 prod instances starting with low-risk management servers, with web servers following this week &#x2014; and the QA dry run for the Aug 5 go-live runs Thursday with Esteban&#x2019;s runbook framework built in Confluence. The phased plan is locked with Fortified Data: apps swing Aug&#x2013;Nov and all databases fail over in a single 4-hour window on Dec 3. The V3 import of core services (SQL, AD) is now the critical path, with a CAB next week to manage the IAM role rollover.</div>
+    <div class="rag-reason">The Aug 5 Wave 1 deadline is firm and Betsy&#x2019;s QA testing passed, but V4 server deployment is blocked pending an S3 bucket copy and the V3 core-services import CAB keeps schedule pressure high.</div>
+    <div class="exec-summary">Betsy&#x2019;s initial QA testing passed without issues &#x2014; a key validation of the migration &#x2014; and the team will let the environment bake to observe stability. The migration runbook is now usable for current tasks, remaining open only for final pre/post-step additions before the production migration. Deployment of the first three V4 servers is blocked pending a copy of the old S3 bucket&#x2019;s contents into the new one &#x2014; Jon posted the request in Slack and Tony confirmed the team will help &#x2014; while the V3 import of core services (SQL, AD) heads to a CAB next week for the IAM role rollover.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; V3 import of core services (SQL, AD, Ansible Runner) is the critical-path dependency &#x2014; CAB next week for the IAM role rollover; Joseph&#x2019;s ALB work is paused until it completes</li>
-          <li>&#x26A0;&#xFE0F; Workspaces POC remains critical to the September user migration &#x2014; Okta is now connected but a V5-app tester list is still needed to validate</li>
-          <li>&#x26A0;&#xFE0F; Listener recreation at the Dec 3 database cutover is untested and could exceed the 4-hour window; it will be tested in QA first</li>
+          <li>&#x26A0;&#xFE0F; V4 server deployment blocked &#x2014; the new S3 bucket must be populated from the old one; David lacks prod write access, so Tony&#x2019;s team is executing the copy</li>
+          <li>&#x26A0;&#xFE0F; V3 import of core services (SQL, AD, Ansible Runner) remains the critical path &#x2014; CAB next week for the IAM role rollover; Joseph&#x2019;s ALB work is paused until it completes</li>
+          <li>&#x26A0;&#xFE0F; Workspaces POC remains critical to the September user migration &#x2014; Okta is connected but a V5-app tester list is still needed to validate</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
-          <li>&#x2705; Prod build unblocked &#x2014; V4 prod instances spinning up now (management servers first, web servers this week)</li>
-          <li>&#x2705; Board reorg live with epics structured by wave; QA dry run for Aug 5 set for Thursday with the runbook framework complete</li>
-          <li>&#x2705; Phased DB plan locked with Fortified Data &#x2014; second SQL node per prod cluster preserves the 3-node HA configuration</li>
+          <li>&#x2705; QA testing passed &#x2014; Betsy&#x2019;s initial connectivity and functionality tests showed no issues, validating the migration approach</li>
+          <li>&#x2705; Migration runbook now usable for current tasks, staying open only for final pre/post-migration steps</li>
+          <li>&#x2705; Prod build moving &#x2014; V4 prod instances spinning up (management servers first, web servers this week)</li>
         </ul>
       </div>
     </div>
-    <div class="hours"><div class="hours-top"><span class="hours-label"><span class="hours-dot" style="background:var(--green-fg)"></span>Budget Hours &#xB7; On Budget &#xB7; Smartsheet 7/15</span><span class="hours-nums">3,064 / 6,245 hrs used</span></div><div class="hours-bar"><div class="hours-fill" style="width:49.1%; background:var(--green-fg)"></div></div><div class="hours-sub">3,181 hrs remaining &#xB7; 49.1% of budget consumed &#xB7; Source: PER Atlanta DC Mobilization + PER PS App DB Migration Mobilization</div></div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Aug 5 Wave 1 go-live &#x2014; QA dry run Jul 16; V3 core-services CAB next week</span></div>
-    <div class="sources">Sources: <a href="https://fathom.video/calls/746285835" target="_blank">Stand-up Jul 15</a> &#xB7; <a href="https://fathom.video/calls/744360322" target="_blank">Stand-up Jul 14</a> &#xB7; <a href="https://fathom.video/calls/744859562" target="_blank">Fortified Data Phased Plan Review Jul 14</a></div>
+    <div class="hours"><div class="hours-top"><span class="hours-label"><span class="hours-dot" style="background:var(--green-fg)"></span>Budget Hours &#xB7; On Budget &#xB7; Smartsheet 7/16</span><span class="hours-nums">3,076 / 6,245 hrs used</span></div><div class="hours-bar"><div class="hours-fill" style="width:49.3%; background:var(--green-fg)"></div></div><div class="hours-sub">3,169 hrs remaining &#xB7; 49.3% of budget consumed &#xB7; Source: PER Atlanta DC Mobilization + PER PS App DB Migration Mobilization</div></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Aug 5 Wave 1 go-live &#x2014; S3 copy &#x2192; first three V4 servers; V3 core-services CAB next week</span></div>
+    <div class="sources">Sources: <a href="https://fathom.video/calls/747635808" target="_blank">Stand-up Jul 16</a> &#xB7; <a href="https://fathom.video/calls/746285835" target="_blank">Stand-up Jul 15</a> &#xB7; <a href="https://fathom.video/calls/744360322" target="_blank">Stand-up Jul 14</a></div>
   </div>
 
   <div class="card">
@@ -125,29 +125,29 @@
       <div><div class="card-name">&#x1F1E8;&#x1F1E6; Canada AWS Platform</div><div class="card-sub"><strong>Goal:</strong> Spin up new Telmediq environment in the Canada region<br><strong>Timeline:</strong> April 22, 2026 - August 19, 2026.</div></div>
       <div class="rag rag-yellow">&#x1F7E1; AT RISK</div>
     </div>
-    <div class="rag-reason">ArgoCD is now running on the new EKS cluster, but LucidPoint access to prod.argo is pending and validation is compressing toward the Aug 19 finish.</div>
-    <div class="exec-summary">Vinny and Matt built out the EKS cluster and ArgoCD is now running &#x2014; resolving the blocker that had stalled all application deployments. Dave and David are submitting access tickets for the new prod.argo cluster so LucidPoint can validate from its side that ArgoCD is showing healthy, while a phased validation plan (Hogger first, then SPV2) targets application deployments in late July/early August. Looker and data plane work are moving again ahead of the Aug 19 finish.</div>
+    <div class="rag-reason">ArgoCD is running on the new EKS cluster, but access requests went to the wrong Argo instance; corrected tickets are being expedited by Tony with access expected Jul 17, and validation keeps compressing toward the Aug 19 finish.</div>
+    <div class="exec-summary">The team still cannot validate the new EKS cluster&#x2019;s health &#x2014; access requests went to the wrong Argo CD instance, so Dave and David are submitting corrected Okta tickets with Tony expediting and access expected by July 17. Data plane work is moving: Russell&#x2019;s S3 PR is due shortly, Brandon is unblocked on Looker, and Rhapsody connectivity in Canada is established with a test call Monday. The shared database was sized to the smaller of the two it consolidates and must be upsized, and the Canadian Twilio instance is a hard early-September requirement before customer onboarding.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
         <ul class="item-list">
-          <li>&#x26A0;&#xFE0F; LucidPoint access to prod.argo pending &#x2014; Dave and David are submitting access tickets to validate ArgoCD health; if denied, the client team assumes responsibility for cluster functionality</li>
-          <li>&#x26A0;&#xFE0F; Cluster testing deferred toward August risks a last-minute scramble before the Aug 19 deadline &#x2014; a canary validation was previously rejected</li>
-          <li>&#x26A0;&#xFE0F; Hassan&#x2019;s integration work is paused for Lightning Bolt; the site-to-site VPN dependency is with Tony to determine if the task can be reassigned</li>
+          <li>&#x26A0;&#xFE0F; Argo CD access remains the top blocker &#x2014; earlier requests hit the wrong instance; corrected Okta tickets are with Tony to expedite, access expected Jul 17</li>
+          <li>&#x26A0;&#xFE0F; Shared database was sized to the smaller of its two source DBs &#x2014; must be upsized to avoid performance issues under combined load (Tony confirms an easy resize)</li>
+          <li>&#x26A0;&#xFE0F; Canadian Twilio instance is a hard early-September deadline &#x2014; the US instance covers testing only, not production customer onboarding</li>
         </ul>
       </div>
       <div>
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
           <li>&#x2705; EKS cluster built out and ArgoCD running &#x2014; the &#x201C;cluster not operational&#x201D; blocker is resolved</li>
-          <li>&#x2705; Phased EKS validation plan set (Hogger &#x2192; SPV2) with app deployments targeted late July/early August</li>
-          <li>&#x2705; Looker work unblocked &#x2014; Brandon resumes this week; S3 IAM definitions moving to the correct applications directory</li>
+          <li>&#x2705; Data plane advancing &#x2014; Russell&#x2019;s S3 PR imminent, Brandon unblocked on Looker, dynamic ARN lookups replacing hard-coded values</li>
+          <li>&#x2705; Rhapsody connectivity to Canada established with a test call Monday; VPN form sent to Thunder Bay</li>
         </ul>
       </div>
     </div>
-    <div class="hours"><div class="hours-top"><span class="hours-label"><span class="hours-dot" style="background:var(--green-fg)"></span>Budget Hours &#xB7; On Budget &#xB7; Smartsheet 7/15</span><span class="hours-nums">533.25 / 2,210 hrs used</span></div><div class="hours-bar"><div class="hours-fill" style="width:24.1%; background:var(--green-fg)"></div></div><div class="hours-sub">1,676.75 hrs remaining &#xB7; 24.1% of budget consumed &#xB7; Source: PER Canadian CC Platform</div></div>
-    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; prod.argo access &#x2192; ArgoCD health validated &#x2192; Hogger deployment (late July)</span></div>
-    <div class="sources">Sources: <a href="https://fathom.video/calls/746285833" target="_blank">Collab Stand-up Jul 15</a> &#xB7; <a href="https://fathom.video/calls/745311988" target="_blank">Weekly Stand-up Jul 14</a> &#xB7; <a href="https://fathom.video/calls/744360281" target="_blank">Collab Stand-up Jul 14</a></div>
+    <div class="hours"><div class="hours-top"><span class="hours-label"><span class="hours-dot" style="background:var(--green-fg)"></span>Budget Hours &#xB7; On Budget &#xB7; Smartsheet 7/16</span><span class="hours-nums">533.25 / 2,210 hrs used</span></div><div class="hours-bar"><div class="hours-fill" style="width:24.1%; background:var(--green-fg)"></div></div><div class="hours-sub">1,676.75 hrs remaining &#xB7; 24.1% of budget consumed &#xB7; Source: PER Canadian CC Platform</div></div>
+    <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Argo CD access (exp. Jul 17) &#x2192; validate cluster health &#x2192; app deployments late July/early Aug</span></div>
+    <div class="sources">Sources: <a href="https://fathom.video/calls/747635813" target="_blank">Weekly Check-In Jul 16</a> &#xB7; <a href="https://fathom.video/calls/747635810" target="_blank">Collab Stand-up Jul 16</a> &#xB7; <a href="https://fathom.video/calls/746285833" target="_blank">Collab Stand-up Jul 15</a></div>
   </div>
 
   <div class="card">
@@ -156,7 +156,7 @@
       <div class="rag rag-green">&#x1F7E2; ON TRACK</div>
     </div>
     <div class="rag-reason">Unblocked &#x2014; a periodic kill loop run from the bastion clears the Glaucus idle transactions and DMS is executing again; there are no open blockers to the latency results.</div>
-    <div class="exec-summary">The Glaucus idle-in-transaction interference has been worked around: a loop run from the bastion periodically kills the offending session, and DMS is executing again with no open blockers to the latency results. The workaround is not ideal &#x2014; it depends on an active SSH session (re-run required after connection drops) and a permanent fix in the Glaucus code remains desirable. Remaining work to close: run the latency tests, an RDS outage window to export 13 tables that need manual resolution, and the DNS application cutover for full validation.</div>
+    <div class="exec-summary">The build is complete &#x2014; the Oregon reader is provisioned and replication from US-East-1 is fully functional &#x2014; and the Glaucus idle-in-transaction interference has been worked around: a loop run from the bastion periodically kills the offending session and DMS is executing again. Lamine will run direct latency benchmarks from a bastion host, providing real-world data without waiting for app-level integration. Remaining work to close: run the latency tests, a ~1-hour RDS outage window to export the 13 tables needing manual resolution via pgdump, and the DNS application cutover for full validation.</div>
     <div class="two-col">
       <div>
         <div class="section-label">Key Risks &amp; Blockers</div>
@@ -170,14 +170,14 @@
         <div class="section-label">Recent Progress</div>
         <ul class="item-list">
           <li>&#x2705; DMS unblocked Jul 17 &#x2014; periodic bastion kill loop clears the Glaucus idle transactions; load executing again</li>
-          <li>&#x2705; Full load previously reached ~100%; go/no-go dashboard live against the 5-second lag threshold</li>
-          <li>&#x2705; DNS flip pre-validated safe via an in-VPC connectivity test</li>
+          <li>&#x2705; Build complete &#x2014; Oregon reader provisioned, replication from US-East-1 functional, connection strings updated by Miguel</li>
+          <li>&#x2705; Latency testing unblocked &#x2014; direct bastion-host benchmarks give real-world data; failed DMS tables down from 16 to 13</li>
         </ul>
       </div>
     </div>
-    <div class="hours"><div class="hours-top"><span class="hours-label"><span class="hours-dot" style="background:var(--green-fg)"></span>Budget Hours &#xB7; On Budget &#xB7; Smartsheet 7/15</span><span class="hours-nums">24.5 / 118 hrs used</span></div><div class="hours-bar"><div class="hours-fill" style="width:20.8%; background:var(--green-fg)"></div></div><div class="hours-sub">93.5 hrs remaining &#xB7; 20.8% of budget consumed &#xB7; Source: PER OC Multi-Region Active POC</div></div>
+    <div class="hours"><div class="hours-top"><span class="hours-label"><span class="hours-dot" style="background:var(--green-fg)"></span>Budget Hours &#xB7; On Budget &#xB7; Smartsheet 7/16</span><span class="hours-nums">24.5 / 118 hrs used</span></div><div class="hours-bar"><div class="hours-fill" style="width:20.8%; background:var(--green-fg)"></div></div><div class="hours-sub">93.5 hrs remaining &#xB7; 20.8% of budget consumed &#xB7; Source: PER OC Multi-Region Active POC</div></div>
     <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Latency tests &#x2192; 13-table manual export (RDS outage window) &#x2192; DNS cutover &#x2192; East-vs-West assessment</span></div>
-    <div class="sources">Sources: <a href="https://fathom.video/calls/739636434" target="_blank">Stand-up Jul 9</a> &#xB7; <a href="https://fathom.video/calls/733722096" target="_blank">Stand-up Jul 6</a> &#xB7; <a href="https://fathom.video/calls/730984648" target="_blank">Stand-up Jul 2</a></div>
+    <div class="sources">Sources: <a href="https://fathom.video/calls/747635811" target="_blank">Stand-up Jul 16</a> &#xB7; <a href="https://fathom.video/calls/739636434" target="_blank">Stand-up Jul 9</a> &#xB7; <a href="https://fathom.video/calls/733722096" target="_blank">Stand-up Jul 6</a></div>
   </div>
 
   <div class="card">
@@ -205,7 +205,7 @@
         </ul>
       </div>
     </div>
-    <div class="hours"><div class="hours-top"><span class="hours-label"><span class="hours-dot" style="background:var(--green-fg)"></span>Budget Hours &#xB7; On Budget &#xB7; Smartsheet 7/15</span><span class="hours-nums">153 / 260 hrs used</span></div><div class="hours-bar"><div class="hours-fill" style="width:58.8%; background:var(--green-fg)"></div></div><div class="hours-sub">107 hrs remaining &#xB7; 58.8% of budget consumed &#xB7; Source: PER Solliance Identity Server Rollout</div></div>
+    <div class="hours"><div class="hours-top"><span class="hours-label"><span class="hours-dot" style="background:var(--green-fg)"></span>Budget Hours &#xB7; On Budget &#xB7; Smartsheet 7/16</span><span class="hours-nums">153 / 260 hrs used</span></div><div class="hours-bar"><div class="hours-fill" style="width:58.8%; background:var(--green-fg)"></div></div><div class="hours-sub">107 hrs remaining &#xB7; 58.8% of budget consumed &#xB7; Source: PER Solliance Identity Server Rollout</div></div>
     <div class="milestone"><span class="milestone-label">Next Critical Milestone</span><span class="milestone-value">&#x1F3C1; Meet with Orrian to re-align the LB release window; upgrade &#x2192; QA regression &#x2192; prod in ~2 wks</span></div>
     <div class="sources">Sources: <a href="https://fathom.video/calls/737286259" target="_blank">IDP Sync Jul 8</a> &#xB7; <a href="https://fathom.video/calls/729864132" target="_blank">IDP Sync Jul 1</a> &#xB7; <a href="https://fathom.video/calls/721001569" target="_blank">IDP Sync Jun 24</a></div>
   </div>
