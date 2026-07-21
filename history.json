@@ -38,10 +38,11 @@
   "rag": {
     "Atlanta AWS Migration": "YYYYYYYYYYYYYRYYYYYYYYYYYYY",
     "Canada AWS Platform": "YYYYYYYYYGYGGGGYYYYYYYYGGGG",
-    "OC West Expansion": "YYYYYYYYYRRRRRYGGGGGGGRGGGG",
     "IDP": "RRYRYYYRRYYYYYYYYYYYYRRRRRR",
     "Genesys to Twilio": ".......YY...YYYYYYYYRRRRRRR",
-    "LDAP to OIDC": ".......YY...YYYYYYYYYYYYYYY"
+    "LDAP to OIDC": ".......YY...YYYYYYYYYYYYYYY",
+    "OC West Expansion POC": "YYYYYYYYYRRRRRYGGGGGGGRGGGG",
+    "OC West Expansion": "..........................G"
   },
   "milestones": [
     {
@@ -71,7 +72,7 @@
       ]
     },
     {
-      "project": "OC West Expansion",
+      "project": "OC West Expansion POC",
       "name": "East-vs-West latency assessment",
       "baseline": "2026-07-03",
       "current": "2026-07-23",
