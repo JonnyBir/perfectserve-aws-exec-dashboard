@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20",
+  "updated": "2026-07-21",
   "dates": [
     "2026-06-24",
     "2026-06-25",
@@ -26,7 +26,8 @@
     "2026-07-16",
     "2026-07-17",
     "2026-07-18",
-    "2026-07-20"
+    "2026-07-20",
+    "2026-07-21"
   ],
   "rag_legend": {
     "G": "on track",
@@ -35,12 +36,12 @@
     ".": "not tracked"
   },
   "rag": {
-    "Atlanta AWS Migration": "YYYYYYYYYYYYYRYYYYYYYYYYYY",
-    "Canada AWS Platform": "YYYYYYYYYGYGGGGYYYYYYYYGGG",
-    "OC West Expansion": "YYYYYYYYYRRRRRYGGGGGGGRGGG",
-    "IDP": "RRYRYYYRRYYYYYYYYYYYYRRRRR",
-    "Genesys to Twilio": ".......YY...YYYYYYYYRRRRRR",
-    "LDAP to OIDC": ".......YY...YYYYYYYYYYYYYY"
+    "Atlanta AWS Migration": "YYYYYYYYYYYYYRYYYYYYYYYYYYY",
+    "Canada AWS Platform": "YYYYYYYYYGYGGGGYYYYYYYYGGGG",
+    "OC West Expansion": "YYYYYYYYYRRRRRYGGGGGGGRGGGG",
+    "IDP": "RRYRYYYRRYYYYYYYYYYYYRRRRRR",
+    "Genesys to Twilio": ".......YY...YYYYYYYYRRRRRRR",
+    "LDAP to OIDC": ".......YY...YYYYYYYYYYYYYYY"
   },
   "milestones": [
     {
@@ -73,7 +74,7 @@
       "project": "OC West Expansion",
       "name": "East-vs-West latency assessment",
       "baseline": "2026-07-03",
-      "current": "2026-07-24",
+      "current": "2026-07-23",
       "history": [
         {
           "date": "2026-07-16",
@@ -84,6 +85,11 @@
           "date": "2026-07-17",
           "current": "2026-07-24",
           "note": "DMS unblocked via periodic bastion kill loop clearing Glaucus idle transactions (workaround); remaining: latency tests, 13-table manual export in RDS outage window, DNS cutover"
+        },
+        {
+          "date": "2026-07-21",
+          "current": "2026-07-23",
+          "note": "latency analysis doc complete and awaiting Matt sign-off Thursday Jul 23 (Kick Off - OC West Production, Jul 20)"
         }
       ]
     },
