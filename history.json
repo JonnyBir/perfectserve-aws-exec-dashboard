@@ -42,7 +42,8 @@
     "IDP": "RRYRYYYRRYYYYYYYYYYYYRRRRRRR",
     "Genesys to Twilio": ".......YY...YYYYYYYYRRRRRRRR",
     "LDAP to OIDC": ".......YY...YYYYYYYYYYYYYYYY",
-    "OC West Expansion": "YYYYYYYYYRRRRRYGGGGGGGRGGGGG"
+    "OC West Expansion POC": "YYYYYYYYYRRRRRYGGGGGGGRGGGGG",
+    "OC West Expansion": "..........................GG"
   },
   "milestones": [
     {
@@ -72,7 +73,7 @@
       ]
     },
     {
-      "project": "OC West Expansion",
+      "project": "OC West Expansion POC",
       "name": "East-vs-West latency assessment",
       "baseline": "2026-07-03",
       "current": "2026-07-23",
