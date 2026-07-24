@@ -44,8 +44,8 @@
     "IDP": "RRYRYYYRRYYYYYYYYYYYYRRRRRRRRR",
     "Genesys to Twilio": ".......YY...YYYYYYYYRRRRRRRRRR",
     "LDAP to OIDC": ".......YY...YYYYYYYYYYYYYYYYYY",
-    "OC West Expansion POC": "YYYYYYYYYRRRRRYGGGGGGGRGGGGGYY",
-    "OC West Expansion": "..........................GGYY"
+    "OC West Expansion POC": "YYYYYYYYYRRRRRYGGGGGGGRGGGGGYG",
+    "OC West Expansion": "..........................GGYG"
   },
   "milestones": [
     {
