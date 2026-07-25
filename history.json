@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-24",
+  "updated": "2026-07-25",
   "dates": [
     "2026-06-24",
     "2026-06-25",
@@ -30,7 +30,8 @@
     "2026-07-21",
     "2026-07-22",
     "2026-07-23",
-    "2026-07-24"
+    "2026-07-24",
+    "2026-07-25"
   ],
   "rag_legend": {
     "G": "on track",
@@ -39,13 +40,13 @@
     ".": "not tracked"
   },
   "rag": {
-    "Atlanta AWS Migration": "YYYYYYYYYYYYYRYYYYYYYYYYYYYYYY",
-    "Canada AWS Platform": "YYYYYYYYYGYGGGGYYYYYYYYGGGGGGG",
-    "IDP": "RRYRYYYRRYYYYYYYYYYYYRRRRRRRRR",
-    "Genesys to Twilio": ".......YY...YYYYYYYYRRRRRRRRRR",
-    "LDAP to OIDC": ".......YY...YYYYYYYYYYYYYYYYYY",
-    "OC West Expansion POC": "YYYYYYYYYRRRRRYGGGGGGGRGGGGGYG",
-    "OC West Expansion": "..........................GGYG"
+    "Atlanta AWS Migration": "YYYYYYYYYYYYYRYYYYYYYYYYYYYYYYY",
+    "Canada AWS Platform": "YYYYYYYYYGYGGGGYYYYYYYYGGGGGGGG",
+    "IDP": "RRYRYYYRRYYYYYYYYYYYYRRRRRRRRRR",
+    "Genesys to Twilio": ".......YY...YYYYYYYYRRRRRRRRRRR",
+    "LDAP to OIDC": ".......YY...YYYYYYYYYYYYYYYYYYY",
+    "OC West Expansion POC": "YYYYYYYYYRRRRRYGGGGGGGRGGGGGYG.",
+    "OC West Expansion": "..........................GGYGG"
   },
   "milestones": [
     {
@@ -75,10 +76,10 @@
       ]
     },
     {
-      "project": "OC West Expansion POC",
+      "project": "OC West Expansion",
       "name": "East-vs-West latency assessment",
       "baseline": "2026-07-03",
-      "current": "2026-07-23",
+      "current": "2026-07-28",
       "history": [
         {
           "date": "2026-07-16",
@@ -94,6 +95,11 @@
           "date": "2026-07-21",
           "current": "2026-07-23",
           "note": "latency analysis doc complete and awaiting Matt sign-off Thursday Jul 23 (Kick Off - OC West Production, Jul 20)"
+        },
+        {
+          "date": "2026-07-25",
+          "current": "2026-07-28",
+          "note": "Viable path identified: latency driven by write-after-read (~5% of calls); refactoring ~10 touch points targets <80ms. Full-stack POC validation in West underway this week (OC West Latency Validation POC mtg, Jul 24)."
         }
       ]
     },
