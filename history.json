@@ -78,7 +78,7 @@
       "project": "OC West Expansion",
       "name": "East-vs-West latency assessment",
       "baseline": "2026-07-03",
-      "current": "2026-07-28",
+      "current": "2026-07-27",
       "history": [
         {
           "date": "2026-07-16",
@@ -99,6 +99,11 @@
           "date": "2026-07-25",
           "current": "2026-07-28",
           "note": "Viable path identified: latency driven by write-after-read (~5% of calls); refactoring ~10 touch points targets <80ms. Full-stack POC validation in West underway this week (OC West Latency Validation POC mtg, Jul 24)."
+        },
+        {
+          "date": "2026-07-27",
+          "current": "2026-07-27",
+          "note": "POC complete per Jon (7/27): read/write-split app refactor validated <80ms target; milestone closed out, production build & deployment now the active phase."
         }
       ]
     },
