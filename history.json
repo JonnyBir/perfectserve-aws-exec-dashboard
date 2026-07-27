@@ -1,7 +1,6 @@
 {
-  "updated": "2026-07-26",
+  "updated": "2026-07-27",
   "dates": [
-    "2026-06-26",
     "2026-06-27",
     "2026-06-28",
     "2026-06-29",
@@ -30,7 +29,8 @@
     "2026-07-23",
     "2026-07-24",
     "2026-07-25",
-    "2026-07-26"
+    "2026-07-26",
+    "2026-07-27"
   ],
   "rag_legend": {
     "G": "on track",
@@ -39,13 +39,13 @@
     ".": "not tracked"
   },
   "rag": {
-    "Atlanta AWS Migration": "YYYYYYYYYYYRYYYYYYYYYYYYYYYYYY",
-    "Canada AWS Platform": "YYYYYYYGYGGGGYYYYYYYYGGGGGGGGG",
-    "IDP": "YRYYYRRYYYYYYYYYYYYRRRRRRRRRRR",
-    "Genesys to Twilio": ".....YY...YYYYYYYYRRRRRRRRRRRR",
-    "LDAP to OIDC": ".....YY...YYYYYYYYYYYYYYYYYYYY",
-    "OC West Expansion POC": "YYYYYYYRRRRRYGGGGGGGRGGGGGYG..",
-    "OC West Expansion": "........................GGYGGG"
+    "Atlanta AWS Migration": "YYYYYYYYYYRYYYYYYYYYYYYYYYYYYY",
+    "Canada AWS Platform": "YYYYYYGYGGGGYYYYYYYYGGGGGGGGGG",
+    "IDP": "RYYYRRYYYYYYYYYYYYRRRRRRRRRRRR",
+    "Genesys to Twilio": "....YY...YYYYYYYYRRRRRRRRRRRRR",
+    "LDAP to OIDC": "....YY...YYYYYYYYYYYYYYYYYYYYY",
+    "OC West Expansion POC": "YYYYYYRRRRRYGGGGGGGRGGGGGYG...",
+    "OC West Expansion": ".......................GGYGGGG"
   },
   "milestones": [
     {
@@ -112,6 +112,19 @@
           "date": "2026-07-16",
           "current": "2026-12-31",
           "note": "Orrian pushed LB prod work to end of year (Slack to Tracy Canepa, Jul 14)"
+        }
+      ]
+    },
+    {
+      "project": "OC West Expansion",
+      "name": "Production Build &amp; Deployment",
+      "baseline": "2026-10-09",
+      "current": "2026-10-09",
+      "history": [
+        {
+          "date": "2026-07-27",
+          "current": "2026-10-09",
+          "note": "New milestone added per Jon: production build &amp; deployment phase starts Jul 27, targeting Oct 9 completion."
         }
       ]
     }
