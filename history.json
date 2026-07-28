@@ -45,8 +45,7 @@
     "IDP": "RYYYRRYYYYYYYYYYYYRRRRRRRRRRRRR",
     "Genesys to Twilio": "....YY...YYYYYYYYRRRRRRRRRRRRRR",
     "LDAP to OIDC": "....YY...YYYYYYYYYYYYYYYYYYYYYY",
-    "OC West Expansion POC": "YYYYYYRRRRRYGGGGGGGRGGGGGYG....",
-    "OC West Expansion": ".......................GGYGGGGG"
+    "OC West Expansion": "YYYYYYRRRRRYGGGGGGGRGGGGGYGGGGG"
   },
   "milestones": [
     {
@@ -72,39 +71,6 @@
           "date": "2026-07-16",
           "current": "2026-08-19",
           "note": "baseline set"
-        }
-      ]
-    },
-    {
-      "project": "OC West Expansion",
-      "name": "East-vs-West latency assessment",
-      "baseline": "2026-07-03",
-      "current": "2026-07-27",
-      "history": [
-        {
-          "date": "2026-07-16",
-          "current": "2026-07-24",
-          "note": "estimate; blocked by Glaucus idle-in-transaction session interfering with DMS"
-        },
-        {
-          "date": "2026-07-17",
-          "current": "2026-07-24",
-          "note": "DMS unblocked via periodic bastion kill loop clearing Glaucus idle transactions (workaround); remaining: latency tests, 13-table manual export in RDS outage window, DNS cutover"
-        },
-        {
-          "date": "2026-07-21",
-          "current": "2026-07-23",
-          "note": "latency analysis doc complete and awaiting Matt sign-off Thursday Jul 23 (Kick Off - OC West Production, Jul 20)"
-        },
-        {
-          "date": "2026-07-25",
-          "current": "2026-07-28",
-          "note": "Viable path identified: latency driven by write-after-read (~5% of calls); refactoring ~10 touch points targets <80ms. Full-stack POC validation in West underway this week (OC West Latency Validation POC mtg, Jul 24)."
-        },
-        {
-          "date": "2026-07-27",
-          "current": "2026-07-27",
-          "note": "POC complete per Jon (7/27): read/write-split app refactor validated <80ms target; milestone closed out, production build & deployment now the active phase."
         }
       ]
     },
