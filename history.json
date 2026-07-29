@@ -1,8 +1,6 @@
 {
-  "updated": "2026-07-28",
+  "updated": "2026-07-29",
   "dates": [
-    "2026-06-27",
-    "2026-06-28",
     "2026-06-29",
     "2026-06-30",
     "2026-07-01",
@@ -31,7 +29,8 @@
     "2026-07-25",
     "2026-07-26",
     "2026-07-27",
-    "2026-07-28"
+    "2026-07-28",
+    "2026-07-29"
   ],
   "rag_legend": {
     "G": "on track",
@@ -40,24 +39,29 @@
     ".": "not tracked"
   },
   "rag": {
-    "Atlanta AWS Migration": "YYYYYYYYYYRYYYYYYYYYYYYYYYYYYYY",
-    "Canada AWS Platform": "YYYYYYGYGGGGYYYYYYYYGGGGGGGGGGG",
-    "IDP": "RYYYRRYYYYYYYYYYYYRRRRRRRRRRRRR",
-    "Genesys to Twilio": "....YY...YYYYYYYYRRRRRRRRRRRRRR",
-    "LDAP to OIDC": "....YY...YYYYYYYYYYYYYYYYYYYYYY",
-    "OC West Expansion": "YYYYYYRRRRRYGGGGGGGRGGGGGYGGGGG"
+    "Atlanta AWS Migration": "YYYYYYYYRYYYYYYYYYYYYYYYYYYYYG",
+    "Canada AWS Platform": "YYYYGYGGGGYYYYYYYYGGGGGGGGGGGG",
+    "IDP": "YYRRYYYYYYYYYYYYRRRRRRRRRRRRRR",
+    "Genesys to Twilio": "..YY...YYYYYYYYRRRRRRRRRRRRRRR",
+    "LDAP to OIDC": "..YY...YYYYYYYYYYYYYYYYYYYYYYY",
+    "OC West Expansion": "YYYYRRRRRYGGGGGGGRGGGGGYGGGGGG"
   },
   "milestones": [
     {
       "project": "Atlanta AWS Migration",
       "name": "Wave 1 go-live",
       "baseline": "2026-08-05",
-      "current": "2026-08-05",
+      "current": "2026-09-02",
       "history": [
         {
           "date": "2026-07-16",
           "current": "2026-08-05",
           "note": "baseline set"
+        },
+        {
+          "date": "2026-07-29",
+          "current": "2026-09-02",
+          "note": "Wave 1 reclassified as an isolated dry run (Jul 28 stand-up); real customer-facing migration for Wave 1 apps now bundled with Wave 2 in September, buying 3&#x2013;4 extra testing weeks and removing the Camacho firewall SPOF risk."
         }
       ]
     },
