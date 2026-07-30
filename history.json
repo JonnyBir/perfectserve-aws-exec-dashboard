@@ -1,7 +1,6 @@
 {
-  "updated": "2026-07-29",
+  "updated": "2026-07-30",
   "dates": [
-    "2026-06-29",
     "2026-06-30",
     "2026-07-01",
     "2026-07-02",
@@ -30,7 +29,8 @@
     "2026-07-26",
     "2026-07-27",
     "2026-07-28",
-    "2026-07-29"
+    "2026-07-29",
+    "2026-07-30"
   ],
   "rag_legend": {
     "G": "on track",
@@ -39,10 +39,10 @@
     ".": "not tracked"
   },
   "rag": {
-    "Atlanta AWS Migration": "YYYYYYYYRYYYYYYYYYYYYYYYYYYYYG",
-    "Canada AWS Platform": "YYYYGYGGGGYYYYYYYYGGGGGGGGGGGG",
-    "IDP": "YYRRYYYYYYYYYYYYRRRRRRRRRRRRRR",
-    "OC West Expansion": "YYYYRRRRRYGGGGGGGRGGGGGYGGGGGG"
+    "Atlanta AWS Migration": "YYYYYYYRYYYYYYYYYYYYYYYYYYYYGG",
+    "Canada AWS Platform": "YYYGYGGGGYYYYYYYYGGGGGGGGGGGGG",
+    "IDP": "YRRYYYYYYYYYYYYRRRRRRRRRRRRRRY",
+    "OC West Expansion": "YYYRRRRRYGGGGGGGRGGGGGYGGGGGGG"
   },
   "milestones": [
     {
@@ -80,12 +80,17 @@
       "project": "IDP",
       "name": "Lightning Bolt production release",
       "baseline": "2026-08-15",
-      "current": "2026-12-31",
+      "current": "2026-11-30",
       "history": [
         {
           "date": "2026-07-16",
           "current": "2026-12-31",
           "note": "Orrian pushed LB prod work to end of year (Slack to Tracy Canepa, Jul 14)"
+        },
+        {
+          "date": "2026-07-30",
+          "current": "2026-11-30",
+          "note": "Per Jon 2026-07-30: after discussion with Orrian and Scott S., the Lightning Bolt release is pushed to November (specific date TBD). Scott chose the later date because his team can only dedicate a couple of hours a week to the effort right now, and he wants the release fully tested and ready to avoid another rollback (per the June 17 rollback/RCA). Milestone current recorded as 2026-11-30 pending a firm day."
         }
       ]
     },
