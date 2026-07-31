@@ -42,7 +42,7 @@
     "Atlanta AWS Migration": "YYYYYYYRYYYYYYYYYYYYYYYYYYYYGG",
     "Canada AWS Platform": "YYYGYGGGGYYYYYYYYGGGGGGGGGGGGG",
     "IDP": "YRRYYYYYYYYYYYYRRRRRRRRRRRRRRY",
-    "OC West Expansion": "YYYRRRRRYGGGGGGGRGGGGGYGGGGGGG"
+    "OC West Expansion": "YYYRRRRRYGGGGGGGRGGGGGYGGGGGGR"
   },
   "milestones": [
     {
@@ -104,6 +104,11 @@
           "date": "2026-07-27",
           "current": "2026-10-09",
           "note": "New milestone added per Jon: production build &amp; deployment phase starts Jul 27, targeting Oct 9 completion."
+        },
+        {
+          "date": "2026-07-30",
+          "current": "2026-10-09",
+          "note": "Lamine has resigned; zero developers currently on staff with the required skill set for this build. Dev/QA (East) switched to use Aurora Global West, but no one is available to build on that progress. Oct 9 target is at serious risk pending backfill \u2014 RAG moves to red (per Jon 2026-07-30)."
         }
       ]
     }
