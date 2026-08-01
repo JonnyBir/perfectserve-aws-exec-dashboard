@@ -1,7 +1,6 @@
 {
-  "updated": "2026-07-31",
+  "updated": "2026-08-01",
   "dates": [
-    "2026-07-01",
     "2026-07-02",
     "2026-07-03",
     "2026-07-04",
@@ -30,7 +29,8 @@
     "2026-07-28",
     "2026-07-29",
     "2026-07-30",
-    "2026-07-31"
+    "2026-07-31",
+    "2026-08-01"
   ],
   "rag_legend": {
     "G": "on track",
@@ -39,10 +39,10 @@
     ".": "not tracked"
   },
   "rag": {
-    "Atlanta AWS Migration": "YYYYYYRYYYYYYYYYYYYYYYYYYYYGGG",
-    "Canada AWS Platform": "YYGYGGGGYYYYYYYYGGGGGGGGGGGGGG",
-    "IDP": "RRYYYYYYYYYYYYRRRRRRRRRRRRRRYY",
-    "OC West Expansion": "YYRRRRRYGGGGGGGRGGGGGYGGGGGGRR"
+    "Atlanta AWS Migration": "YYYYYRYYYYYYYYYYYYYYYYYYYYGGGG",
+    "Canada AWS Platform": "YGYGGGGYYYYYYYYGGGGGGGGGGGGGGG",
+    "IDP": "RYYYYYYYYYYYYRRRRRRRRRRRRRRYYY",
+    "OC West Expansion": "YRRRRRYGGGGGGGRGGGGGYGGGGGGRRR"
   },
   "milestones": [
     {
