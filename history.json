@@ -43,7 +43,7 @@
     "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGG",
     "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGG",
     "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYY",
-    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRR"
+    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRY"
   },
   "milestones": [
     {
@@ -110,6 +110,11 @@
           "date": "2026-07-30",
           "current": "2026-10-09",
           "note": "Lamine has resigned; zero developers currently on staff with the required skill set for this build. Dev/QA (East) switched to use Aurora Global West, but no one is available to build on that progress. Oct 9 target is at serious risk pending backfill \u2014 RAG moves to red (per Jon 2026-07-30)."
+        },
+        {
+          "date": "2026-08-03",
+          "current": "2026-10-09",
+          "note": "Backfill confirmed: contractor Adam Nagle accepted the role vacated by Lamine, starting Aug 4 pending background check (per LP Internal: OC West Expansion Stand-up, 2026-08-03). Oct 9 target treated as recovering, not yet secure; a new unofficial customer-side September deadline ask is a fresh risk to watch."
         }
       ]
     }
