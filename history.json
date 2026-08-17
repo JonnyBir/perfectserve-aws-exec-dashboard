@@ -125,6 +125,11 @@
           "date": "2026-08-17",
           "current": "2026-10-09",
           "note": "Scope confirmed as the full OC West Expansion project (not just the database architecture/build phase) &#x2014; card Goal/Timeline updated to reflect full project delivery. Target unchanged at Oct 9, 2026 (per Jon 2026-08-17)."
+        },
+        {
+          "date": "2026-08-17",
+          "current": "2026-10-09",
+          "note": "Architecture decision reopened: PerfectServe is re-validating Lamine&#x2019;s original ~500ms write-forwarding latency result (session consistency) with Scott and Mark reviewing methodology/process/data, while the app team has completed fixes for SELECT FOR UPDATE, SKIP LOCKED, and nested-transaction issues and is now testing cross-region latency with those fixes in place. Write forwarding may still be viable if testing holds up; final path (write forwarding vs. DR-Only) pending both validations. Target unchanged at Oct 9, 2026 (per Jon 2026-08-17)."
         }
       ]
     }
