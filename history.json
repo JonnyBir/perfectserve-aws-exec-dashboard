@@ -120,6 +120,11 @@
           "date": "2026-08-03",
           "current": "2026-10-09",
           "note": "Backfill confirmed: contractor Adam Nagle accepted the role vacated by Lamine, starting Aug 4 pending background check (per LP Internal: OC West Expansion Stand-up, 2026-08-03). Oct 9 target treated as recovering, not yet secure; a new unofficial customer-side September deadline ask is a fresh risk to watch."
+        },
+        {
+          "date": "2026-08-17",
+          "current": "2026-10-09",
+          "note": "Scope confirmed as the full OC West Expansion project (not just the database architecture/build phase) &#x2014; card Goal/Timeline updated to reflect full project delivery. Target unchanged at Oct 9, 2026 (per Jon 2026-08-17)."
         }
       ]
     }
