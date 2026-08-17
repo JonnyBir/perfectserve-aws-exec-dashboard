@@ -46,7 +46,7 @@
   },
   "rag": {
     "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGG",
-    "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGG",
+    "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGY",
     "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYY",
     "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYY"
   },
@@ -79,6 +79,11 @@
           "date": "2026-07-16",
           "current": "2026-08-19",
           "note": "baseline set"
+        },
+        {
+          "date": "2026-08-17",
+          "current": "2026-08-19",
+          "note": "Moved to AT RISK (per Jon 2026-08-17): SPV2 RDS security-group hardening, Client VPN access to the MQ console, and a Canada-specific stand-up confirmation are still open two days out from the Aug 19 target, with no meeting update since Aug 6. Target unchanged at Aug 19, 2026."
         }
       ]
     },
