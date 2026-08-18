@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-17",
+  "updated": "2026-08-18",
   "dates": [
     "2026-07-03",
     "2026-07-04",
@@ -36,7 +36,8 @@
     "2026-08-05",
     "2026-08-06",
     "2026-08-07",
-    "2026-08-17"
+    "2026-08-17",
+    "2026-08-18"
   ],
   "rag_legend": {
     "G": "on track",
@@ -45,10 +46,10 @@
     ".": "not tracked"
   },
   "rag": {
-    "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGG",
-    "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGY",
-    "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYY",
-    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYY"
+    "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGGG",
+    "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGYR",
+    "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYYY",
+    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYY"
   },
   "milestones": [
     {
@@ -73,7 +74,7 @@
       "project": "Canada AWS Platform",
       "name": "Platform complete",
       "baseline": "2026-08-19",
-      "current": "2026-08-19",
+      "current": "2026-08-31",
       "history": [
         {
           "date": "2026-07-16",
@@ -84,6 +85,11 @@
           "date": "2026-08-17",
           "current": "2026-08-19",
           "note": "Moved to AT RISK (per Jon 2026-08-17): SPV2 RDS security-group hardening, Client VPN access to the MQ console, and a Canada-specific stand-up confirmation are still open two days out from the Aug 19 target, with no meeting update since Aug 6. Target unchanged at Aug 19, 2026."
+        },
+        {
+          "date": "2026-08-18",
+          "current": "2026-08-31",
+          "note": "Moved to RED/OFF TRACK (Internal Canadian Collab Stand-up, 2026-08-17): team explicitly confirmed the Aug 19 target is no longer feasible \u2014 a new Canadian VPN spike is halting data-plane work and Looker's license purchase was never completed. Timeline reset to end-of-month; Jon escalating long-standing blockers to Tony and Esteban."
         }
       ]
     },
