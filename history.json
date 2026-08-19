@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-18",
+  "updated": "2026-08-19",
   "dates": [
     "2026-07-03",
     "2026-07-04",
@@ -37,7 +37,8 @@
     "2026-08-06",
     "2026-08-07",
     "2026-08-17",
-    "2026-08-18"
+    "2026-08-18",
+    "2026-08-19"
   ],
   "rag_legend": {
     "G": "on track",
@@ -46,10 +47,10 @@
     ".": "not tracked"
   },
   "rag": {
-    "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGGG",
-    "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGYR",
-    "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYYY",
-    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYY"
+    "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGGGG",
+    "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGYRR",
+    "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYYYY",
+    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYYY"
   },
   "milestones": [
     {
@@ -74,7 +75,7 @@
       "project": "Canada AWS Platform",
       "name": "Platform complete",
       "baseline": "2026-08-19",
-      "current": "2026-08-31",
+      "current": "2026-09-11",
       "history": [
         {
           "date": "2026-07-16",
@@ -90,6 +91,11 @@
           "date": "2026-08-18",
           "current": "2026-08-31",
           "note": "Moved to RED/OFF TRACK (Internal Canadian Collab Stand-up, 2026-08-17): team explicitly confirmed the Aug 19 target is no longer feasible \u2014 a new Canadian VPN spike is halting data-plane work and Looker's license purchase was never completed. Timeline reset to end-of-month; Jon escalating long-standing blockers to Tony and Esteban."
+        },
+        {
+          "date": "2026-08-19",
+          "current": "2026-09-11",
+          "note": "Official reset per Canadian AWS Platform Weekly Stand-up (2026-08-18): the Aug 19 target is confirmed missed. New target is September 11, 2026, with a defined two-phase app rollout (Phase 1: Hogger, Copper, SPV-2, Fuflunds this week; Phase 2: Minerva, Naboo, Looms early Sept). The Canada VPN CIDR range from Tony remains the primary blocker, still halting all data-plane work (PG Bouncer, Looker)."
         }
       ]
     },
