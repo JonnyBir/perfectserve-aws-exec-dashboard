@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-26",
+  "updated": "2026-08-27",
   "dates": [
     "2026-07-03",
     "2026-07-04",
@@ -45,7 +45,8 @@
     "2026-08-23",
     "2026-08-24",
     "2026-08-25",
-    "2026-08-26"
+    "2026-08-26",
+    "2026-08-27"
   ],
   "rag_legend": {
     "G": "on track",
@@ -54,17 +55,17 @@
     ".": "not tracked"
   },
   "rag": {
-    "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGGG",
-    "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGYRRRRYYGGG",
-    "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYY",
-    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYYYYYYYGGG"
+    "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGGGY",
+    "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGYRRRRYYGGGG",
+    "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYYY",
+    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYYYYYYYGGGY"
   },
   "milestones": [
     {
       "project": "Atlanta AWS Migration",
       "name": "Wave 1 go-live",
       "baseline": "2026-08-05",
-      "current": "2026-09-02",
+      "current": "2026-10-31",
       "history": [
         {
           "date": "2026-07-16",
@@ -75,6 +76,11 @@
           "date": "2026-07-29",
           "current": "2026-09-02",
           "note": "Wave 1 reclassified as an isolated dry run (Jul 28 stand-up); real customer-facing migration for Wave 1 apps now bundled with Wave 2 in September, buying 3&#x2013;4 extra testing weeks and removing the Camacho firewall SPOF risk."
+        },
+        {
+          "date": "2026-08-27",
+          "current": "2026-10-31",
+          "note": "Real customer-facing Wave 1 go-live pushed from Sept 2 to October (exact date TBD) after Customer Success comms incorrectly promised zero downtime for the Sept 2 cutover; Sept 2 downgraded to a small internal-only validation wave (Aug 26 PLT Core / Atlanta stand-up)."
         }
       ]
     },
@@ -128,7 +134,7 @@
       "project": "OC West Expansion",
       "name": "Production Build &amp; Deployment",
       "baseline": "2026-10-09",
-      "current": "2026-10-09",
+      "current": "2026-10-14",
       "history": [
         {
           "date": "2026-07-27",
@@ -154,6 +160,11 @@
           "date": "2026-08-17",
           "current": "2026-10-09",
           "note": "Architecture decision reopened: PerfectServe is re-validating Lamine&#x2019;s original ~500ms write-forwarding latency result (session consistency) with Scott and Mark reviewing methodology/process/data, while the app team has completed fixes for SELECT FOR UPDATE, SKIP LOCKED, and nested-transaction issues and is now testing cross-region latency with those fixes in place. Write forwarding may still be viable if testing holds up; final path (write forwarding vs. DR-Only) pending both validations. Target unchanged at Oct 9, 2026 (per Jon 2026-08-17)."
+        },
+        {
+          "date": "2026-08-27",
+          "current": "2026-10-14",
+          "note": "Strategy shift from AWS DMS to RDS-replica promotion (Aug 26 OC West Multi-Region Stand-up); production cutover mechanism still unknown pending a dedicated architecture meeting, tentatively targeting the first Wednesday maintenance window in October (Oct 14, unconfirmed)."
         }
       ]
     }
