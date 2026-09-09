@@ -70,7 +70,7 @@
   "rag": {
     "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGGGYYYYYYYYYYYYGG",
     "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGYRRRRYYGGGGGGGGGYYYYYYYY",
-    "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYGG",
+    "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYGR",
     "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYYYYYYYGGGYYYYYYYYYYYYYY"
   },
   "milestones": [
@@ -140,6 +140,11 @@
           "date": "2026-07-30",
           "current": "2026-11-30",
           "note": "Per Jon 2026-07-30: after discussion with Orrian and Scott S., the Lightning Bolt release is pushed to November (specific date TBD). Scott chose the later date because his team can only dedicate a couple of hours a week to the effort right now, and he wants the release fully tested and ready to avoid another rollback (per the June 17 rollback/RCA). Milestone current recorded as 2026-11-30 pending a firm day."
+        },
+        {
+          "date": "2026-09-09",
+          "current": "2026-11-30",
+          "note": "Sept 9 Phase 2 production release deployed then rolled back same day after Okta issues surfaced in production (no lower-env sandbox available to catch it pre-release); a previously-unknown 2-min API recycle window was also discovered. Lightning Bolt (Nov) target unaffected."
         }
       ]
     },
