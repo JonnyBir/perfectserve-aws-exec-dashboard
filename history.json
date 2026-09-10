@@ -188,7 +188,7 @@
         {
           "date": "2026-09-10",
           "current": "2026-10-14",
-          "note": "Per Jon (2026-09-10): the East-region Aurora upgrade/cutover is confirmed successful. RAG moved back to GREEN. Sequence ahead: build out the West-region database reader, convert Aurora to Aurora Global (East+West), then deploy the application stack and connectivity. Target held at 2026-10-14 pending progress on that sequence."
+          "note": "Per Jon (2026-09-10): the East-region Aurora upgrade/cutover is confirmed successful and Fivetran has been fully resynced. RAG holds GREEN. Sequence ahead: build out the West-region database reader, convert Aurora to Aurora Global (East+West), then deploy the application stack and connectivity. Target held at 2026-10-14 pending progress on that sequence."
         }
       ]
     }
