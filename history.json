@@ -72,7 +72,7 @@
     "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGGGYYYYYYYYYYYYGGG",
     "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGYRRRRYYGGGGGGGGGYYYYYYYYR",
     "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYGRR",
-    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYYYYYYYGGGYYYYYYYYYYYYYYY"
+    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYYYYYYYGGGYYYYYYYYYYYYYYG"
   },
   "milestones": [
     {
@@ -184,6 +184,11 @@
           "date": "2026-08-27",
           "current": "2026-10-14",
           "note": "Strategy shift from AWS DMS to RDS-replica promotion (Aug 26 OC West Multi-Region Stand-up); production cutover mechanism still unknown pending a dedicated architecture meeting, tentatively targeting the first Wednesday maintenance window in October (Oct 14, unconfirmed)."
+        },
+        {
+          "date": "2026-09-10",
+          "current": "2026-10-14",
+          "note": "Per Jon (2026-09-10): the East-region Aurora upgrade/cutover is confirmed successful. RAG moved back to GREEN. Sequence ahead: build out the West-region database reader, convert Aurora to Aurora Global (East+West), then deploy the application stack and connectivity. Target held at 2026-10-14 pending progress on that sequence."
         }
       ]
     }
