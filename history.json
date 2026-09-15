@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-14",
+  "updated": "2026-09-15",
   "dates": [
     "2026-07-03",
     "2026-07-04",
@@ -64,7 +64,8 @@
     "2026-09-11",
     "2026-09-12",
     "2026-09-13",
-    "2026-09-14"
+    "2026-09-14",
+    "2026-09-15"
   ],
   "rag_legend": {
     "G": "on track",
@@ -73,10 +74,10 @@
     ".": "not tracked"
   },
   "rag": {
-    "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGGGYYYYYYYYYYYYGGGGGGG",
-    "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGYRRRRYYGGGGGGGGGYYYYYYYYRRRRR",
-    "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYGRRRRRR",
-    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYYYYYYYGGGYYYYYYYYYYYYYYGGGGG"
+    "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGGGYYYYYYYYYYYYGGGGGGGG",
+    "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGYRRRRYYGGGGGGGGGYYYYYYYYRRRRRR",
+    "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYGRRRRRRR",
+    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYYYYYYYGGGYYYYYYYYYYYYYYGGGGGG"
   },
   "milestones": [
     {
@@ -106,7 +107,7 @@
       "project": "Canada AWS Platform",
       "name": "Platform complete",
       "baseline": "2026-08-19",
-      "current": "2026-09-11",
+      "current": "2026-09-18",
       "history": [
         {
           "date": "2026-07-16",
@@ -132,6 +133,11 @@
           "date": "2026-09-11",
           "current": "2026-09-11",
           "note": "Sept 11 target date arrives with platform infrastructure nearing completion (PG Bouncer and PilotLite EKS resolved/near-resolved per Sep 10 stand-ups) but the application-deployment layer (SPV2, Nebu, Copper) still blocked by OpenSearch, PG Bouncer, S3/SES, and a trial-mode Twilio account. The Sep 9 Internal Canadian Collab stand-up confirmed the Sep 11 internal-validation handover would be missed with no new date committed; the Sep 10 Weekly Check-in explicitly described the project as behind schedule and requested a detailed handoff-readiness breakdown from Adam. Current date held at 2026-09-11 pending a realistic revised target from the team."
+        },
+        {
+          "date": "2026-09-15",
+          "current": "2026-09-18",
+          "note": "Sept 11 target confirmed missed with no new committed date; OpenSearch unblocked via a tag workaround (PR pending) and PG Bouncer nearly complete &#x2014; only a Postgres SCRAM&#x2192;MD5 password coordination step remains (Sept 14 Internal Canadian Collab stand-up). Looker and the app-deployment layer (SPV2, Nebu, Copper) remain blocked. Current date moved to a provisional Sept 18 pending firm confirmation from the team (per Jon 2026-09-15)."
         }
       ]
     },
