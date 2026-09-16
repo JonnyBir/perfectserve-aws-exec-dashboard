@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-15",
+  "updated": "2026-09-16",
   "dates": [
     "2026-07-03",
     "2026-07-04",
@@ -65,7 +65,8 @@
     "2026-09-12",
     "2026-09-13",
     "2026-09-14",
-    "2026-09-15"
+    "2026-09-15",
+    "2026-09-16"
   ],
   "rag_legend": {
     "G": "on track",
@@ -74,10 +75,10 @@
     ".": "not tracked"
   },
   "rag": {
-    "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGGGYYYYYYYYYYYYGGGGGGGG",
-    "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGYRRRRYYGGGGGGGGGYYYYYYYYRRRRRR",
-    "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYGRRRRRRR",
-    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYYYYYYYGGGYYYYYYYYYYYYYYGGGGGG"
+    "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGGGYYYYYYYYYYYYGGGGGGGGG",
+    "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGYRRRRYYGGGGGGGGGYYYYYYYYRRRRRRG",
+    "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYGRRRRRRRR",
+    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYYYYYYYGGGYYYYYYYYYYYYYYGGGGGGG"
   },
   "milestones": [
     {
@@ -107,7 +108,7 @@
       "project": "Canada AWS Platform",
       "name": "Platform complete",
       "baseline": "2026-08-19",
-      "current": "2026-09-18",
+      "current": "2026-10-09",
       "history": [
         {
           "date": "2026-07-16",
@@ -138,6 +139,11 @@
           "date": "2026-09-15",
           "current": "2026-09-18",
           "note": "Sept 11 target confirmed missed with no new committed date; OpenSearch unblocked via a tag workaround (PR pending) and PG Bouncer nearly complete &#x2014; only a Postgres SCRAM&#x2192;MD5 password coordination step remains (Sept 14 Internal Canadian Collab stand-up). Looker and the app-deployment layer (SPV2, Nebu, Copper) remain blocked. Current date moved to a provisional Sept 18 pending firm confirmation from the team (per Jon 2026-09-15)."
+        },
+        {
+          "date": "2026-09-16",
+          "current": "2026-10-09",
+          "note": "Per Jon (2026-09-16): moved to GREEN (ON TRACK) &#x2014; the team has committed to a new firm October 9 delivery date. No specific blocker resolution reported yet for OpenSearch/PG Bouncer/Looker; those items carry forward as risks to watch, but the new team commitment restores delivery-date confidence per the RAG stability rule."
         }
       ]
     },
