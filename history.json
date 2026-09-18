@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-16",
+  "updated": "2026-09-18",
   "dates": [
     "2026-07-03",
     "2026-07-04",
@@ -66,7 +66,8 @@
     "2026-09-13",
     "2026-09-14",
     "2026-09-15",
-    "2026-09-16"
+    "2026-09-16",
+    "2026-09-18"
   ],
   "rag_legend": {
     "G": "on track",
@@ -75,17 +76,17 @@
     ".": "not tracked"
   },
   "rag": {
-    "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGGGYYYYYYYYYYYYGGGGGGGGG",
-    "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGYRRRRYYGGGGGGGGGYYYYYYYYRRRRRRG",
-    "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYGRRRRRRRR",
-    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYYYYYYYGGGYYYYYYYYYYYYYYGGGGGGG"
+    "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGGGYYYYYYYYYYYYGGGGGGGGGG",
+    "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGYRRRRYYGGGGGGGGGYYYYYYYYRRRRRRGG",
+    "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYGRRRRRRRRR",
+    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYYYYYYYGGGYYYYYYYYYYYYYYGGGGGGGG"
   },
   "milestones": [
     {
       "project": "Atlanta AWS Migration",
       "name": "Wave 1 go-live",
       "baseline": "2026-08-05",
-      "current": "2026-10-31",
+      "current": "2026-10-07",
       "history": [
         {
           "date": "2026-07-16",
@@ -101,6 +102,11 @@
           "date": "2026-08-27",
           "current": "2026-10-31",
           "note": "Real customer-facing Wave 1 go-live pushed from Sept 2 to October (exact date TBD) after Customer Success comms incorrectly promised zero downtime for the Sept 2 cutover; Sept 2 downgraded to a small internal-only validation wave (Aug 26 PLT Core / Atlanta stand-up)."
+        },
+        {
+          "date": "2026-09-18",
+          "current": "2026-10-07",
+          "note": "Team is explicitly managing against &#x201C;the Oct 7th deadline&#x201D; across three consecutive stand-ups (Sep 15&#x2013;17): New Relic performance validation is proceeding via a QA-first strategy with the production list locking Sept 30, and Sept 23 QA-readiness work (redundant AD controllers) is underway. Supersedes the prior end-of-month placeholder recorded when the date was still TBD."
         }
       ]
     },
