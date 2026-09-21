@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-18",
+  "updated": "2026-09-21",
   "dates": [
     "2026-07-03",
     "2026-07-04",
@@ -67,7 +67,8 @@
     "2026-09-14",
     "2026-09-15",
     "2026-09-16",
-    "2026-09-18"
+    "2026-09-18",
+    "2026-09-21"
   ],
   "rag_legend": {
     "G": "on track",
@@ -76,15 +77,15 @@
     ".": "not tracked"
   },
   "rag": {
-    "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGGGYYYYYYYYYYYYGGGGGGGGGG",
-    "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGYRRRRYYGGGGGGGGGYYYYYYYYRRRRRRGG",
-    "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYGRRRRRRRRR",
-    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYYYYYYYGGGYYYYYYYYYYYYYYGGGGGGGG"
+    "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGGGYYYYYYYYYYYYGGGGGGGGGGG",
+    "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGYRRRRYYGGGGGGGGGYYYYYYYYRRRRRRGGG",
+    "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYGRRRRRRRRRR",
+    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYYYYYYYGGGYYYYYYYYYYYYYYGGGGGGGGG"
   },
   "milestones": [
     {
       "project": "Atlanta AWS Migration",
-      "name": "Wave 1 go-live",
+      "name": "Wave 3 go-live",
       "baseline": "2026-08-05",
       "current": "2026-10-07",
       "history": [
@@ -107,12 +108,17 @@
           "date": "2026-09-18",
           "current": "2026-10-07",
           "note": "Team is explicitly managing against &#x201C;the Oct 7th deadline&#x201D; across three consecutive stand-ups (Sep 15&#x2013;17): New Relic performance validation is proceeding via a QA-first strategy with the production list locking Sept 30, and Sept 23 QA-readiness work (redundant AD controllers) is underway. Supersedes the prior end-of-month placeholder recorded when the date was still TBD."
+        },
+        {
+          "date": "2026-09-21",
+          "current": "2026-10-07",
+          "note": "Waves 1 &amp; 2 complete; now tracking Wave 3 (Oct 7) &#x2014; per Jon 2026-09-14. Team explicitly managing to the Oct 7th deadline (Sep 18 Scrum of Scrums): Oct 7 production release enters QA Sept 23; final database-move phase confirmed for Dec 2."
         }
       ]
     },
     {
       "project": "Canada AWS Platform",
-      "name": "Platform complete",
+      "name": "Customer production-ready / full handoff",
       "baseline": "2026-08-19",
       "current": "2026-10-09",
       "history": [
@@ -129,7 +135,7 @@
         {
           "date": "2026-08-18",
           "current": "2026-08-31",
-          "note": "Moved to RED/OFF TRACK (Internal Canadian Collab Stand-up, 2026-08-17): team explicitly confirmed the Aug 19 target is no longer feasible \u2014 a new Canadian VPN spike is halting data-plane work and Looker's license purchase was never completed. Timeline reset to end-of-month; Jon escalating long-standing blockers to Tony and Esteban."
+          "note": "Moved to RED/OFF TRACK (Internal Canadian Collab Stand-up, 2026-08-17): team explicitly confirmed the Aug 19 target is no longer feasible — a new Canadian VPN spike is halting data-plane work and Looker's license purchase was never completed. Timeline reset to end-of-month; Jon escalating long-standing blockers to Tony and Esteban."
         },
         {
           "date": "2026-08-19",
@@ -150,6 +156,11 @@
           "date": "2026-09-16",
           "current": "2026-10-09",
           "note": "Per Jon (2026-09-16): moved to GREEN (ON TRACK) &#x2014; the team has committed to a new firm October 9 delivery date. No specific blocker resolution reported yet for OpenSearch/PG Bouncer/Looker; those items carry forward as risks to watch, but the new team commitment restores delivery-date confidence per the RAG stability rule."
+        },
+        {
+          "date": "2026-09-21",
+          "current": "2026-10-09",
+          "note": "Phased recovery plan per Jon 2026-09-14 (Phase 1 blockers clear Sep 14&#x2013;18, Phase 1 env available Sep 21, integrations/testing Sep 21&#x2013;Oct 2, validation Oct 5&#x2013;9, target Oct 9). Fathom (Sep 17): OpenSearch and PG Bouncer near/complete, but the services-team handoff targeted for the Sep 21 Phase 1 checkpoint remains blocked on Okta IQ Admin approval and a Naboo S3 workaround as of the last check-in."
         }
       ]
     },
@@ -178,9 +189,9 @@
     },
     {
       "project": "OC West Expansion",
-      "name": "Production Build &amp; Deployment",
+      "name": "Full project handoff",
       "baseline": "2026-10-09",
-      "current": "2026-10-14",
+      "current": "2026-10-09",
       "history": [
         {
           "date": "2026-07-27",
@@ -190,7 +201,7 @@
         {
           "date": "2026-07-30",
           "current": "2026-10-09",
-          "note": "Lamine has resigned; zero developers currently on staff with the required skill set for this build. Dev/QA (East) switched to use Aurora Global West, but no one is available to build on that progress. Oct 9 target is at serious risk pending backfill \u2014 RAG moves to red (per Jon 2026-07-30)."
+          "note": "Lamine has resigned; zero developers currently on staff with the required skill set for this build. Dev/QA (East) switched to use Aurora Global West, but no one is available to build on that progress. Oct 9 target is at serious risk pending backfill — RAG moves to red (per Jon 2026-07-30)."
         },
         {
           "date": "2026-08-03",
@@ -216,6 +227,11 @@
           "date": "2026-09-10",
           "current": "2026-10-14",
           "note": "Per Jon (2026-09-10): the East-region Aurora upgrade/cutover is confirmed successful and Fivetran has been fully resynced. RAG holds GREEN. Sequence ahead: build out the West-region database reader, convert Aurora to Aurora Global (East+West), then deploy the application stack and connectivity. Target held at 2026-10-14 pending progress on that sequence."
+        },
+        {
+          "date": "2026-09-21",
+          "current": "2026-10-09",
+          "note": "Detailed milestone chain per Jon 2026-09-14: DB attach 9/18 (CAB by 9/17) &#x2192; app stack 9/25 &#x2192; integration 10/2 &#x2192; validation 10/6 &#x2192; optional DR endpoint work 10/6 &#x2192; signoff 10/7 &#x2192; full handoff 10/9, aligned with Canada&#x2019;s Oct 9 target. Plan flagged by Jon as needing review, not fully locked. Fathom (Sep 17): recovery-layer work (nightly snapshots) underway and old RDS entering its decommission grace period, consistent with the DB-attach step landing on/near 9/18; DR deliverables scoped cleanly to the database layer with TGW ownership flagged to the client."
         }
       ]
     }
