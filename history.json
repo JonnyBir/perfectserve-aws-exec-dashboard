@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15",
+  "updated": "2026-10-16",
   "dates": [
     "2026-07-03",
     "2026-07-04",
@@ -82,7 +82,8 @@
     "2026-10-12",
     "2026-10-13",
     "2026-10-14",
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
   ],
   "rag_legend": {
     "G": "on track",
@@ -91,10 +92,10 @@
     ".": "not tracked"
   },
   "rag": {
-    "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGGGYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGYGGGGGG",
-    "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGYRRRRYYGGGGGGGGGYYYYYYYYRRRRRRGGGGGGGGGGGGGGGGG",
-    "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYGRRRRRRRRRRRRRRRYYYYYYYYY",
-    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYYYYYYYGGGYYYYYYYYYYYYYYGGGGGGGGGGYYYYYYYYYYYYY"
+    "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGGGYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGYGGGGGGG",
+    "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGYRRRRYYGGGGGGGGGYYYYYYYYRRRRRRGGGGGGGGGGGGGGGGGG",
+    "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYGRRRRRRRRRRRRRRRYYYYYYYYYY",
+    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYYYYYYYGGGYYYYYYYYYYYYYYGGGGGGGGGGYYYYYYYYYYYYYY"
   },
   "milestones": [
     {
@@ -149,7 +150,7 @@
         {
           "date": "2026-08-18",
           "current": "2026-08-31",
-          "note": "Moved to RED/OFF TRACK (Internal Canadian Collab Stand-up, 2026-08-17): team explicitly confirmed the Aug 19 target is no longer feasible — a new Canadian VPN spike is halting data-plane work and Looker's license purchase was never completed. Timeline reset to end-of-month; Jon escalating long-standing blockers to Tony and Esteban."
+          "note": "Moved to RED/OFF TRACK (Internal Canadian Collab Stand-up, 2026-08-17): team explicitly confirmed the Aug 19 target is no longer feasible \u2014 a new Canadian VPN spike is halting data-plane work and Looker's license purchase was never completed. Timeline reset to end-of-month; Jon escalating long-standing blockers to Tony and Esteban."
         },
         {
           "date": "2026-08-19",
@@ -210,7 +211,7 @@
       "project": "OC West Expansion",
       "name": "Full project handoff",
       "baseline": "2026-10-09",
-      "current": "2026-10-19",
+      "current": "2026-11-02",
       "history": [
         {
           "date": "2026-07-27",
@@ -220,7 +221,7 @@
         {
           "date": "2026-07-30",
           "current": "2026-10-09",
-          "note": "Lamine has resigned; zero developers currently on staff with the required skill set for this build. Dev/QA (East) switched to use Aurora Global West, but no one is available to build on that progress. Oct 9 target is at serious risk pending backfill — RAG moves to red (per Jon 2026-07-30)."
+          "note": "Lamine has resigned; zero developers currently on staff with the required skill set for this build. Dev/QA (East) switched to use Aurora Global West, but no one is available to build on that progress. Oct 9 target is at serious risk pending backfill \u2014 RAG moves to red (per Jon 2026-07-30)."
         },
         {
           "date": "2026-08-03",
@@ -261,6 +262,11 @@
           "date": "2026-10-08",
           "current": "2026-10-19",
           "note": "OC West Multi-Region Stand-up (Oct 7): the West Redis cache-consistency fix (read from the East writer on cache miss, Option A) needs a code change estimated for mid-next week (Oct 15), which may push the overall project beyond the Oct 19 target. Full handoff now tracked at Oct 19, with readiness review and handoff meetings to be scheduled."
+        },
+        {
+          "date": "2026-10-16",
+          "current": "2026-11-02",
+          "note": "Per Jon (2026-10-16): networking (VPC Peering vs Transit Gateway) and data-consistency decisions still pending; estimated completion is roughly two weeks after those decisions, assuming teams are available and no new blockers arise, so the Oct 19 handoff is re-tracked to about Nov 2. RAG held AT RISK per the stability rule."
         }
       ]
     }
