@@ -98,7 +98,8 @@
     "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGGGYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGYGGGGGGGGGG",
     "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGYRRRRYYGGGGGGGGGYYYYYYYYRRRRRRGGGGGGGGGGGGGGGGGGGGG",
     "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYGRRRRRRRRRRRRRRRYYYYYYYYYYYYY",
-    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYYYYYYYGGGYYYYYYYYYYYYYYGGGGGGGGGGYYYYYYYYYYYYYYYYY"
+    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYYYYYYYGGGYYYYYYYYYYYYYYGGGGGGGGGGYYYYYYYYYYYYYYYYY",
+    "AudioCodes SBC Deployment": ".....................................................................................G"
   },
   "milestones": [
     {
@@ -270,6 +271,19 @@
           "date": "2026-10-16",
           "current": "2026-11-02",
           "note": "Per Jon (2026-10-16): networking (VPC Peering vs Transit Gateway) and data-consistency decisions still pending; estimated completion is roughly two weeks after those decisions, assuming teams are available and no new blockers arise, so the Oct 19 handoff is re-tracked to about Nov 2. RAG held AT RISK per the stability rule."
+        }
+      ]
+    },
+    {
+      "project": "AudioCodes SBC Deployment",
+      "name": "SBC deployment complete",
+      "baseline": "2026-11-13",
+      "current": "2026-11-13",
+      "history": [
+        {
+          "date": "2026-10-21",
+          "current": "2026-11-13",
+          "note": "Baseline set per Jon (2026-10-21): project timeline Oct 15 &#x2013; Nov 13, 2026. Kick-off held Oct 15 (two redundant SBC pairs plus one OVOC instance in AWS); Oct 19 architecture alignment settled on a dedicated AWS account to isolate the AudioCodes Stack Manager, adding a 3&#x2013;4 day platform-engineering dependency for account and VPC/CIDR creation."
         }
       ]
     }
