@@ -140,7 +140,7 @@
       "project": "Canada AWS Platform",
       "name": "Customer production-ready / full handoff",
       "baseline": "2026-08-19",
-      "current": "2026-10-22",
+      "current": "2026-11-04",
       "history": [
         {
           "date": "2026-07-16",
@@ -186,6 +186,11 @@
           "date": "2026-10-15",
           "current": "2026-10-22",
           "note": "Final handoff meeting rescheduled to Oct 22, 1:30 PM ET because the Services team was unavailable (OC West Multi-Region Stand-up and Canada Platform Final Handoff Agenda, Oct 14). Project work is otherwise complete and the team moves to support mode; end-to-end validation is blocked by the Canadian Rhapsody instance and customer readiness, with an approved workaround to send test data directly to the Minerva platform. RAG held GREEN per the stability rule."
+        },
+        {
+          "date": "2026-10-22",
+          "current": "2026-11-04",
+          "note": "Final handoff pushed from Oct 22 to Nov 4 per Professional Services (per Jon 2026-10-22). Project wrapped up (99% complete) except the Integrations epic and the Looker tile. RAG held GREEN per the stability rule."
         }
       ]
     },
