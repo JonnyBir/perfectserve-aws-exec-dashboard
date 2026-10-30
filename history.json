@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "dates": [
     "2026-07-03",
     "2026-07-04",
@@ -92,7 +92,8 @@
     "2026-10-26",
     "2026-10-27",
     "2026-10-28",
-    "2026-10-29"
+    "2026-10-29",
+    "2026-10-30"
   ],
   "rag_legend": {
     "G": "on track",
@@ -101,11 +102,11 @@
     ".": "not tracked"
   },
   "rag": {
-    "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGGGYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGYGGGGGGGGGGGGGGGG",
-    "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGYRRRRYYGGGGGGGGGYYYYYYYYRRRRRRGGGGGGGGGGGGGGGGGGGGGGGGGGG",
-    "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYGRRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYY",
-    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYYYYYYYGGGYYYYYYYYYYYYYYGGGGGGGGGGYYYYYYYYYYYYYYYYYYGGGGG",
-    "AudioCodes SBC Deployment": ".....................................................................................GGGGGGG"
+    "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGGGYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGYGGGGGGGGGGGGGGGGG",
+    "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGYRRRRYYGGGGGGGGGYYYYYYYYRRRRRRGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+    "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYGRRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYYY",
+    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYYYYYYYGGGYYYYYYYYYYYYYYGGGGGGGGGGYYYYYYYYYYYYYYYYYYGGGGGG",
+    "AudioCodes SBC Deployment": ".....................................................................................GGGGGGGG"
   },
   "milestones": [
     {
@@ -160,7 +161,7 @@
         {
           "date": "2026-08-18",
           "current": "2026-08-31",
-          "note": "Moved to RED/OFF TRACK (Internal Canadian Collab Stand-up, 2026-08-17): team explicitly confirmed the Aug 19 target is no longer feasible \u2014 a new Canadian VPN spike is halting data-plane work and Looker's license purchase was never completed. Timeline reset to end-of-month; Jon escalating long-standing blockers to Tony and Esteban."
+          "note": "Moved to RED/OFF TRACK (Internal Canadian Collab Stand-up, 2026-08-17): team explicitly confirmed the Aug 19 target is no longer feasible — a new Canadian VPN spike is halting data-plane work and Looker's license purchase was never completed. Timeline reset to end-of-month; Jon escalating long-standing blockers to Tony and Esteban."
         },
         {
           "date": "2026-08-19",
@@ -236,7 +237,7 @@
         {
           "date": "2026-07-30",
           "current": "2026-10-09",
-          "note": "Lamine has resigned; zero developers currently on staff with the required skill set for this build. Dev/QA (East) switched to use Aurora Global West, but no one is available to build on that progress. Oct 9 target is at serious risk pending backfill \u2014 RAG moves to red (per Jon 2026-07-30)."
+          "note": "Lamine has resigned; zero developers currently on staff with the required skill set for this build. Dev/QA (East) switched to use Aurora Global West, but no one is available to build on that progress. Oct 9 target is at serious risk pending backfill — RAG moves to red (per Jon 2026-07-30)."
         },
         {
           "date": "2026-08-03",
