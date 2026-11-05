@@ -202,6 +202,11 @@
           "date": "2026-10-22",
           "current": "2026-11-04",
           "note": "Final handoff pushed from Oct 22 to Nov 4 per Professional Services (per Jon 2026-10-22). Project wrapped up (99% complete) except the Integrations epic and the Looker tile. RAG held GREEN per the stability rule."
+        },
+        {
+          "date": "2026-11-05",
+          "current": "2026-11-04",
+          "note": "Per Jon (2026-11-05): project is 100% complete and the team is in support mode; the Integrations epic and the Looker Okta tile now fall on the client. Milestone date unchanged; RAG held GREEN."
         }
       ]
     },
