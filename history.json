@@ -1,331 +1,332 @@
 {
-  "updated": "2026-11-05",
-  "dates": [
-    "2026-07-03",
-    "2026-07-04",
-    "2026-07-05",
-    "2026-07-06",
-    "2026-07-07",
-    "2026-07-08",
-    "2026-07-09",
-    "2026-07-10",
-    "2026-07-11",
-    "2026-07-12",
-    "2026-07-13",
-    "2026-07-14",
-    "2026-07-15",
-    "2026-07-16",
-    "2026-07-17",
-    "2026-07-18",
-    "2026-07-20",
-    "2026-07-21",
-    "2026-07-22",
-    "2026-07-23",
-    "2026-07-24",
-    "2026-07-25",
-    "2026-07-26",
-    "2026-07-27",
-    "2026-07-28",
-    "2026-07-29",
-    "2026-07-30",
-    "2026-07-31",
-    "2026-08-01",
-    "2026-08-02",
-    "2026-08-03",
-    "2026-08-04",
-    "2026-08-05",
-    "2026-08-06",
-    "2026-08-07",
-    "2026-08-17",
-    "2026-08-18",
-    "2026-08-19",
-    "2026-08-20",
-    "2026-08-21",
-    "2026-08-22",
-    "2026-08-23",
-    "2026-08-24",
-    "2026-08-25",
-    "2026-08-26",
-    "2026-08-27",
-    "2026-08-28",
-    "2026-08-29",
-    "2026-08-30",
-    "2026-08-31",
-    "2026-09-01",
-    "2026-09-02",
-    "2026-09-03",
-    "2026-09-04",
-    "2026-09-05",
-    "2026-09-06",
-    "2026-09-07",
-    "2026-09-08",
-    "2026-09-09",
-    "2026-09-10",
-    "2026-09-11",
-    "2026-09-12",
-    "2026-09-13",
-    "2026-09-14",
-    "2026-09-15",
-    "2026-09-16",
-    "2026-09-18",
-    "2026-09-21",
-    "2026-09-24",
-    "2026-09-25",
-    "2026-09-28",
-    "2026-09-29",
-    "2026-10-01",
-    "2026-10-02",
-    "2026-10-06",
-    "2026-10-07",
-    "2026-10-08",
-    "2026-10-09",
-    "2026-10-12",
-    "2026-10-13",
-    "2026-10-14",
-    "2026-10-15",
-    "2026-10-16",
-    "2026-10-19",
-    "2026-10-20",
-    "2026-10-21",
-    "2026-10-22",
-    "2026-10-23",
-    "2026-10-26",
-    "2026-10-27",
-    "2026-10-28",
-    "2026-10-29",
-    "2026-10-30",
-    "2026-11-02",
-    "2026-11-03",
-    "2026-11-04",
-    "2026-11-05"
-  ],
-  "rag_legend": {
-    "G": "on track",
-    "Y": "at risk",
-    "R": "off track",
-    ".": "not tracked"
-  },
-  "rag": {
-    "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGGGYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGYGGGGGGGGGGGGGGGGGGGGG",
-    "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGYRRRRYYGGGGGGGGGYYYYYYYYRRRRRRGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
-    "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYGRRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYYYYYYY",
-    "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYYYYYYYGGGYYYYYYYYYYYYYYGGGGGGGGGGYYYYYYYYYYYYYYYYYYGGGGGGGGGG",
-    "AudioCodes SBC Deployment": ".....................................................................................GGGGGGGGGGGG",
-    "Hivelocity - Arista & Kubernetes (LG)": "................................................................................................G"
-  },
-  "milestones": [
+ "updated": "2026-11-09",
+ "dates": [
+  "2026-07-03",
+  "2026-07-04",
+  "2026-07-05",
+  "2026-07-06",
+  "2026-07-07",
+  "2026-07-08",
+  "2026-07-09",
+  "2026-07-10",
+  "2026-07-11",
+  "2026-07-12",
+  "2026-07-13",
+  "2026-07-14",
+  "2026-07-15",
+  "2026-07-16",
+  "2026-07-17",
+  "2026-07-18",
+  "2026-07-20",
+  "2026-07-21",
+  "2026-07-22",
+  "2026-07-23",
+  "2026-07-24",
+  "2026-07-25",
+  "2026-07-26",
+  "2026-07-27",
+  "2026-07-28",
+  "2026-07-29",
+  "2026-07-30",
+  "2026-07-31",
+  "2026-08-01",
+  "2026-08-02",
+  "2026-08-03",
+  "2026-08-04",
+  "2026-08-05",
+  "2026-08-06",
+  "2026-08-07",
+  "2026-08-17",
+  "2026-08-18",
+  "2026-08-19",
+  "2026-08-20",
+  "2026-08-21",
+  "2026-08-22",
+  "2026-08-23",
+  "2026-08-24",
+  "2026-08-25",
+  "2026-08-26",
+  "2026-08-27",
+  "2026-08-28",
+  "2026-08-29",
+  "2026-08-30",
+  "2026-08-31",
+  "2026-09-01",
+  "2026-09-02",
+  "2026-09-03",
+  "2026-09-04",
+  "2026-09-05",
+  "2026-09-06",
+  "2026-09-07",
+  "2026-09-08",
+  "2026-09-09",
+  "2026-09-10",
+  "2026-09-11",
+  "2026-09-12",
+  "2026-09-13",
+  "2026-09-14",
+  "2026-09-15",
+  "2026-09-16",
+  "2026-09-18",
+  "2026-09-21",
+  "2026-09-24",
+  "2026-09-25",
+  "2026-09-28",
+  "2026-09-29",
+  "2026-10-01",
+  "2026-10-02",
+  "2026-10-06",
+  "2026-10-07",
+  "2026-10-08",
+  "2026-10-09",
+  "2026-10-12",
+  "2026-10-13",
+  "2026-10-14",
+  "2026-10-15",
+  "2026-10-16",
+  "2026-10-19",
+  "2026-10-20",
+  "2026-10-21",
+  "2026-10-22",
+  "2026-10-23",
+  "2026-10-26",
+  "2026-10-27",
+  "2026-10-28",
+  "2026-10-29",
+  "2026-10-30",
+  "2026-11-02",
+  "2026-11-03",
+  "2026-11-04",
+  "2026-11-05",
+  "2026-11-09"
+ ],
+ "rag_legend": {
+  "G": "on track",
+  "Y": "at risk",
+  "R": "off track",
+  ".": "not tracked"
+ },
+ "rag": {
+  "Atlanta AWS Migration": "YYYYRYYYYYYYYYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGGGYYYYYYYYYYYYGGGGGGGGGGGGGGGGGGYGGGGGGGGGGGGGGGGGGGGGG",
+  "Canada AWS Platform": "GYGGGGYYYYYYYYGGGGGGGGGGGGGGGGGGGGGYRRRRYYGGGGGGGGGYYYYYYYYRRRRRRGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+  "IDP": "YYYYYYYYYYYYRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYGRRRRRRRRRRRRRRRYYYYYYYYYYYYYYYYYYYYYYYYY",
+  "OC West Expansion": "RRRRRYGGGGGGGRGGGGGYGGGGGGRRRRYYYYYYYYYYYYGGGYYYYYYYYYYYYYYGGGGGGGGGGYYYYYYYYYYYYYYYYYYGGGGGGGGGGG",
+  "AudioCodes SBC Deployment": ".....................................................................................GGGGGGGGGGGGG",
+  "Hivelocity - Arista & Kubernetes (LG)": "................................................................................................GG"
+ },
+ "milestones": [
+  {
+   "project": "Atlanta AWS Migration",
+   "name": "Wave 3 go-live",
+   "baseline": "2026-08-05",
+   "current": "2026-10-07",
+   "history": [
     {
-      "project": "Atlanta AWS Migration",
-      "name": "Wave 3 go-live",
-      "baseline": "2026-08-05",
-      "current": "2026-10-07",
-      "history": [
-        {
-          "date": "2026-07-16",
-          "current": "2026-08-05",
-          "note": "baseline set"
-        },
-        {
-          "date": "2026-07-29",
-          "current": "2026-09-02",
-          "note": "Wave 1 reclassified as an isolated dry run (Jul 28 stand-up); real customer-facing migration for Wave 1 apps now bundled with Wave 2 in September, buying 3&#x2013;4 extra testing weeks and removing the Camacho firewall SPOF risk."
-        },
-        {
-          "date": "2026-08-27",
-          "current": "2026-10-31",
-          "note": "Real customer-facing Wave 1 go-live pushed from Sept 2 to October (exact date TBD) after Customer Success comms incorrectly promised zero downtime for the Sept 2 cutover; Sept 2 downgraded to a small internal-only validation wave (Aug 26 PLT Core / Atlanta stand-up)."
-        },
-        {
-          "date": "2026-09-18",
-          "current": "2026-10-07",
-          "note": "Team is explicitly managing against &#x201C;the Oct 7th deadline&#x201D; across three consecutive stand-ups (Sep 15&#x2013;17): New Relic performance validation is proceeding via a QA-first strategy with the production list locking Sept 30, and Sept 23 QA-readiness work (redundant AD controllers) is underway. Supersedes the prior end-of-month placeholder recorded when the date was still TBD."
-        },
-        {
-          "date": "2026-09-21",
-          "current": "2026-10-07",
-          "note": "Waves 1 &amp; 2 complete; now tracking Wave 3 (Oct 7) &#x2014; per Jon 2026-09-14. Team explicitly managing to the Oct 7th deadline (Sep 18 Scrum of Scrums): Oct 7 production release enters QA Sept 23; final database-move phase confirmed for Dec 2."
-        }
-      ]
+     "date": "2026-07-16",
+     "current": "2026-08-05",
+     "note": "baseline set"
     },
     {
-      "project": "Canada AWS Platform",
-      "name": "Customer production-ready / full handoff",
-      "baseline": "2026-08-19",
-      "current": "2026-11-04",
-      "history": [
-        {
-          "date": "2026-07-16",
-          "current": "2026-08-19",
-          "note": "baseline set"
-        },
-        {
-          "date": "2026-08-17",
-          "current": "2026-08-19",
-          "note": "Moved to AT RISK (per Jon 2026-08-17): SPV2 RDS security-group hardening, Client VPN access to the MQ console, and a Canada-specific stand-up confirmation are still open two days out from the Aug 19 target, with no meeting update since Aug 6. Target unchanged at Aug 19, 2026."
-        },
-        {
-          "date": "2026-08-18",
-          "current": "2026-08-31",
-          "note": "Moved to RED/OFF TRACK (Internal Canadian Collab Stand-up, 2026-08-17): team explicitly confirmed the Aug 19 target is no longer feasible — a new Canadian VPN spike is halting data-plane work and Looker's license purchase was never completed. Timeline reset to end-of-month; Jon escalating long-standing blockers to Tony and Esteban."
-        },
-        {
-          "date": "2026-08-19",
-          "current": "2026-09-11",
-          "note": "Official reset per Canadian AWS Platform Weekly Stand-up (2026-08-18): the Aug 19 target is confirmed missed. New target is September 11, 2026, with a defined two-phase app rollout (Phase 1: Hogger, Copper, SPV-2, Fuflunds this week; Phase 2: Minerva, Naboo, Looms early Sept). The Canada VPN CIDR range from Tony remains the primary blocker, still halting all data-plane work (PG Bouncer, Looker)."
-        },
-        {
-          "date": "2026-09-11",
-          "current": "2026-09-11",
-          "note": "Sept 11 target date arrives with platform infrastructure nearing completion (PG Bouncer and PilotLite EKS resolved/near-resolved per Sep 10 stand-ups) but the application-deployment layer (SPV2, Nebu, Copper) still blocked by OpenSearch, PG Bouncer, S3/SES, and a trial-mode Twilio account. The Sep 9 Internal Canadian Collab stand-up confirmed the Sep 11 internal-validation handover would be missed with no new date committed; the Sep 10 Weekly Check-in explicitly described the project as behind schedule and requested a detailed handoff-readiness breakdown from Adam. Current date held at 2026-09-11 pending a realistic revised target from the team."
-        },
-        {
-          "date": "2026-09-15",
-          "current": "2026-09-18",
-          "note": "Sept 11 target confirmed missed with no new committed date; OpenSearch unblocked via a tag workaround (PR pending) and PG Bouncer nearly complete &#x2014; only a Postgres SCRAM&#x2192;MD5 password coordination step remains (Sept 14 Internal Canadian Collab stand-up). Looker and the app-deployment layer (SPV2, Nebu, Copper) remain blocked. Current date moved to a provisional Sept 18 pending firm confirmation from the team (per Jon 2026-09-15)."
-        },
-        {
-          "date": "2026-09-16",
-          "current": "2026-10-09",
-          "note": "Per Jon (2026-09-16): moved to GREEN (ON TRACK) &#x2014; the team has committed to a new firm October 9 delivery date. No specific blocker resolution reported yet for OpenSearch/PG Bouncer/Looker; those items carry forward as risks to watch, but the new team commitment restores delivery-date confidence per the RAG stability rule."
-        },
-        {
-          "date": "2026-09-21",
-          "current": "2026-10-09",
-          "note": "Phased recovery plan per Jon 2026-09-14 (Phase 1 blockers clear Sep 14&#x2013;18, Phase 1 env available Sep 21, integrations/testing Sep 21&#x2013;Oct 2, validation Oct 5&#x2013;9, target Oct 9). Fathom (Sep 17): OpenSearch and PG Bouncer near/complete, but the services-team handoff targeted for the Sep 21 Phase 1 checkpoint remains blocked on Okta IQ Admin approval and a Naboo S3 workaround as of the last check-in."
-        },
-        {
-          "date": "2026-10-15",
-          "current": "2026-10-22",
-          "note": "Final handoff meeting rescheduled to Oct 22, 1:30 PM ET because the Services team was unavailable (OC West Multi-Region Stand-up and Canada Platform Final Handoff Agenda, Oct 14). Project work is otherwise complete and the team moves to support mode; end-to-end validation is blocked by the Canadian Rhapsody instance and customer readiness, with an approved workaround to send test data directly to the Minerva platform. RAG held GREEN per the stability rule."
-        },
-        {
-          "date": "2026-10-22",
-          "current": "2026-11-04",
-          "note": "Final handoff pushed from Oct 22 to Nov 4 per Professional Services (per Jon 2026-10-22). Project wrapped up (99% complete) except the Integrations epic and the Looker tile. RAG held GREEN per the stability rule."
-        },
-        {
-          "date": "2026-11-05",
-          "current": "2026-11-04",
-          "note": "Per Jon (2026-11-05): project is 100% complete and the team is in support mode; the Integrations epic and the Looker Okta tile now fall on the client. Milestone date unchanged; RAG held GREEN."
-        }
-      ]
+     "date": "2026-07-29",
+     "current": "2026-09-02",
+     "note": "Wave 1 reclassified as an isolated dry run (Jul 28 stand-up); real customer-facing migration for Wave 1 apps now bundled with Wave 2 in September, buying 3&#x2013;4 extra testing weeks and removing the Camacho firewall SPOF risk."
     },
     {
-      "project": "IDP",
-      "name": "Lightning Bolt production release",
-      "baseline": "2026-08-15",
-      "current": "2026-11-30",
-      "history": [
-        {
-          "date": "2026-07-16",
-          "current": "2026-12-31",
-          "note": "Orrian pushed LB prod work to end of year (Slack to Tracy Canepa, Jul 14)"
-        },
-        {
-          "date": "2026-07-30",
-          "current": "2026-11-30",
-          "note": "Per Jon 2026-07-30: after discussion with Orrian and Scott S., the Lightning Bolt release is pushed to November (specific date TBD). Scott chose the later date because his team can only dedicate a couple of hours a week to the effort right now, and he wants the release fully tested and ready to avoid another rollback (per the June 17 rollback/RCA). Milestone current recorded as 2026-11-30 pending a firm day."
-        },
-        {
-          "date": "2026-09-09",
-          "current": "2026-11-30",
-          "note": "Sept 9 Phase 2 production release deployed then rolled back same day after Okta issues surfaced in production (no lower-env sandbox available to catch it pre-release); a previously-unknown 2-min API recycle window was also discovered. Lightning Bolt (Nov) target unaffected."
-        }
-      ]
+     "date": "2026-08-27",
+     "current": "2026-10-31",
+     "note": "Real customer-facing Wave 1 go-live pushed from Sept 2 to October (exact date TBD) after Customer Success comms incorrectly promised zero downtime for the Sept 2 cutover; Sept 2 downgraded to a small internal-only validation wave (Aug 26 PLT Core / Atlanta stand-up)."
     },
     {
-      "project": "OC West Expansion",
-      "name": "Full project handoff",
-      "baseline": "2026-10-09",
-      "current": "2026-11-02",
-      "history": [
-        {
-          "date": "2026-07-27",
-          "current": "2026-10-09",
-          "note": "New milestone added per Jon: production build &amp; deployment phase starts Jul 27, targeting Oct 9 completion."
-        },
-        {
-          "date": "2026-07-30",
-          "current": "2026-10-09",
-          "note": "Lamine has resigned; zero developers currently on staff with the required skill set for this build. Dev/QA (East) switched to use Aurora Global West, but no one is available to build on that progress. Oct 9 target is at serious risk pending backfill — RAG moves to red (per Jon 2026-07-30)."
-        },
-        {
-          "date": "2026-08-03",
-          "current": "2026-10-09",
-          "note": "Backfill confirmed: contractor Adam Nagle accepted the role vacated by Lamine, starting Aug 4 pending background check (per LP Internal: OC West Expansion Stand-up, 2026-08-03). Oct 9 target treated as recovering, not yet secure; a new unofficial customer-side September deadline ask is a fresh risk to watch."
-        },
-        {
-          "date": "2026-08-17",
-          "current": "2026-10-09",
-          "note": "Scope confirmed as the full OC West Expansion project (not just the database architecture/build phase) &#x2014; card Goal/Timeline updated to reflect full project delivery. Target unchanged at Oct 9, 2026 (per Jon 2026-08-17)."
-        },
-        {
-          "date": "2026-08-17",
-          "current": "2026-10-09",
-          "note": "Architecture decision reopened: PerfectServe is re-validating Lamine&#x2019;s original ~500ms write-forwarding latency result (session consistency) with Scott and Mark reviewing methodology/process/data, while the app team has completed fixes for SELECT FOR UPDATE, SKIP LOCKED, and nested-transaction issues and is now testing cross-region latency with those fixes in place. Write forwarding may still be viable if testing holds up; final path (write forwarding vs. DR-Only) pending both validations. Target unchanged at Oct 9, 2026 (per Jon 2026-08-17)."
-        },
-        {
-          "date": "2026-08-27",
-          "current": "2026-10-14",
-          "note": "Strategy shift from AWS DMS to RDS-replica promotion (Aug 26 OC West Multi-Region Stand-up); production cutover mechanism still unknown pending a dedicated architecture meeting, tentatively targeting the first Wednesday maintenance window in October (Oct 14, unconfirmed)."
-        },
-        {
-          "date": "2026-09-10",
-          "current": "2026-10-14",
-          "note": "Per Jon (2026-09-10): the East-region Aurora upgrade/cutover is confirmed successful and Fivetran has been fully resynced. RAG holds GREEN. Sequence ahead: build out the West-region database reader, convert Aurora to Aurora Global (East+West), then deploy the application stack and connectivity. Target held at 2026-10-14 pending progress on that sequence."
-        },
-        {
-          "date": "2026-09-21",
-          "current": "2026-10-09",
-          "note": "Detailed milestone chain per Jon 2026-09-14: DB attach 9/18 (CAB by 9/17) &#x2192; app stack 9/25 &#x2192; integration 10/2 &#x2192; validation 10/6 &#x2192; optional DR endpoint work 10/6 &#x2192; signoff 10/7 &#x2192; full handoff 10/9, aligned with Canada&#x2019;s Oct 9 target. Plan flagged by Jon as needing review, not fully locked. Fathom (Sep 17): recovery-layer work (nightly snapshots) underway and old RDS entering its decommission grace period, consistent with the DB-attach step landing on/near 9/18; DR deliverables scoped cleanly to the database layer with TGW ownership flagged to the client."
-        },
-        {
-          "date": "2026-09-25",
-          "current": "2026-10-15",
-          "note": "OC West Multi-Region Stand-up (Sep 24) confirmed the full handoff now targets Oct 15 &#x2014; one week past the Oct 9 target &#x2014; after the client meeting scoped Release 14 code changes (DB router, session pinning) as a prerequisite for production-ready West traffic. A phased plan deploys the current app to West now for implementation-team access while that code work continues (per Jon 2026-09-25)."
-        },
-        {
-          "date": "2026-10-08",
-          "current": "2026-10-19",
-          "note": "OC West Multi-Region Stand-up (Oct 7): the West Redis cache-consistency fix (read from the East writer on cache miss, Option A) needs a code change estimated for mid-next week (Oct 15), which may push the overall project beyond the Oct 19 target. Full handoff now tracked at Oct 19, with readiness review and handoff meetings to be scheduled."
-        },
-        {
-          "date": "2026-10-16",
-          "current": "2026-11-02",
-          "note": "Per Jon (2026-10-16): networking (VPC Peering vs Transit Gateway) and data-consistency decisions still pending; estimated completion is roughly two weeks after those decisions, assuming teams are available and no new blockers arise, so the Oct 19 handoff is re-tracked to about Nov 2. RAG held AT RISK per the stability rule."
-        },
-        {
-          "date": "2026-10-23",
-          "current": "2026-11-02",
-          "note": "RAG set to GREEN (ON TRACK) per Jon 2026-10-23; milestone date unchanged at Nov 2."
-        }
-      ]
+     "date": "2026-09-18",
+     "current": "2026-10-07",
+     "note": "Team is explicitly managing against &#x201C;the Oct 7th deadline&#x201D; across three consecutive stand-ups (Sep 15&#x2013;17): New Relic performance validation is proceeding via a QA-first strategy with the production list locking Sept 30, and Sept 23 QA-readiness work (redundant AD controllers) is underway. Supersedes the prior end-of-month placeholder recorded when the date was still TBD."
     },
     {
-      "project": "AudioCodes SBC Deployment",
-      "name": "SBC deployment complete",
-      "baseline": "2026-11-13",
-      "current": "2026-11-13",
-      "history": [
-        {
-          "date": "2026-10-21",
-          "current": "2026-11-13",
-          "note": "Baseline set per Jon (2026-10-21): project timeline Oct 15 &#x2013; Nov 13, 2026. Kick-off held Oct 15 (two redundant SBC pairs plus one OVOC instance in AWS); Oct 19 architecture alignment settled on a dedicated AWS account to isolate the AudioCodes Stack Manager, adding a 3&#x2013;4 day platform-engineering dependency for account and VPC/CIDR creation."
-        }
-      ]
-    },
-    {
-      "project": "Hivelocity - Arista & Kubernetes (LG)",
-      "name": "Network + Kubernetes load-balancing design agreed by LP, Arista, Hivelocity and LG",
-      "baseline": "TBD",
-      "current": "TBD",
-      "history": [
-        {
-          "date": "2026-11-05",
-          "current": "TBD",
-          "note": "Project added per Jon (2026-11-05): kickoff held 2026-11-04. No baseline or timeline set yet (Jon to provide); the milestone is the design all four parties (LP, Arista, Hivelocity, LG) accept. Discovery questions (17) sent to Hivelocity after kickoff."
-        }
-      ]
+     "date": "2026-09-21",
+     "current": "2026-10-07",
+     "note": "Waves 1 &amp; 2 complete; now tracking Wave 3 (Oct 7) &#x2014; per Jon 2026-09-14. Team explicitly managing to the Oct 7th deadline (Sep 18 Scrum of Scrums): Oct 7 production release enters QA Sept 23; final database-move phase confirmed for Dec 2."
     }
-  ]
+   ]
+  },
+  {
+   "project": "Canada AWS Platform",
+   "name": "Customer production-ready / full handoff",
+   "baseline": "2026-08-19",
+   "current": "2026-11-04",
+   "history": [
+    {
+     "date": "2026-07-16",
+     "current": "2026-08-19",
+     "note": "baseline set"
+    },
+    {
+     "date": "2026-08-17",
+     "current": "2026-08-19",
+     "note": "Moved to AT RISK (per Jon 2026-08-17): SPV2 RDS security-group hardening, Client VPN access to the MQ console, and a Canada-specific stand-up confirmation are still open two days out from the Aug 19 target, with no meeting update since Aug 6. Target unchanged at Aug 19, 2026."
+    },
+    {
+     "date": "2026-08-18",
+     "current": "2026-08-31",
+     "note": "Moved to RED/OFF TRACK (Internal Canadian Collab Stand-up, 2026-08-17): team explicitly confirmed the Aug 19 target is no longer feasible — a new Canadian VPN spike is halting data-plane work and Looker's license purchase was never completed. Timeline reset to end-of-month; Jon escalating long-standing blockers to Tony and Esteban."
+    },
+    {
+     "date": "2026-08-19",
+     "current": "2026-09-11",
+     "note": "Official reset per Canadian AWS Platform Weekly Stand-up (2026-08-18): the Aug 19 target is confirmed missed. New target is September 11, 2026, with a defined two-phase app rollout (Phase 1: Hogger, Copper, SPV-2, Fuflunds this week; Phase 2: Minerva, Naboo, Looms early Sept). The Canada VPN CIDR range from Tony remains the primary blocker, still halting all data-plane work (PG Bouncer, Looker)."
+    },
+    {
+     "date": "2026-09-11",
+     "current": "2026-09-11",
+     "note": "Sept 11 target date arrives with platform infrastructure nearing completion (PG Bouncer and PilotLite EKS resolved/near-resolved per Sep 10 stand-ups) but the application-deployment layer (SPV2, Nebu, Copper) still blocked by OpenSearch, PG Bouncer, S3/SES, and a trial-mode Twilio account. The Sep 9 Internal Canadian Collab stand-up confirmed the Sep 11 internal-validation handover would be missed with no new date committed; the Sep 10 Weekly Check-in explicitly described the project as behind schedule and requested a detailed handoff-readiness breakdown from Adam. Current date held at 2026-09-11 pending a realistic revised target from the team."
+    },
+    {
+     "date": "2026-09-15",
+     "current": "2026-09-18",
+     "note": "Sept 11 target confirmed missed with no new committed date; OpenSearch unblocked via a tag workaround (PR pending) and PG Bouncer nearly complete &#x2014; only a Postgres SCRAM&#x2192;MD5 password coordination step remains (Sept 14 Internal Canadian Collab stand-up). Looker and the app-deployment layer (SPV2, Nebu, Copper) remain blocked. Current date moved to a provisional Sept 18 pending firm confirmation from the team (per Jon 2026-09-15)."
+    },
+    {
+     "date": "2026-09-16",
+     "current": "2026-10-09",
+     "note": "Per Jon (2026-09-16): moved to GREEN (ON TRACK) &#x2014; the team has committed to a new firm October 9 delivery date. No specific blocker resolution reported yet for OpenSearch/PG Bouncer/Looker; those items carry forward as risks to watch, but the new team commitment restores delivery-date confidence per the RAG stability rule."
+    },
+    {
+     "date": "2026-09-21",
+     "current": "2026-10-09",
+     "note": "Phased recovery plan per Jon 2026-09-14 (Phase 1 blockers clear Sep 14&#x2013;18, Phase 1 env available Sep 21, integrations/testing Sep 21&#x2013;Oct 2, validation Oct 5&#x2013;9, target Oct 9). Fathom (Sep 17): OpenSearch and PG Bouncer near/complete, but the services-team handoff targeted for the Sep 21 Phase 1 checkpoint remains blocked on Okta IQ Admin approval and a Naboo S3 workaround as of the last check-in."
+    },
+    {
+     "date": "2026-10-15",
+     "current": "2026-10-22",
+     "note": "Final handoff meeting rescheduled to Oct 22, 1:30 PM ET because the Services team was unavailable (OC West Multi-Region Stand-up and Canada Platform Final Handoff Agenda, Oct 14). Project work is otherwise complete and the team moves to support mode; end-to-end validation is blocked by the Canadian Rhapsody instance and customer readiness, with an approved workaround to send test data directly to the Minerva platform. RAG held GREEN per the stability rule."
+    },
+    {
+     "date": "2026-10-22",
+     "current": "2026-11-04",
+     "note": "Final handoff pushed from Oct 22 to Nov 4 per Professional Services (per Jon 2026-10-22). Project wrapped up (99% complete) except the Integrations epic and the Looker tile. RAG held GREEN per the stability rule."
+    },
+    {
+     "date": "2026-11-05",
+     "current": "2026-11-04",
+     "note": "Per Jon (2026-11-05): project is 100% complete and the team is in support mode; the Integrations epic and the Looker Okta tile now fall on the client. Milestone date unchanged; RAG held GREEN."
+    }
+   ]
+  },
+  {
+   "project": "IDP",
+   "name": "Lightning Bolt production release",
+   "baseline": "2026-08-15",
+   "current": "2026-11-30",
+   "history": [
+    {
+     "date": "2026-07-16",
+     "current": "2026-12-31",
+     "note": "Orrian pushed LB prod work to end of year (Slack to Tracy Canepa, Jul 14)"
+    },
+    {
+     "date": "2026-07-30",
+     "current": "2026-11-30",
+     "note": "Per Jon 2026-07-30: after discussion with Orrian and Scott S., the Lightning Bolt release is pushed to November (specific date TBD). Scott chose the later date because his team can only dedicate a couple of hours a week to the effort right now, and he wants the release fully tested and ready to avoid another rollback (per the June 17 rollback/RCA). Milestone current recorded as 2026-11-30 pending a firm day."
+    },
+    {
+     "date": "2026-09-09",
+     "current": "2026-11-30",
+     "note": "Sept 9 Phase 2 production release deployed then rolled back same day after Okta issues surfaced in production (no lower-env sandbox available to catch it pre-release); a previously-unknown 2-min API recycle window was also discovered. Lightning Bolt (Nov) target unaffected."
+    }
+   ]
+  },
+  {
+   "project": "OC West Expansion",
+   "name": "Full project handoff",
+   "baseline": "2026-10-09",
+   "current": "2026-11-02",
+   "history": [
+    {
+     "date": "2026-07-27",
+     "current": "2026-10-09",
+     "note": "New milestone added per Jon: production build &amp; deployment phase starts Jul 27, targeting Oct 9 completion."
+    },
+    {
+     "date": "2026-07-30",
+     "current": "2026-10-09",
+     "note": "Lamine has resigned; zero developers currently on staff with the required skill set for this build. Dev/QA (East) switched to use Aurora Global West, but no one is available to build on that progress. Oct 9 target is at serious risk pending backfill — RAG moves to red (per Jon 2026-07-30)."
+    },
+    {
+     "date": "2026-08-03",
+     "current": "2026-10-09",
+     "note": "Backfill confirmed: contractor Adam Nagle accepted the role vacated by Lamine, starting Aug 4 pending background check (per LP Internal: OC West Expansion Stand-up, 2026-08-03). Oct 9 target treated as recovering, not yet secure; a new unofficial customer-side September deadline ask is a fresh risk to watch."
+    },
+    {
+     "date": "2026-08-17",
+     "current": "2026-10-09",
+     "note": "Scope confirmed as the full OC West Expansion project (not just the database architecture/build phase) &#x2014; card Goal/Timeline updated to reflect full project delivery. Target unchanged at Oct 9, 2026 (per Jon 2026-08-17)."
+    },
+    {
+     "date": "2026-08-17",
+     "current": "2026-10-09",
+     "note": "Architecture decision reopened: PerfectServe is re-validating Lamine&#x2019;s original ~500ms write-forwarding latency result (session consistency) with Scott and Mark reviewing methodology/process/data, while the app team has completed fixes for SELECT FOR UPDATE, SKIP LOCKED, and nested-transaction issues and is now testing cross-region latency with those fixes in place. Write forwarding may still be viable if testing holds up; final path (write forwarding vs. DR-Only) pending both validations. Target unchanged at Oct 9, 2026 (per Jon 2026-08-17)."
+    },
+    {
+     "date": "2026-08-27",
+     "current": "2026-10-14",
+     "note": "Strategy shift from AWS DMS to RDS-replica promotion (Aug 26 OC West Multi-Region Stand-up); production cutover mechanism still unknown pending a dedicated architecture meeting, tentatively targeting the first Wednesday maintenance window in October (Oct 14, unconfirmed)."
+    },
+    {
+     "date": "2026-09-10",
+     "current": "2026-10-14",
+     "note": "Per Jon (2026-09-10): the East-region Aurora upgrade/cutover is confirmed successful and Fivetran has been fully resynced. RAG holds GREEN. Sequence ahead: build out the West-region database reader, convert Aurora to Aurora Global (East+West), then deploy the application stack and connectivity. Target held at 2026-10-14 pending progress on that sequence."
+    },
+    {
+     "date": "2026-09-21",
+     "current": "2026-10-09",
+     "note": "Detailed milestone chain per Jon 2026-09-14: DB attach 9/18 (CAB by 9/17) &#x2192; app stack 9/25 &#x2192; integration 10/2 &#x2192; validation 10/6 &#x2192; optional DR endpoint work 10/6 &#x2192; signoff 10/7 &#x2192; full handoff 10/9, aligned with Canada&#x2019;s Oct 9 target. Plan flagged by Jon as needing review, not fully locked. Fathom (Sep 17): recovery-layer work (nightly snapshots) underway and old RDS entering its decommission grace period, consistent with the DB-attach step landing on/near 9/18; DR deliverables scoped cleanly to the database layer with TGW ownership flagged to the client."
+    },
+    {
+     "date": "2026-09-25",
+     "current": "2026-10-15",
+     "note": "OC West Multi-Region Stand-up (Sep 24) confirmed the full handoff now targets Oct 15 &#x2014; one week past the Oct 9 target &#x2014; after the client meeting scoped Release 14 code changes (DB router, session pinning) as a prerequisite for production-ready West traffic. A phased plan deploys the current app to West now for implementation-team access while that code work continues (per Jon 2026-09-25)."
+    },
+    {
+     "date": "2026-10-08",
+     "current": "2026-10-19",
+     "note": "OC West Multi-Region Stand-up (Oct 7): the West Redis cache-consistency fix (read from the East writer on cache miss, Option A) needs a code change estimated for mid-next week (Oct 15), which may push the overall project beyond the Oct 19 target. Full handoff now tracked at Oct 19, with readiness review and handoff meetings to be scheduled."
+    },
+    {
+     "date": "2026-10-16",
+     "current": "2026-11-02",
+     "note": "Per Jon (2026-10-16): networking (VPC Peering vs Transit Gateway) and data-consistency decisions still pending; estimated completion is roughly two weeks after those decisions, assuming teams are available and no new blockers arise, so the Oct 19 handoff is re-tracked to about Nov 2. RAG held AT RISK per the stability rule."
+    },
+    {
+     "date": "2026-10-23",
+     "current": "2026-11-02",
+     "note": "RAG set to GREEN (ON TRACK) per Jon 2026-10-23; milestone date unchanged at Nov 2."
+    }
+   ]
+  },
+  {
+   "project": "AudioCodes SBC Deployment",
+   "name": "SBC deployment complete",
+   "baseline": "2026-11-13",
+   "current": "2026-11-13",
+   "history": [
+    {
+     "date": "2026-10-21",
+     "current": "2026-11-13",
+     "note": "Baseline set per Jon (2026-10-21): project timeline Oct 15 &#x2013; Nov 13, 2026. Kick-off held Oct 15 (two redundant SBC pairs plus one OVOC instance in AWS); Oct 19 architecture alignment settled on a dedicated AWS account to isolate the AudioCodes Stack Manager, adding a 3&#x2013;4 day platform-engineering dependency for account and VPC/CIDR creation."
+    }
+   ]
+  },
+  {
+   "project": "Hivelocity - Arista & Kubernetes (LG)",
+   "name": "Network + Kubernetes load-balancing design agreed by LP, Arista, Hivelocity and LG",
+   "baseline": "TBD",
+   "current": "TBD",
+   "history": [
+    {
+     "date": "2026-11-05",
+     "current": "TBD",
+     "note": "Project added per Jon (2026-11-05): kickoff held 2026-11-04. No baseline or timeline set yet (Jon to provide); the milestone is the design all four parties (LP, Arista, Hivelocity, LG) accept. Discovery questions (17) sent to Hivelocity after kickoff."
+    }
+   ]
+  }
+ ]
 }
